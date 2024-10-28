@@ -1,31 +1,33 @@
+// src/context/AuthContext.js
 import React, { createContext, useState, useEffect } from 'react';
 
-// Cria o contexto
+// Cria o contexto de autenticação
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [adm, setAdm] = useState(null);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const storedAdm = localStorage.getItem('adm');
-    if (storedAdm) {
-      setAdm(JSON.parse(storedAdm));
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
     }
   }, []);
 
-  const login = (admData) => {
-    localStorage.setItem('adm', JSON.stringify(admData));
-    setAdm(admData);
+  const login = (userData) => {
+    localStorage.setItem('user', JSON.stringify(userData));
+    setUser(userData);
   };
 
   const logout = () => {
-    localStorage.removeItem('adm');
-    setAdm(null);
+    localStorage.removeItem('user');
+    setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ adm, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
 };
+
