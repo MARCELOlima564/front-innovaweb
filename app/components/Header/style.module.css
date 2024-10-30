@@ -1,0 +1,39 @@
+.header {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+  
+  .pesquisa-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    background-color: white;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .pesquisa-input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    flex: 1;
+  }
