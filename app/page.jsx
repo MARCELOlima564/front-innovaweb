@@ -5,7 +5,6 @@ import styles from './page.module.css';
 import Wave from 'react-wavify';
 
 export default function Home() {
-  // Função para rolagem suave
   const scrollToSection = () => {
     const target = document.getElementById("targetSection");
     if (target) {
@@ -24,7 +23,7 @@ export default function Home() {
           <p>Descubra itinerários formativos que abrem portas para novas oportunidades.</p>
           <p>Nós transformamos sua paixão em profissão com cursos de qualidade e inovação.</p>
 
-          {/* Botão com evento onClick para rolar suavemente até a seção alvo */}
+       
           <button onClick={scrollToSection} className={styles.bannerButton}>Saiba Mais</button>
         </div>
       </div>
