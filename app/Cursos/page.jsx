@@ -3,24 +3,26 @@ import api from '../../api/api.js';
 import React, { useEffect, useState } from 'react';
 import CursosC from '../components/CursosC/CursosC.jsx';
 
+
 const CursosComponent = () => {
   const [cursos, setCursos] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchCursos = async () => {
-  //     try {
-  //       const response = await api.get('http://localhost:4000/cursos');
-  //       setCursos(response.data);
-  //     } catch (error) {
-  //       console.error('Erro ao buscar cursos:', error);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchCursos = async () => {
+      try {
+        const response = await api.get('http://localhost:4000/cursos');
+        setCursos(response.data.cursos);
+        console.log(cursos)
+      } catch (error) {
+        console.log('Erro ao buscar cursos:', error);
+      }
+    };
 
-  //   fetchCursos();
-  // }, []);
+    fetchCursos();
+  }, []);
 
   return (
-    <div>
+    <view>
       <h1>Cursos</h1>
       {cursos.length > 0 ? (
         cursos.map((curso) => (
@@ -44,7 +46,7 @@ const CursosComponent = () => {
       ) : (
         <p>Carregando aaaaaaaaaaa...</p>
       )}
-    </div>
+    </view>
   );
 };
 
