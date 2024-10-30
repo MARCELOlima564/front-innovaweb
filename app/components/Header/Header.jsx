@@ -6,7 +6,7 @@ const Header = () => {
     <div className="header">
       {/* <a href="#" className="link">Cursos</a> */}
       <div className="pesquisa-container">
-        <img src="/assets/lupa.png" alt="Icone de busca" className="icon" />
+        <img src='public/lupa.png' alt="Icone de busca" className="icon" />
         <input
           type="text"
           placeholder="Nome do curso"
