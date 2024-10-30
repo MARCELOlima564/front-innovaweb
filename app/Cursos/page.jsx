@@ -1,7 +1,7 @@
 "use client"
-import api from '../../../api/api';
+import api from '../../api/api.js';
 import React, { useEffect, useState } from 'react';
-import CursosC from '../components/CursosC'; // Ajuste o caminho conforme necessário
+import CursosC from '../components/CursosC/CursosC.jsx';
 
 const CursosComponent = () => {
   const [cursos, setCursos] = useState([]);
@@ -9,7 +9,7 @@ const CursosComponent = () => {
   useEffect(() => {
     const fetchCursos = async () => {
       try {
-        const response = await api.get('/cursos');
+        const response = await api.get('http://localhost:4000/cursos');
         setCursos(response.data);
       } catch (error) {
         console.error('Erro ao buscar cursos:', error);
