@@ -1,15 +1,103 @@
-.Card{
-    background-color: rgb(255, 255, 255);
+.Card {
+    background-color: rgb(253, 251, 251);
     width: 300px;
-    height: 350px;
+    height: 330px;
     border-radius: 5%;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 25px;
+    margin: 28px;
+    border-bottom: 11px solid #FF0000;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.541);
 }
-.fotos{
-    width: 125px;
-    height: 124px;
-    border-radius: 100%;
 
+.fotos {
+    width: 5vw;
+    height: 10vh;
+    border-radius: 100%;
+}
+
+.Nomes {
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.funcoes {
+    color: #26235C;
+    font-size: 15px;
+    padding: 2px;
+}
+
+.descricao {
+    color: black;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.DivEmail {
+    background-color: #26235C;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.email {
+    text-align: center;
+    font-size: 14px;
+    justify-content: center;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .Card {
+        background-color: rgb(255, 255, 255);
+        width: 300px;
+        height: 315px;
+        border-radius: 5%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 25px;
+        margin: 25px;
+        margin-left: 12%;  
+        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.541);
+        border-bottom: 11px solid #FF0000;
+    }
+    .fotos {
+        width: 25vw;
+        height: 12vh;
+        border-radius: 100%;
+    }
+    .Nomes {
+        color: black;
+        font-size: 18px;
+        padding: 5px;
+    }
+    .funcoes {
+        color: #26235C;
+        font-size: 15px;
+        padding: 2px;
+    }
+    .descricao {
+        color: black;
+        font-size: 13px;
+        padding: 10px;
+    }
+    .DivEmail {
+        background-color: #26235C;
+        border-radius: 6px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .email {
+        text-align: center;
+        font-size: 13px;
+        justify-content: center;
+        color: white;
+    }
 }
