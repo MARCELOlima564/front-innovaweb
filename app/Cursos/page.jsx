@@ -42,7 +42,7 @@ const CursosComponent = () => {
           />
         ))
       ) : (
-        <p>Carregando...</p>
+        <p>Carregando aaaaaaaaaaa...</p>
       )}
     </div>
   );
