@@ -4,6 +4,7 @@ export default function Sobrenos() {
     return (
         <div>
             <CardSobreNos
+                foto={"anaju.jpg"}
                 nome={"Ana Júlia Pontes"}
                 funcao={"Desenvolvedora"}
                 desc={"Tem 18 anos, estudante formada do SENAI Valinhos, no curso de Desenvolvimento de Sistemas em 2024."}
