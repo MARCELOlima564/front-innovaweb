@@ -1,0 +1,12 @@
+.cardPerguntas{
+    display: flex;
+}
+.circuloVermelho{
+    color: red;
+    margin-top: 4px;    
+    width: 10px;
+}
+.titulo{
+    margin-top: 20px;
+    margin-left: 30px;
+}
