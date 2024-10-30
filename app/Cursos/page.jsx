@@ -22,12 +22,12 @@ const CursosComponent = () => {
   }, []);
 
   return (
-    <view>
+    <div>
       <h1>Cursos</h1>
       {cursos.length > 0 ? (
         cursos.map((curso) => (
           <CursosC
-            key={curso.id}
+            key={curso.id_curso}
             titulo={curso.titulo}
             modalidade={curso.modalidade}
             carga_horaria={curso.carga_horaria}
@@ -46,8 +46,9 @@ const CursosComponent = () => {
       ) : (
         <p>Carregando aaaaaaaaaaa...</p>
       )}
-    </view>
+    </div>
   );
 };
 
 export default CursosComponent;
+

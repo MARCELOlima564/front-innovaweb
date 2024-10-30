@@ -2,7 +2,7 @@ import Header from "./components/Header/Header";
 import styles from './page.module.css';
 //import Wave from 'react-wavify'
 
-import CursosComponent from "./Cursos/page"
+
 
 export default function Home() {
   return (
@@ -49,7 +49,7 @@ export default function Home() {
     </mask>
   </defs>
 </Wave>*/}
-        <CursosComponent />
+      
       </div>
     </div>
   );
