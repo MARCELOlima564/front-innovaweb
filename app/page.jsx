@@ -1,8 +1,11 @@
 import Header from "./components/Header/Header";
 import styles from './page.module.css';
 
+import CursosComponent from "./Cursos/page"
+
 export default function Home() {
   return (
+
     <div className={styles.backgroundimg}>
       <Header />
       <div className={styles.redSection}>
@@ -18,3 +21,9 @@ export default function Home() {
     </div>
   );
 }
+    <div>
+      <h1>Bem-vindo ao Next.js!</h1>
+  <CursosComponent/>
+    </div>
+  )
+} 

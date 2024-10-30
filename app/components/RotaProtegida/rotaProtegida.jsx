@@ -1,16 +1,23 @@
-// src/components/ProtectedRoute.js
-import React, { useContext } from 'react';
-import { Navigate } from 'react-router-dom';
-import { AuthContext } from '../context/AuthContext';
+import { useAuth } from '../context/AuthContext';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
-const ProtectedRoute = ({ children }) => {
-  const { user } = useContext(AuthContext);
+const RotaPrivada = ({ children }) => {
+    const { isAuthenticated } = useAuth();
+    const router = useRouter();
 
-  if (!user) {
-    return <Navigate to="/login" />; // Redireciona para a página de login se não estiver autenticado
-  }
+    useEffect(() => {
+        if (!isAuthenticated) {
+            router.push('/login');
+        }
+    }, [isAuthenticated, router]);
 
-  return children;
+    if (!isAuthenticated) {
+        return null;
+    }
+
+    return children;
 };
 
-export default ProtectedRoute;
+export default RotaPrivada;
+
