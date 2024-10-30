@@ -2,13 +2,7 @@
 import React from 'react';
 import Header from "./components/Header/Header";
 import styles from './page.module.css';
-
 import Wave from 'react-wavify';
-
-import Wave from 'react-wavify'
-
-import CursosComponent from "./Cursos/page"
-
 
 export default function Home() {
   const scrollToSection = () => {
@@ -17,7 +11,6 @@ export default function Home() {
       target.scrollIntoView({ behavior: "smooth" });
     }
   };
-
   return (
 
     <div className={styles.backgroundimg}>
@@ -73,7 +66,7 @@ export default function Home() {
 
       <div>
         <h1>Bem-vindo ao Next.js!</h1>
-        <Wave mask="url(#mask)" fill="#1277b0" >
+      { /* <Wave mask="url(#mask)" fill="#1277b0" >
   <defs>
     <linearGradient id="gradient" gradientTransform="rotate(90)">
       <stop offset="0" stopColor="white" />
@@ -83,8 +76,8 @@ export default function Home() {
       <rect x="0" y="0" width="2000" height="200" fill="url(#gradient)"  />
     </mask>
   </defs>
-</Wave>
-        <CursosComponent />
+</Wave>*/}
+      
       </div>
     </div>
   );
