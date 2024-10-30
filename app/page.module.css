@@ -107,24 +107,18 @@
   padding-bottom: 45px;
 }
 
-.redSection {
-  position: relative;
-  background-color: #d20000;
-  padding: 50px 0;
-  text-align: center;
-  color: white;
+.letter {
+  margin-bottom: 30px;
 }
 
-.redSection::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 75%);
-  border-radius: 50% 50% 0 0;
-  transform: translateY(50%);
+.redSection {
+  position: relative;
+  background-color: #393b47;
+  padding: 130px 0;
+  text-align: center;
+  color: white;
+  margin-bottom: -5px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .banner {
@@ -135,22 +129,21 @@
 }
 
 .bannerButton {
-  background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
-  margin: 20px 0;
+  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 51%, #ababab 100%);
+  margin: 35px 0;
   text-transform: uppercase;
-  transition: 0.5s;
+  cursor: pointer;
+  transition: background-position 0.3s, color 0.3s;
   background-size: 200% auto;
-  color: white;
+  color: 393b47;
   border-radius: 100px;
   display: inline-block;
   border: none;
   padding: 10px 20px;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
 }
 
-.bannerButton:hover {
-  background-position: right center;
-  color: #fff;
+.targetSection {
+  padding: 430px 0;
+  text-align: center;
 }
