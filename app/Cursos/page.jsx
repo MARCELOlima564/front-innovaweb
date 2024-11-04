@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import api from '../../api/api.js';
 import React, { useEffect, useState } from 'react';
 import CursosC from '../components/CursosC/CursosC.jsx';
-
+import styles from './cursos.module.css';
 
 const CursosComponent = () => {
   const [cursos, setCursos] = useState([]);
@@ -12,7 +12,7 @@ const CursosComponent = () => {
       try {
         const response = await api.get('http://localhost:4000/cursos');
         setCursos(response.data.cursos);
-        console.log(cursos)
+        console.log(cursos);
       } catch (error) {
         console.log('Erro ao buscar cursos:', error);
       }
@@ -22,33 +22,33 @@ const CursosComponent = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Cursos</h1>
+    <div className={styles.cursosContainer}>
+      <h1 className={styles.title}>Cursos</h1>
       {cursos.length > 0 ? (
         cursos.map((curso) => (
-          <CursosC
-            key={curso.id_curso}
-            titulo={curso.titulo}
-            modalidade={curso.modalidade}
-            carga_horaria={curso.carga_horaria}
-            nivel={curso.nivel}
-            descricao={curso.descricao}
-            descricao_requisitos={curso.descricao_requisitos}
-            programacao={curso.programacao}
-            modalidade_aula={curso.modalidade_aula}
-            metodologia_ensino={curso.metodologia_ensino}
-            idade={curso.idade}
-            turnos={curso.turnos}
-            status={curso.status}
-            imagem={curso.imagem}
-          />
+          <div className={styles.cursoCard} key={curso.id_curso}>
+            <CursosC
+              titulo={curso.titulo}
+              modalidade={curso.modalidade}
+              carga_horaria={curso.carga_horaria}
+              nivel={curso.nivel}
+              descricao={curso.descricao}
+              descricao_requisitos={curso.descricao_requisitos}
+              programacao={curso.programacao}
+              modalidade_aula={curso.modalidade_aula}
+              metodologia_ensino={curso.metodologia_ensino}
+              idade={curso.idade}
+              turnos={curso.turnos}
+              status={curso.status}
+              imagem={curso.imagem}
+            />
+          </div>
         ))
       ) : (
-        <p>Carregando aaaaaaaaaaa...</p>
+        <p className={styles.loader}>Carregando...</p>
       )}
     </div>
   );
 };
 
 export default CursosComponent;
-
