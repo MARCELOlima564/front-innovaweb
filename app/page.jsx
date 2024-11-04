@@ -1,6 +1,8 @@
 "use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 import Header from "./components/Header/Header";
+import Footer from './components/Footer/Footer';
 import styles from './page.module.css';
 import Wave from 'react-wavify';
 
@@ -11,40 +13,60 @@ export default function Home() {
       target.scrollIntoView({ behavior: "smooth" });
     }
   };
-  return (
 
+  return (
     <div className={styles.backgroundimg}>
       <Header />
-      {/* <div class="hero_area">
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-          <defs>
-            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-          </defs>
-          <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-          </g>
-        </svg>
-      </div> */}
-      {/* <div className={"ocean"}>
-        <div className={"wave"}></div>
-        <div className={"wave wave2"}></div>
-      </div> */}
       <div className={styles.redSection}>
         <div className={styles.banner}>
-          <h1>O conhecimento se transforma em prática e</h1>
-          <h1>o aprendizado em carreira. O caminho</h1>
-          <h1 className={styles.letter}>para a profissão dos seus sonhos!</h1>
-          <p>Descubra itinerários formativos que abrem portas para novas oportunidades.</p>
-          <p>Nós transformamos sua paixão em profissão com cursos de qualidade e inovação.</p>
-
-       
-          <button onClick={scrollToSection} className={styles.bannerButton}>Saiba Mais</button>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }} // Estado inicial
+            animate={{ opacity: 1, y: 0 }} // Estado final
+            transition={{ duration: 0.5 }} // Duração da animação
+          >
+            O conhecimento se transforma em prática e
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            o aprendizado em carreira. O caminho
+          </motion.h1>
+          <motion.h1
+            className={styles.letter}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            para a profissão dos seus sonhos!
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            Descubra itinerários formativos que abrem portas para novas oportunidades.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
+            Nós transformamos sua paixão em profissão com cursos de qualidade e inovação.
+          </motion.p>
+    
+          <motion.button
+            onClick={scrollToSection}
+            className={styles.bannerButton}
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5, delay: 1 }}
+          >
+            Saiba Mais
+          </motion.button>
         </div>
       </div>
-
 
       <div style={{ transform: "rotate(180deg)", overflow: "hidden" }}>
         <Wave mask="url(#mask)" fill="#393b47" options={{ speed: 0.2, points: 4 }}>
@@ -60,25 +82,77 @@ export default function Home() {
         </Wave>
       </div>
 
-      {/* Seção alvo da rolagem suave */}
       <div id="targetSection" className={styles.targetSection}>
         <h1>Bem-vindo ao Next.js!</h1>
-
-      <div>
-        <h1>Bem-vindo ao Next.js!</h1>
-      { /* <Wave mask="url(#mask)" fill="#1277b0" >
-  <defs>
-    <linearGradient id="gradient" gradientTransform="rotate(90)">
-      <stop offset="0" stopColor="white" />
-      <stop offset="0.5" stopColor="black" />
-    </linearGradient>
-    <mask id="mask">
-      <rect x="0" y="0" width="2000" height="200" fill="url(#gradient)"  />
-    </mask>
-  </defs>
-</Wave>*/}
-      
       </div>
+ {/* Cards de cursos! */} 
+
+      <div className={styles.cardsContainer}>
+ 
+  <div className={styles.card1}>
+    <img className={styles.redSeta} src='red.png'></img>
+    <h4 className={styles.cardTitle}>Nossas opções de curso</h4>
+  </div>
+
+  {/* Outros 6 Cards */}
+  <div className={styles.card}>
+    <h4 className={styles.cardTitle}>Curso 1</h4>
+    <p className={styles.cardDescription}>Descrição breve do curso 1.</p>
+    <button className={styles.cardButton}>
+      + Saiba mais
+    </button>
+  </div>
+
+  <div className={styles.card}>
+    <h4 className={styles.cardTitle}>Curso 2</h4>
+    <p className={styles.cardDescription}>Descrição breve do curso 2.</p>
+    <button className={styles.cardButton}>
+      + Saiba mais
+    </button>
+  </div>
+
+  <div className={styles.card}>
+    <h4 className={styles.cardTitle}>Curso 3</h4>
+    <p className={styles.cardDescription}>Descrição breve do curso 3.</p>
+    <button className={styles.cardButton}>
+      + Saiba mais
+    </button>
+  </div>
+
+  <div className={styles.card}>
+    <h4 className={styles.cardTitle}>Curso 4</h4>
+    <p className={styles.cardDescription}>Descrição breve do curso 4.</p>
+    <button className={styles.cardButton}>
+      + Saiba mais
+    </button>
+  </div>
+
+  <div className={styles.card}>
+    <h4 className={styles.cardTitle}>Curso 5</h4>
+    <p className={styles.cardDescription}>Descrição breve do curso 5.</p>
+    <button className={styles.cardButton}>
+      + Saiba mais
+    </button>
+  </div>
+
+  <div className={styles.card}>
+    <h4 className={styles.cardTitle}>Curso 6</h4>
+    <p className={styles.cardDescription}>Descrição breve do curso 6.</p>
+    <button className={styles.cardButton}>
+      + Saiba mais
+    </button>
+  </div>
+
+  {/* Último Card */}
+  <div className={styles.card} style={{ backgroundColor: '#f0f0f0' }}>
+    <h4 className={styles.cardTitle}>Ver mais opções</h4>
+    <button className={styles.cardButton} style={{ backgroundColor: 'red', color: 'white' }}>
+      Ver mais opções
+    </button>
+  </div>
+</div>
+
+      <Footer />
     </div>
   );
 }
