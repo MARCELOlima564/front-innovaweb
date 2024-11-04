@@ -3,7 +3,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Header from "./components/Header/Header";
 import Footer from './components/Footer/Footer';
-import styles from './page.module.css';
 import Wave from 'react-wavify';
 
 export default function Home() {
