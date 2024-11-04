@@ -3,16 +3,38 @@
     align-items: center;
     justify-content: center;
 }
+.Principal2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .titulo {
     text-align: center;
-    margin: 2%;
-    font-size: 35px;
-    color: #26235C;
-
+    font-size: 38px;
+    color: white;
 }
 .imagem{
-    width: 100vw;
-    height: 65vh;
+    width: 65vw;
+    height: 60vh;
     margin-bottom: 2%;
     margin-top: 2%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 17%;
 }
+.titulo1{
+    background-color: #FF0000;
+    margin: 1%;
+}
+.imagem1{
+    width: 55vw;
+    height: 50vh;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 22%;
+}
+

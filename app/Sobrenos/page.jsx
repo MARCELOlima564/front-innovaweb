@@ -6,7 +6,9 @@ export default function Sobrenos() {
         <div className={styles.div1}>
            
             <img src="senai.webp" alt="senai" className={styles.imagem}/>
+            <div className={styles.titulo1}>
             <h1 className={styles.titulo}>Desenvolvedores do Projeto</h1>
+            </div>
         <div className={styles.Principal}>
             <CardSobreNos
                 foto={"anaju.jpg"}
@@ -29,6 +31,8 @@ export default function Sobrenos() {
                 desc={"Tem 18 anos, estudante formado do SENAI Valinhos, no curso de Desenvolvimento de Sistemas em 2024."}
                 email={"marcelo.lima4@aluno.senai.br"}
             />
+            </div>
+            <div className={styles.Principal2}>
              <CardSobreNos
                 foto={"nicolly.jpg"}
                 nome={"Nicolly Santos"}
@@ -43,7 +47,9 @@ export default function Sobrenos() {
                 desc={"Tem 17 anos, estudante formada do SENAI Valinhos, no curso de Desenvolvimento de Sistemas em 2024."}
                 email={"manuelamachado@aluno.senai.br"}
             />
-        </div>
+            </div>
+        
+        <img src="senai.webp" alt="senai" className={styles.imagem1}/>
         </div>
     )
 }
