@@ -1,0 +1,32 @@
+.footer {
+    background-color: #393b47; 
+    color: white; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .text {
+    margin: 0 0 10px;
+    font-size: 14px;
+  }
+  
+  .links {
+    margin-top: 10px;
+  }
+  
+  .link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #e40000; 
+  }

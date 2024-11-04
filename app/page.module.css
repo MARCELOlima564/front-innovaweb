@@ -3,114 +3,6 @@
   margin-top: 0;
 }
 
-
-
-.ocean {
-  height: 5%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #015871;
-}
-
-.wave {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
-  position: absolute;
-  width: 6400px;
-  top: -198px;
-  left: 0;
-  height: 198px;
-  transform: translate(0, 0, 0);
-  animation: wave 7s ease infinite;
-}
-
-.wave:nth-of-type(2) {
-  top: -168px;
-  animation: swell 4s ease infinite;
-  opacity: 1;
-}
-
-@keyframes wave {
-  0% { margin-left: 0; }
-  100% { margin-left: -1600px;}
-}
-@keyframes swell {
-  0%, 100% {
-    transform: translate(0, -30px);
-  }
-  50% {
-    transform: translate(0, 5px);
-  }
-}
-
-.hero_area {
-  position: relative;
-  height: 100vh;
-  background-color: black;
-}
-
-.waves {
-  position: absolute;
-  width: 100%;
-  height: 15vh;
-  min-height: 100px;
-  max-height: 150px;
-  bottom: 0;
-  left: 0;
-}
-
-.parallax>use {
-  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
-}
-
-.parallax>use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-
-.parallax>use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-
-.parallax>use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-
-.parallax>use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-
-@keyframes move-forever {
-  0% {
-      transform: translate3d(-90px, 0, 0);
-  }
-
-  100% {
-      transform: translate3d(85px, 0, 0);
-  }
-}
-
-.header {
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 45px;
-}
-
-.letter {
-  margin-bottom: 30px;
-}
-
 .redSection {
   position: relative;
   background-color: #393b47;
@@ -135,7 +27,7 @@
   cursor: pointer;
   transition: background-position 0.3s, color 0.3s;
   background-size: 200% auto;
-  color: 393b47;
+  color: #393b47;
   border-radius: 100px;
   display: inline-block;
   border: none;
@@ -143,7 +35,70 @@
   font-family: 'Raleway', sans-serif;
 }
 
+.bannerButton:hover {
+  background-position: right;
+}
+
 .targetSection {
   padding: 430px 0;
   text-align: center;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px dashed #505050; 
+}
+
+.card1 {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.cardTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* Linha vermelha do primeiro card */
+.card:first-of-type .cardTitle::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  height: 2px; 
+  background-color: red; 
+  border-radius: 2px;
+}
+
+.cardDescription {
+  margin-bottom: 10px;
+}
+
+.cardButton {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.cardButton:hover {
+  background-color: #005bb5;
+}
+
+.redSeta {
+  width: 90px;
 }
