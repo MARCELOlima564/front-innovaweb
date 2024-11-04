@@ -1,0 +1,26 @@
+.containerPerguntas{
+    display: flex;
+}
+.titulo{
+    margin-top: 2vh;
+    margin-left: 5vh;
+}
+.circulo{
+    margin-top: 5vh;
+    margin-left: 5vh;
+}
+.containerContato{
+    width: 110vh;
+    height: 60vh;
+    background-color: #f59a9a21;
+    margin-left: 50vh;
+    margin-top: 20vh;
+}
+.tituloContato{
+    color: black;
+    margin-left: 5vh;
+}
+.subtiuloContato{
+    font-weight: bold;
+    margin-left: 5vh;
+}

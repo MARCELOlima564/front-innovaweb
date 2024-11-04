@@ -1,5 +1,6 @@
 import styles from "./faq.module.css"
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
+import CardFaq from "../components/cardFaq/CardFaq";
 
 export default function Faq() {
     return(
@@ -10,14 +11,28 @@ export default function Faq() {
             <div className={styles.containerPerguntas}>
 
             <RiCheckboxBlankCircleFill color="red" className={styles.circulo} />
-            <p className={styles.Pergunta}>O que é o senai?</p>
+            <CardFaq perguntas={"O que o senai?"}
+                     respostas={"Uma escola de curso tecnico focado com o profissonal."}/>
+            </div>  
+            <div className={styles.containerPerguntas}>
 
-            </div>
-
-            <div>
-                <p className={styles.Respostas}>Uma empresa focado no aprendizado profissional.</p>
-            </div>
+            <RiCheckboxBlankCircleFill color="red" className={styles.circulo} />
+            <CardFaq perguntas={"O que o senai?"}
+                     respostas={"Uma escola de curso tecnico focado com o profissonal."}/>
             
+
+            </div>     
+            <div className={styles.containerPerguntas}>
+
+            <RiCheckboxBlankCircleFill color="red" className={styles.circulo} />
+            <CardFaq perguntas={"O que o senai?"}
+                     respostas={"Uma escola de curso tecnico focado com o profissonal."}/>
+            </div>   
+
+            <div className={styles.containerContato}>
+                <h1 className={styles.tituloContato}>Contato</h1>
+                <p className={styles.subtiuloContato}>Informações de contato</p>
+            </div>            
         </div>
     )
 }
