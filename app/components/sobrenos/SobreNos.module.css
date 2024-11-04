@@ -13,8 +13,8 @@
 }
 
 .fotos {
-    width: 5vw;
-    height: 10vh;
+    width: 42%;
+    height: 17vh;
     border-radius: 100%;
 }
 
@@ -68,8 +68,8 @@
         border-bottom: 11px solid #FF0000;
     }
     .fotos {
-        width: 25vw;
-        height: 12vh;
+        width: 20vw;
+        height: 8vh;
         border-radius: 100%;
     }
     .Nomes {

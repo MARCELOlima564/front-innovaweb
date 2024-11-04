@@ -71,33 +71,45 @@
 }
 
 @media (max-width: 768px) {
-    .Principal {
-        display: block;
-        padding-top: 2%;
+    .Principal, .Principal2 {
+        flex-direction: column; /* Muda a direção do flex para coluna */
+        align-items: flex-start; /* Alinha itens à esquerda */
+        justify-content: flex-start; /* Alinha itens ao início */
     }
-    .Principal2{
-        display: block;
 
+    .imagem, .imagem1 {
+        width: 90vw; /* Ajusta a largura das imagens para ser mais responsiva */
+        height: auto; /* Mantém a proporção das imagens */
+        margin-left: 0; /* Remove a margem esquerda */
+        margin-bottom: 5%; /* Aumenta a margem inferior para espaçamento */
     }
+
     .titulo {
-        text-align: center;
-        font-size: 30px;
-        color: white;
-        padding-top: 2%;
-        padding-bottom: 2%;
+        font-size: 28px; /* Reduz o tamanho da fonte do título */
     }
-    .imagem{
-        height: 30vh;
-        width: 100vw;
-        margin-bottom: 10%;
-        margin-top: 2%;
-        margin: 0;
-        padding-bottom: 5%;
-        padding: 5%;
-        padding-top: 16%;
+
+    .Divtexto {
+        width: 95%; /* Aumenta a largura da div de texto para preencher melhor */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+        padding-left: 2%; /* Aumenta o padding para melhor espaçamento */
+        padding-right: 2%;
     }
-    .titulo1{
-        background-color: #FF0000;
-        margin: 1%;
+
+    .texto, .texto2 {
+        font-size: 14px; /* Ajusta o tamanho da fonte para melhorar a legibilidade */
+    }
+
+    .texto3 {
+        font-size: 18px; /* Reduz o tamanho da fonte do texto destacado */
+    }
+
+    .titulo1 {
+        font-size: 24px; /* Reduz o tamanho da fonte do título secundário */
+        margin: 2%; /* Aumenta a margem para espaçamento */
+    }
+
+    .divTitulo {
+        padding-top: 5%; /* Aumenta o padding superior */
+        padding-bottom: 5%; /* Aumenta o padding inferior */
     }
 }
