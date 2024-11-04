@@ -49,7 +49,19 @@ export default function Sobrenos() {
             />
             </div>
         
-        <img src="senai.webp" alt="senai" className={styles.imagem1}/>
+            <img src="senai.webp" alt="senai" className={styles.imagem1} />
+            <div className={styles.Divtexto}>
+                <div className={styles.divTitulo}>
+                <h1 className={styles.texto3}>Sobre a Equipe e Projeto</h1>
+                </div>
+                <p className={styles.texto}>A equipe InnovaWeb tem o prazer de anunciar a conclusão da plataforma de itinerários de cursos
+                    para a Escola Técnica Senai. Nossa solução foi desenvolvida para oferecer uma experiência intuitiva e personalizada,
+                    permitindo que os alunos ajustem seus planos de estudo de acordo com seus interesses.</p>
+
+                <p className={styles.texto2}> A plataforma já está em funcionamento, proporcionando fácil acesso às informações dos cursos, como conteúdos,
+                    horários e vagas disponíveis. Agradecemos a todos os alunos e professores que contribuíram com feedback ao longo do desenvolvimento.
+                    Estamos empolgados em ver como essa ferramenta irá enriquecer a jornada educacional dos estudantes!</p>
+            </div>
         </div>
     )
 }
