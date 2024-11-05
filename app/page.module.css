@@ -63,48 +63,24 @@
 .card {
   background-color: white;
   border-radius: 20px;
-  border: 1px dashed #505050; 
+  border: 2px dashed #c1c1c1;
   margin: 10px;
   text-align: center;
-  width: 200px; 
-  height: 200px; 
-  transition: transform 0.2s ease;
-  cursor: pointer; 
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; 
-}
-
-.card img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  display: block; 
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .cardContent {
-  padding: 20px; 
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.card.hideContent {
-  padding: 0; 
-}
-
-
-
-.activeCard {
-  transform: scale(1.05); 
-}
-
-.card1 {
-  background-color: white;
-  border-radius: 20px;
-  padding: 20px;
 }
 
 .cardTitle {
@@ -117,7 +93,7 @@
   font-weight: bold;
   margin: 5px;
   margin-bottom: 8px;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .cardDescription {
@@ -131,7 +107,7 @@
 }
 
 .cardLink:hover {
-  color: #005bb5; 
+  color: #005bb5;
 }
 
 .redSeta {
@@ -157,7 +133,6 @@
   background-color: #172533;
   transform: scale(1.05);
 }
-
 
 .infoSection {
   text-align: center;
@@ -188,8 +163,45 @@
   margin: 15px;
   text-align: center;
   padding: 20px;
-  border: 1px dashed #797979;
+  border: 3px dashed #d8d8d8;
   font-family: 'Raleway', sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.infoCardTitle {
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: large;
+  background: linear-gradient(to right, #005bb5, #00aaff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientMove 2s linear infinite;
+  will-change: background-position;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
+}
+
+.infoCard:hover .infoCardTitle {
+  background: linear-gradient(to right, #ffe100, #ff0000, #ffe100);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-position: right center;
 }
 
 .infoCardImage {
@@ -197,75 +209,61 @@
   height: 190px;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-.infoCardTitle {
-  font-weight: bold;
-  margin: 10px 0;
-  font-size: large;
+.infoCard:hover .infoCardImage {
+  transform: scale(1.1);
 }
 
-.infoCardDescription {
-  margin-bottom: 10px;
-}
 
 .middleSection {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 40px 0;
-}
-
-.leftImage {
-  flex: 1;
-  text-align: center;
-}
-
-.leftImage img {
-  max-width: 100%;
+  padding: 50px 20px;
+  background-color: #ffffff;
   height: auto;
-}
-
-.rightText {
-  flex: 1;
-  padding: 70px;
+  width: 100%;
   text-align: left;
 }
 
-.topCoursesSection {
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.topCoursesTitle {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.coursesList {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.courseItem {
-  flex: 1;
-  min-width: 150px;
+.leftImage {
+  flex: 0 0 350px;
   text-align: center;
-  margin: 10px;
+  margin-left: 300px;
 }
 
-.courseItem img {
-  max-width: 100%;
-  height: auto;
+.leftImage img {
+  width: 100%;
+  max-width: 350px;
   border-radius: 8px;
 }
 
-.courseItem h4 {
-  margin: 10px 0;
-  color: red; /* Title color */
+.rightContent {
+  flex: 1;
+  padding-left: 30px;
 }
 
-.courseItem p {
-  color: #999; /* Subtitle color */
+.titleAndText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+
+.sectionTitle {
+  font-size: 47px;
+  font-weight: 700;
+  color: #555555;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.rightText {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  max-width: 820px;
+}
+
