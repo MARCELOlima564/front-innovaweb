@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Carrossel from "./components/Carrossel/CarouselComponent"
+import Carrossel from "./components/Carrossel/CarouselComponent";
 import Wave from "react-wavify";
 import styles from "./page.module.css";
 
@@ -105,40 +105,8 @@ export default function Home() {
         </Wave>
       </div>
 
-
       <div ref={targetSectionRef} className={styles.targetSection}>
-        <div className={styles.cardsContainer}>
-          <div className={styles.cardsInnerContainer}>
-            <div className={styles.card1}>
-              <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
-              <h4 className={styles.cardTitle1}>Descubra áreas disponíveis!</h4>
-            </div>
-          </div>
 
-          <div className={styles.cardsInnerContainer}>
-            {[1, 2, 3, 4, 5, 6].map((item, index) => (
-              <motion.div
-                key={index}
-                className={styles.card}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className={styles.cardContent}>
-                  <h4 className={styles.cardTitle}>Área {item}</h4>
-                  <p className={styles.cardDescription}>Descrição breve da Área {item}.</p>
-                  <span className={styles.cardLink}>+ Saiba mais</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div style={{ textAlign: "center", margin: "20px 0" }}>
-            <button className={styles.buttonMais}>Quero mais opções</button>
-          </div>
-        </div>
 
         <div className={styles.infoSection}>
           <h2 className={styles.infoTitle}>Conhecendo o SENAI Valinhos</h2>
@@ -200,12 +168,44 @@ export default function Home() {
           </div>
         </div>
 
+        <div className={styles.cardsContainer}>
+          <div className={styles.cardsInnerContainer}>
+            <div className={styles.card1}>
+              <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
+              <h4 className={styles.cardTitle1}>Descubra áreas disponíveis!</h4>
+            </div>
+          </div>
+
+          <div className={styles.cardsInnerContainer}>
+            {[1, 2, 3, 4, 5, 6].map((item, index) => (
+              <motion.div
+                key={index}
+                className={styles.card}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className={styles.cardContent}>
+                  <h4 className={styles.cardTitle}>Área {item}</h4>
+                  <p className={styles.cardDescription}>Descrição breve da Área {item}.</p>
+                  <span className={styles.cardLink}>+ Saiba mais</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div style={{ textAlign: "center", margin: "20px 0" }}>
+            <button className={styles.buttonMais}>Quero mais opções</button>
+          </div>
+        </div>
+
         <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
         <h4 className={styles.cardTitle1}>Depoimentos</h4>
         <Carrossel />
-
-        
       </div>
+
       <Footer />
     </div>
   );
