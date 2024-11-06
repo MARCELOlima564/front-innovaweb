@@ -6,10 +6,10 @@
 .redSection {
   position: relative;
   background-color: #393b47;
-  padding: 130px 0;
+  padding: 30px 0;
   text-align: center;
   color: white;
-  margin-bottom: -5px;
+  margin-bottom: -25px;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .targetSection {
-  padding: 80px 0;
+  padding: 40px 0;
   text-align: center;
 }
 
@@ -68,8 +68,8 @@
   border: 2px dashed #c1c1c1;
   margin: 10px;
   text-align: center;
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,6 +83,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 .cardTitle {
@@ -119,6 +120,14 @@
   margin: 0 auto 10px;
 }
 
+.letter {
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-top: 20px;
+}
+
 .buttonMais {
   background-color: #ca2525;
   color: white;
@@ -138,35 +147,36 @@
 
 .infoSection {
   text-align: center;
-  padding: 90px 0;
-  font-family: 'Raleway', sans-serif;
+  padding: -20px 0;
+  font-family: 'Raleway';
 }
 
 .infoTitle {
-  font-size: 42px;
+  font-size: 32px;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .infoSubtitle {
   margin-bottom: 60px;
-  font-size: 20px;
+  font-size: 14px;
   color: #666;
 }
 
 .infoCardsContainer {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 5px;
+  margin-top: -20px;
 }
 
 .infoCard {
   background-color: white;
   border-radius: 20px;
-  width: 300px;
+  width: 280px;
   margin: 20px;
   text-align: center;
-  padding: 30px;
+  padding: 10px;
   border: 3px dashed #d8d8d8;
   font-family: 'Raleway', sans-serif;
   position: relative;
@@ -209,11 +219,15 @@
 }
 
 .infoCardImage {
-  width: 90%;
-  height: 240px;
+  width: 80%;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
+}
+
+.infoCardDescription {
+  margin-bottom: 20px;
 }
 
 .infoCard:hover .infoCardImage {
@@ -229,12 +243,13 @@
   height: auto;
   width: 100%;
   text-align: left;
+  margin-top: 50px;
 }
 
 .leftImage {
-  flex: 0 0 350px;
+  flex: 0 0 280px;
   text-align: center;
-  margin-left: 300px;
+  margin-left: 80px;
 }
 
 .leftImage img {
@@ -246,6 +261,7 @@
 .rightContent {
   flex: 1;
   padding-left: 30px;
+  margin-right: 50px;
 }
 
 .titleAndText {

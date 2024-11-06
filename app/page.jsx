@@ -41,6 +41,7 @@ export default function Home() {
       <div className={styles.redSection}>
         <div className={styles.banner}>
           <motion.h1
+            className={styles.title}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
