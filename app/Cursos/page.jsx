@@ -27,7 +27,10 @@ const CursosComponent = () => {
       <div className={styles.container2}>
       {cursos.length > 0 ? (
         cursos.map((curso) => (
+        
           <div className={styles.cursoCard} key={curso.id_curso}>
+         <div className={styles.aside}>
+      
             <CursosC
               titulo={curso.titulo}
               modalidade={curso.modalidade}
@@ -44,12 +47,14 @@ const CursosComponent = () => {
               imagem={curso.imagem}
             />
           </div>
+          </div>
         ))
       ) : (
         <p className={styles.loader}>Carregando...</p>
       )}
       </div>
     </div>
+
   );
 };
 
