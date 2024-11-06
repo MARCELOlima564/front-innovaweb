@@ -16,10 +16,9 @@ export function AuthProvider({ children }) {
             if (token) {
                 try {
                     // Aqui você faria uma chamada à API para validar o token
-                    const response = await fetch('/api/verify-token', {
-                        headers: {
-                            Authorization: `Bearer ${token}`
-                        }
+                    const response = await api.post('/auth/login', {
+                       email,
+                       senha,
                     });
 
                     if (response.ok) {
