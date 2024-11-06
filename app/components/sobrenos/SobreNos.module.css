@@ -9,7 +9,7 @@
     padding: 25px;
     margin: 28px;
     border-bottom: 11px solid #FF0000;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.541);
+    box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
 .fotos {
@@ -54,17 +54,15 @@
 
 @media (max-width: 768px) {
     .Card {
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(253, 251, 251);
         width: 300px;
-        height: 315px;
+        height: 33Vh;
         border-radius: 5%;
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 25px;
-        margin: 25px;
         margin-left: 12%;  
-        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.541);
+        box-shadow: 0 0 15px rgb(0, 0, 0);
         border-bottom: 11px solid #FF0000;
     }
     .fotos {
