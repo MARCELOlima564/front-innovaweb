@@ -1,46 +1,78 @@
 .containerPerguntas{
     display: flex;
+    background-color: #26235c;
+    margin: 3%;
+    color: white;
+    width: 35vw;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
+    align-items: center;
+    text-align: center;
+}
+.containerPerguntas:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 20px rgb(0, 0, 0); 
+    border-bottom: 5px solid #FF0000; 
+}
+.perguntas{
+    display: flex;
 }
 .titulo{
     margin-top: 8vh;
-    margin-left: 7vh;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: #ffffff;
+}
+.containerT{
+    background-color: #FF0000;
+}
+.container{
+    margin-bottom: 7vh;
 }
 .circulo{
-    margin-top: 4vh;
-    margin-left: 8vh;
+    margin-top: 1vh;
+    margin-left: 3vh;
 }
 .containerContato{
-    width: 180vh;
-    height: 70vh;
-    background-color: #f59a9a21;
-    margin-left: 15vh;
-    margin-top: 10vh;
-    border-radius: 5vh;
+    width: 80vh;
+    height: 31vh;
+    background-color: #26235c;
+    margin-left: 64vh;
+    padding-top: 2vh;
+    margin-top: 5vh;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0); 
 }
 .tituloContato{
-    color: black;
-    margin-left: 5vh;
-    margin-top: 5vh;
+    color: #ffffff;
+    text-align: center;
+    font-size: 27px;
 }
 .subtiuloContato{
     font-weight: bold;
-    margin-left: 5vh;
+    text-align: center;
+    color: #FF0000;
+    font-size: 15px;
+    margin-bottom: 4vh;
 }
-.containerInformacoes{
+.divInformacoes{
     display: flex;
-}
-.imagem{
-    width: 80vh;
-    height: 53vh;
-    margin-left: 5vh;
-    border-radius: 5vh;
+    margin: 2vh;
+    margin-top: 3vh;
 }
 .telefone{
     font-size: 15px;
+    color: white;
+    text-align: center;
 }
 .localizacao{
     font-size: 15px;
+    color: white;
+    text-align: center;
 }
-.divInformacoes{
-    margin-top: 20vh;
-}
+
+
+
