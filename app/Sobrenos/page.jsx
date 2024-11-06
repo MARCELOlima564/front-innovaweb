@@ -1,9 +1,11 @@
+import { Footer, Header } from "antd/es/layout/layout";
 import CardSobreNos from "../components/sobrenos/CardSobreNos";
 import styles from './sobrenos.module.css';
 
 export default function Sobrenos() {
     return (
         <div className={styles.div1}>
+            <Header />
            
             <img src="senai.webp" alt="senai" className={styles.imagem}/>
             <div className={styles.titulo1}>
@@ -62,6 +64,7 @@ export default function Sobrenos() {
                     horários e vagas disponíveis. Agradecemos a todos os alunos e professores que contribuíram com feedback ao longo do desenvolvimento.
                     Estamos empolgados em ver como essa ferramenta irá enriquecer a jornada educacional dos estudantes!</p>
             </div>
+            <Footer />
         </div>
     )
 }

@@ -29,7 +29,9 @@ export default function LoginPage() {
 
   return (
     <div className={styles.loginPage}>
-      <Header />
+      <div className={styles.headerDiv}>
+        <Header />
+      </div>
       <div className={styles['login-reg-panel']}>
         <div className={styles['white-panel']}>
           <div className={styles.loginContainer}>
@@ -83,7 +85,7 @@ export default function LoginPage() {
           Transformar carreiras começa com a escolha certa, mas as informações precisam ser acessíveis!
         </motion.div>
       </div>
-      <Footer />
+
     </div>
   );
 }
