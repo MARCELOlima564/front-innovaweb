@@ -24,6 +24,7 @@ const CursosComponent = () => {
   return (
     <div className={styles.cursosContainer}>
       <h1 className={styles.title}>Cursos</h1>
+      <div className={styles.container2}>
       {cursos.length > 0 ? (
         cursos.map((curso) => (
           <div className={styles.cursoCard} key={curso.id_curso}>
@@ -47,6 +48,7 @@ const CursosComponent = () => {
       ) : (
         <p className={styles.loader}>Carregando...</p>
       )}
+      </div>
     </div>
   );
 };
