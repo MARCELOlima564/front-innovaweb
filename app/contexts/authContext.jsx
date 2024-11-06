@@ -45,7 +45,7 @@ export function AuthProvider({ children }) {
             setLoading(true);
             setError(null);
 
-            const response = await api.post('/auth/login', {
+            const response = await api.post('/auth/Login', {
                 email,
                 senha,
             });
