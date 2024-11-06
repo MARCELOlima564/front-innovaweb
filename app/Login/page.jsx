@@ -4,6 +4,8 @@ import { useAuth } from '@/app/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 import styles from './login.module.css';
 import { motion } from 'framer-motion';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -27,6 +29,7 @@ export default function LoginPage() {
 
   return (
     <div className={styles.loginPage}>
+      <Header />
       <div className={styles['login-reg-panel']}>
         <div className={styles['white-panel']}>
           <div className={styles.loginContainer}>
@@ -80,6 +83,7 @@ export default function LoginPage() {
           Transformar carreiras começa com a escolha certa, mas as informações precisam ser acessíveis!
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 }
