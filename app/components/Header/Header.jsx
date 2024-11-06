@@ -12,7 +12,7 @@ const Header = () => {
         <a href="/login" className={styles.link}>Login</a>
 
       </div>
-      <button className={styles.button}>Veja mais sobre o SENAI</button>
+      <button className={styles.button}>SENAI</button>
     </div>
   );
 };

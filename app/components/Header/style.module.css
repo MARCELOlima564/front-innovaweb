@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0; 
+  padding: 10px 0; 
 }
 
 .logo {
@@ -50,7 +50,7 @@
 }
 
 .button {
-  background-image: linear-gradient(to right, #553131 0%, #da2626 51%, #553131 100%);
+  background-image: linear-gradient(to right, #823030 0%, #da2626 51%, #553131 100%);
   color: white;
   font-size: 15px;
   text-transform: uppercase;
