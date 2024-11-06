@@ -1,0 +1,115 @@
+.Principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Principal2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titulo {
+    text-align: center;
+    font-size: 38px;
+    color: white;
+}
+.imagem{
+    width: 65vw;
+    height: 60vh;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 17%;
+}
+.titulo1{
+    background-color: #FF0000;
+    margin: 1%;
+}
+.imagem1{
+    width: 55vw;
+    height: 50vh;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 22%;
+}
+
+.Divtexto{
+    background-color: rgb(253, 251, 251);
+    width: 80%;
+    height: 32vh;
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+    border-radius: 8px;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    padding-left: 1%;
+    padding-right: 1%;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.541);
+    margin-left: 10%;
+}
+.texto{
+    font-size: 15px;
+    color: #26235C;
+}
+.texto2{
+    font-size: 15px;
+    color: #26235C;
+}
+.texto3{
+    font-size: 20px;
+    color: #FF0000;
+}
+.divTitulo{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+@media (max-width: 768px) {
+    .Principal, .Principal2 {
+        flex-direction: column; /* Muda a direção do flex para coluna */
+        align-items: flex-start; /* Alinha itens à esquerda */
+        justify-content: flex-start; /* Alinha itens ao início */
+    }
+
+    .imagem, .imagem1 {
+        width: 90vw; /* Ajusta a largura das imagens para ser mais responsiva */
+        height: auto; /* Mantém a proporção das imagens */
+        margin-left: 0; /* Remove a margem esquerda */
+        margin-bottom: 5%; /* Aumenta a margem inferior para espaçamento */
+    }
+
+    .titulo {
+        font-size: 28px; /* Reduz o tamanho da fonte do título */
+    }
+
+    .Divtexto {
+        width: 95%; /* Aumenta a largura da div de texto para preencher melhor */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+        padding-left: 2%; /* Aumenta o padding para melhor espaçamento */
+        padding-right: 2%;
+    }
+
+    .texto, .texto2 {
+        font-size: 14px; /* Ajusta o tamanho da fonte para melhorar a legibilidade */
+    }
+
+    .texto3 {
+        font-size: 18px; /* Reduz o tamanho da fonte do texto destacado */
+    }
+
+    .titulo1 {
+        font-size: 24px; /* Reduz o tamanho da fonte do título secundário */
+        margin: 2%; /* Aumenta a margem para espaçamento */
+    }
+
+    .divTitulo {
+        padding-top: 5%; /* Aumenta o padding superior */
+        padding-bottom: 5%; /* Aumenta o padding inferior */
+    }
+}
