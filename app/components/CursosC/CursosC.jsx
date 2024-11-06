@@ -2,8 +2,6 @@ import styles from './style.module.css';
 
 function CursosC({
   titulo,
-  carga_horaria,
-  nivel,
   descricao,
   idade,
   status,
