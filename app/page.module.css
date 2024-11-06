@@ -128,23 +128,6 @@
   margin-top: 20px;
 }
 
-.buttonMais {
-  background-color: #ca2525;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 15px;
-  font-size: 16px;
-  font-family: 'Raleway', sans-serif;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.buttonMais:hover {
-  background-color: #172533;
-  transform: scale(1.05);
-}
-
 .infoSection {
   text-align: center;
   padding: -20px 0;
