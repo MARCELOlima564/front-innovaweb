@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '@/app/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 import styles from './login.module.css';
-
+import { motion } from 'framer-motion';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -71,6 +71,14 @@ export default function LoginPage() {
             </form>
           </div>
         </div>
+        <motion.div
+          className={styles.motivationalText}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Transformar carreiras começa com a escolha certa, mas as informações precisam ser acessíveis!
+        </motion.div>
       </div>
     </div>
   );

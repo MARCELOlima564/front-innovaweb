@@ -1,19 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Mukta');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-.body {
-  font-family: 'Mukta', sans-serif !important;
-  height: 100vh;
-  min-height: 550px;
-  background-color: #b9fab9 !important;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow-y: hidden;
-}
-.a {
-  text-decoration: none;
-  color: #2c7715;
+.motivationalText {
+  position: absolute;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+  font-size: 24px; /* Tamanho da fonte aumentado */
+  font-weight: 600; /* Peso da fonte para negrito */
+  max-width: 300px;
+  top: 30%;
+  left: 60%;
+  transform: translateY(-50%);
+  text-align: left;
 }
 
 .loginPage {
