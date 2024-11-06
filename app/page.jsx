@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Carrossel from "./components/Carrossel/CarouselComponent";
 import Wave from "react-wavify";
 import styles from "./page.module.css";
+import AreaCardsPagination from "./components/AreaCardsPagination/AreaCardsPagination";
 
 export default function Home() {
   const [activeCard, setActiveCard] = useState(null);
@@ -177,7 +178,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.cardsInnerContainer}>
+          {/* <div className={styles.cardsInnerContainer}>
             {[1, 2, 3, 4, 5, 6].map((item, index) => (
               <motion.div
                 key={index}
@@ -195,11 +196,11 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
 
-          <div style={{ textAlign: "center", margin: "20px 0" }}>
-            <button className={styles.buttonMais}>Quero mais opções</button>
-          </div>
+          < AreaCardsPagination />
+
+         
         </div>
 
         <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
