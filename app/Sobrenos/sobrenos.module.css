@@ -10,7 +10,7 @@
 }
 .titulo {
     text-align: center;
-    font-size: 38px;
+    font-size: 26px;
     color: white;
 }
 .imagem{
@@ -50,7 +50,8 @@
     margin-bottom: 6%;
     padding-left: 1%;
     padding-right: 1%;
-    box-shadow: 0px 0px 7px rgba(0, 0, 0);
+    border: 2px dashed #26235C;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
     margin-left: 10%;
 }
 .texto{
@@ -82,10 +83,11 @@
         height: auto; 
         margin-left: 5%; 
         margin-bottom: 2%; 
+        padding-bottom: 2%;
     }
 
     .titulo {
-        font-size: 28px; 
+        font-size: 24px; 
     }
 
     .Divtexto {

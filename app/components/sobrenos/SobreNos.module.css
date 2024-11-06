@@ -10,8 +10,13 @@
     margin: 28px;
     border-bottom: 11px solid #FF0000;
     box-shadow: 0 0 15px rgb(0, 0, 0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
 }
-
+.Card:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 20px rgb(0, 0, 0); 
+    border-bottom: 11px solid #FF4500; 
+}
 .fotos {
     width: 42%;
     height: 17vh;
@@ -64,6 +69,12 @@
         margin-left: 12%;  
         box-shadow: 0 0 15px rgb(0, 0, 0);
         border-bottom: 11px solid #FF0000;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
+    }
+    .Card:hover {
+        transform: scale(1.1); 
+        box-shadow: 0 0 20px rgb(0, 0, 0); 
+        border-bottom: 11px solid #FF4500; 
     }
     .fotos {
         width: 20vw;
