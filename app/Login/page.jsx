@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuth } from '@/app/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 
@@ -9,19 +9,19 @@ export default function LoginPage() {
   const { login, loading, error, isAuthenticated } = useAuth();
   const router = useRouter();
 
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.push('/DashBoard');
+    }
+  }, [isAuthenticated, router]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const success = await login(email, password);
     if (success) {
-      router.push('/DashBoard'); // Redireciona para o dashboard após login
+      router.push('/DashBoard');
     }
   };
-
-  // Redireciona se já estiver autenticado
-  if (isAuthenticated) {
-    router.push('/DashBoard');
-    return null;
-  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
