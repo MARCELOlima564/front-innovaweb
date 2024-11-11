@@ -5,6 +5,9 @@ import styles from './sobrenos.module.css';
 export default function Sobrenos() {
     return (
         <div className={styles.div1}>
+            <div className={styles.titulo1}>
+            <h1 className={styles.titulo}>DESENVOLVEDORES DO PROJETO</h1>    
+            </div>  
         <div className={styles.Principal}>
             <CardSobreNos
                 foto={"anaju.jpg"}
