@@ -1,0 +1,124 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../../public/senai.jpg");
+    color: white;
+}
+
+.titulo1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 5%;
+}
+
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 53vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.heroText {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 1%;
+    text-align: center;
+    margin-left: 7%;
+    margin-right: 7%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.heroButton {
+    font-size: 20px;
+    background-color: #e40000;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 2%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.heroButton:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+.Principal {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.cardImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.cardTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cardRole {
+    color: #e40000;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.cardDescription {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.cardEmail {
+    font-size: 0.8em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footerDiv {
+    margin-top: auto;
+    background-color: #393b47;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
