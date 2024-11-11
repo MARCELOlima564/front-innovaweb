@@ -1,0 +1,10 @@
+.Perguntas{
+    font-weight: bold;
+    font-size: 2vh;
+    margin-right: 22vh;
+}
+.Respostas{
+    margin-top: 1vh;
+    text-align: center;
+    margin-right: 1vh;
+}
