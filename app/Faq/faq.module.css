@@ -1,7 +1,7 @@
 .containerPerguntas{
     display: flex;
     background-color: #393b47ee;
-    margin: 3%;
+    margin: 2%;
     color: white;
     width: 35vw;
     padding-bottom: 2%;
@@ -35,7 +35,7 @@
 
 .circulo{
     margin-left: 3vh;
-    margin-bottom: 3vh;
+    margin-bottom: 7vh;
 }
 .containerContato{
     width: 80vh;
