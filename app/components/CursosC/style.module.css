@@ -1,6 +1,6 @@
 /* style.module.css */
 
-.container {
+.card {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Ajusta a linha caso haja muitos cursos */

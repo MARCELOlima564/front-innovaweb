@@ -65,9 +65,10 @@ const CursosComponent = () => {
   };
 
   return (
-    <div className={styles.cursosContainer}>
+<div>
       <h1 className={styles.title}>Cursos</h1>
-      <div className={styles.filterContainer}>
+      <div className={styles.container}>
+        <div className={styles.aside}>
         <div className={styles.filterItem}>
           <label htmlFor="idade">Idade Mínima:</label>
           <input
@@ -77,7 +78,7 @@ const CursosComponent = () => {
             onChange={(e) => handleFilterChange('idade', e.target.value)}
           />
         </div>
-        <div className={styles.filterItem}>
+          <div className={styles.filterItem}>
           <label htmlFor="modalidade">Modalidade:</label>
           <select
             id="modalidade"
@@ -87,7 +88,7 @@ const CursosComponent = () => {
             <option value="">Selecione uma modalidade</option>
             <option value="online">Online</option>
             <option value="presencial">Presencial</option>
-            <option value="gravado">Gravado</option>
+            <option value="Gravada">Gravada</option>
           </select>
         </div>
         <div className={styles.filterItem}>
@@ -98,9 +99,10 @@ const CursosComponent = () => {
             onChange={(e) => handleFilterChange('nivel', e.target.value)}
           >
             <option value="">Selecione um nível</option>
-            <option value="integrado">Integrado</option>
+            <option value="integrado">Iniciante</option>
+            <option value="Avançado">Avançado</option>
             <option value="profissionalizante">Profissionalizante</option>
-            <option value="concomitante">Concomitante</option>
+            
           </select>
         </div>
         <div className={styles.filterItem}>
@@ -116,14 +118,13 @@ const CursosComponent = () => {
             <option value="noite">Noite</option>
             <option value="integral">Integral</option>
           </select>
-        </div>
-      </div>
-      <div className={styles.container2}>
+        </div></div>
+        <div className={styles.containerCard}>
         {isLoading ? (
           <p className={styles.loader}>Carregando...</p>
         ) : filteredCursos.length > 0 ? (
           filteredCursos.map((curso) => (
-            <div className={styles.cursoCard} key={curso.id_curso}>
+            <div className={styles.card} key={curso.id_curso}>
               <CursosC
                 titulo={curso.titulo}
                 modalidade={curso.modalidade}
@@ -142,10 +143,11 @@ const CursosComponent = () => {
             </div>
           ))
         ) : (
-          <p className={styles.loader}>Nenhum curso encontrado.</p>
+          <p className={styles.loader}> OPS! Nenhum curso encontrado.</p>
         )}
+        </div>
       </div>
-    </div>
+</div>
   );
 };
 

@@ -1,8 +1,25 @@
-.container2 {
+.containerCard {
   display: flex;
   flex-wrap: wrap;
+  background-color: rgb(9, 149, 230);
 }   
 .tittle {
   font-size: 19px;
   font-weight: bold;
+}
+
+.container{
+  display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+   margin-top: 1rem; 
+   background-color: brown; 
+}
+
+.aside{
+
+   gap: 1rem;
+   margin-top: 1rem;  
+   margin: px;
+  background-color: aqua;
 }
