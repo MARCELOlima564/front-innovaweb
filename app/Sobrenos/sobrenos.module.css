@@ -31,8 +31,8 @@
 }
 
 .Divtexto{
-    background-color: rgb(253, 251, 251);
     width: 80%;
+    height: auto;
     text-align: center;
     align-items: center;
     justify-content:center;
@@ -41,23 +41,25 @@
     margin-bottom: 6%;
     padding-left: 1%;
     padding-right: 1%;
-    border: 2px dashed #26235C;
-    box-shadow: 0 0 15px rgb(0, 0, 0);
+    border: 2px dashed #9b9b9b; 
     margin-left: 10%;
+}
+.Divtexto:hover{
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    border: 0px dashed #ffffff; 
 }
 .texto{
     font-size: 15px;
-    color: #26235C;
     padding-bottom: 1%;
 }
 .texto2{
     font-size: 15px;
-    color: #26235C;
     padding-bottom: 2%;
 }
 .texto3{
     font-size: 20px;
-    color: #FF0000;
+    color: #26235C;
 }
 .divTitulo{
     padding-top: 2%;
@@ -89,8 +91,9 @@
         text-align: center;
         padding-left: 2%;
         padding-right: 2%;
+        border: 2px dashed #9b9b9b; 
     }
-
+    
     .texto, .texto2 {
         font-size: 13px; 
     }
