@@ -1,6 +1,6 @@
 .containerPerguntas{
     display: flex;
-    background-color: #26235c;
+    background-color: #393b47ee;
     margin: 3%;
     color: white;
     width: 35vw;
@@ -22,7 +22,7 @@
 .titulo{
     margin-top: 6vh;
     text-align: center;
-    color: #26235c;
+    color: #393b47ee;
     font-size: 38px;
 }
 .containerT{
@@ -43,12 +43,12 @@
     padding-bottom: 3vh;
     margin-top: 5vh;
     border-radius: 8px;
-    border: 2px dashed #26235c;
+    border: 2px dashed #393b47ee;
     margin-bottom: 8vh;
 }
 
 .tituloContato{
-    color: #26235c;
+    color: #393b47ee;
     text-align: center;
     font-size: 22px;
     margin-bottom: 1vh;
