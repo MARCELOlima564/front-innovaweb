@@ -101,12 +101,13 @@ export default function Faq() {
                         respostas={"Uma escola de curso tecnico focado com o profissonal."} />
                 </div>
             </div>
+            <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
             <div className={styles.containerContato}>
                 <h1 className={styles.tituloContato}>Caso Tenha Dúvidas:</h1>
                 <p className={styles.subtiuloContato}>Informações de Contato e Endereço</p>
                 <div className={styles.containerInformacoes}>
                     <div className={styles.divInformacoes}>
-                        <p className={styles.telefone}>TELEFONE: (19) 98925-6337</p>
+                        <p className={styles.telefone}>TELEFONE: (19) 3829-7800</p>
                     </div>
                     <div className={styles.divInformacoes}></div>
                     <p className={styles.localizacao}>LOCALIZAÇÃO: R. Artur Fernandes Querido, 55 - Vila Santo Antonio, Valinhos - SP, 13270-530 </p>

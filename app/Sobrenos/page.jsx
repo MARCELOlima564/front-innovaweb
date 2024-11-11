@@ -51,8 +51,11 @@ export default function Sobrenos() {
                     email={"manuelamachado@aluno.senai.br"}
                 />
             </div>
-
+            <div className={styles.divImg}>
+            <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
+            <p className={styles.textoImg}>Foto da Equipe</p>
             <img src="senai.webp" alt="senai" className={styles.imagem1} />
+            </div>
             <div className={styles.Divtexto}>
                 <div className={styles.divTitulo}>
                     <h1 className={styles.texto3}>Sobre a Equipe e o Projeto</h1>

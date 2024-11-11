@@ -70,7 +70,7 @@
 
 .texto3 {
     font-size: 20px;
-    color: #FF0000;
+    color: #e40000;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -78,7 +78,19 @@
     padding-top: 2%;
     padding-bottom: 1%;
 }
-
+.textoImg{
+    text-align: center;
+    font-size: 30px;
+    color: #393b47ee;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+.redSeta {
+    width: 115px;
+    display: block;
+    margin: 0 auto 0.5%;
+    margin-top: 4%;
+  }
 @media (max-width: 768px) {
 
     .Principal,
