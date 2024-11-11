@@ -117,6 +117,5 @@ export default function Faq() {
        <Footer/>
       </div>
         </div>
-        
     )
 }
