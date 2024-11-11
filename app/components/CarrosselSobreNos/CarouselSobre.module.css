@@ -1,0 +1,63 @@
+.carouselWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .carousel {
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .carouselItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: -60px;
+  
+  }
+  
+  .carouselImage {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .ant-carousel .slick-prev, .ant-carousel .slick-next {
+    background-color: #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  
+  .ant-carousel .slick-prev {
+    left: -80px;
+  }
+  
+  .ant-carousel .slick-next {
+    right: -80px;
+  }
+  
+  .ant-carousel .slick-prev:hover, .ant-carousel .slick-next:hover {
+    background-color: #333;
+  }
+  
+  .ant-carousel .slick-dots li button {
+    background-color: #000;
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+  }
+  
+  .ant-carousel .slick-dots li.slick-active button {
+    background-color: #333;
+    opacity: 1;
+  }
+  
+  .ant-carousel .slick-dots {
+    bottom: -30px;
+  }
+  
