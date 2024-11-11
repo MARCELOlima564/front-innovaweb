@@ -14,4 +14,4 @@ const CardFaq = ({ perguntas, respostas }) => {
     )
   }
   
-  export default CardFaq
+  export default CardFaq;
