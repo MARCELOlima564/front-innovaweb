@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import styles from './login.module.css';
 import { motion } from 'framer-motion';
 import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
