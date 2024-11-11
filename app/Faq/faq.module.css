@@ -10,11 +10,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
     align-items: center;
     text-align: center;
+    border-bottom: 6px solid #949494;
 }
 .containerPerguntas:hover {
     transform: scale(1.1); 
     box-shadow: 0 0 15px rgb(0, 0, 0); 
-    border-bottom: 5px solid #FF0000; 
+    border-bottom: 6px solid #e40000; 
 }
 .perguntas{
     display: flex;
@@ -23,13 +24,13 @@
     margin-top: 6vh;
     text-align: center;
     color: #393b47ee;
-    font-size: 38px;
+    font-size: 35px;
     font-family: 'Raleway', sans-serif;
 }
 .containerT{
     height: 8vh;
     width: 100%;
-  border-bottom: 4px solid #FF0000;
+  border-bottom: 4px solid #e40000;
 }
 
 .circulo{
@@ -42,7 +43,7 @@
     margin-left: 59vh;
     padding-top: 2vh;
     padding-bottom: 3vh;
-    margin-top: 5vh;
+    margin-top: 2vh;
     border-radius: 8px;
     border: 2px dashed #393b47ee;
     margin-bottom: 8vh;
@@ -58,7 +59,7 @@
 .subtiuloContato{
     font-weight: bold;
     text-align: center;
-    color: #FF0000;
+    color: #e40000;
     font-size: 13px;
     margin-bottom: 4vh;
     font-family: 'Raleway', sans-serif;
@@ -81,3 +82,9 @@
     margin-left: 1vh;
     font-family: 'Raleway', sans-serif;
 }
+.redSeta {
+    width: 150px;
+    display: block;
+    margin: 0 auto 0.5%;
+    margin-top: 2vh;
+  }

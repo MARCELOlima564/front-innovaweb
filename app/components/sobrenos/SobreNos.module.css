@@ -8,14 +8,14 @@
     text-align: center;
     padding: 25px;
     margin: 28px;
-    border-bottom: 11px solid #FF0000;
+    border-bottom: 11px solid #e40000;
     box-shadow: 0 0 15px rgb(0, 0, 0);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
 }
 .Card:hover {
     transform: scale(1.1); 
     box-shadow: 0 0 20px rgb(0, 0, 0); 
-    border-bottom: 11px solid #FF0000; 
+    border-bottom: 11px solid #e40000; 
 }
 .fotos {
     width: 38%;
@@ -31,7 +31,7 @@
 }
 
 .funcoes {
-    color: #FF0000;
+    color: #e40000;
     font-size: 15px;
     padding: 2px;
     font-family: 'Raleway', sans-serif;
@@ -70,13 +70,13 @@
         text-align: center;
         margin-left: 12%;  
         box-shadow: 0 0 15px rgb(0, 0, 0);
-        border-bottom: 11px solid #FF0000;
+        border-bottom: 11px solid #e40000;
         transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
     }
     .Card:hover {
         transform: scale(1.1); 
         box-shadow: 0 0 20px rgb(0, 0, 0); 
-        border-bottom: 11px solid #FF0000; 
+        border-bottom: 11px solid #e40000; 
     }
     .fotos {
         width: 20vw;
@@ -90,7 +90,7 @@
         font-family: 'Raleway', sans-serif;
     }
     .funcoes {
-        color: #FF0000;
+        color: #e40000;
         font-size: 15px;
         padding: 2px;
         font-family: 'Raleway', sans-serif;
