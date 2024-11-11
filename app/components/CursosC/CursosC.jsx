@@ -1,34 +1,39 @@
+import styles from './style.module.css';
 
 function CursosC({
   titulo,
-  modalidade,
-  carga_horaria,
-  nivel,
   descricao,
-  descricao_requisitos,
-  programacao,
-  modalidade_aula,
-  metodologia_ensino,
   idade,
-  turnos,
   status,
-  imagem
 }) {
   return (
-    <div className="curso">
-      <p className="titulo">{titulo}</p>
-      <p className="text">{modalidade}</p>
-      <p className="text">{carga_horaria}</p>
-      <p className="text">{nivel}</p>
-      <p className="text">{descricao}</p>
-      <p className="text">{descricao_requisitos}</p>
-      <img className="imagem" src={imagem} alt={titulo} />
-      <p className="text">{programacao}</p>
-      <p className="text">{modalidade_aula}</p>
-      <p className="text">{metodologia_ensino}</p>
-      <p className="text">{idade}</p>
-      <p className="text">{status}</p>
-      <p className="text">{turnos}</p>
+    <div className={styles.container}>
+      <div className={styles.topcontainer}>
+        <div className={styles.curso2}>
+          <div className={styles.curso}>
+            <div className={styles.top}>
+              <div className={styles.tittle}>
+                <h1>{titulo}</h1>
+              </div>
+
+              <div className={styles.desc}>
+                <p className={styles.text}>{descricao}</p>
+              </div>
+
+              <div className={styles.infos}>
+                <p className={styles.textInfo}>Idade:{idade}.</p>
+                <p className={styles.textInfo}>Curso:{status}.</p>
+              </div>
+
+            </div>
+            <div className={styles.botoes}>
+              <button className={styles.btn}>
+                <a href="#">Ver Curso</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,55 +1,103 @@
+'use client';
+
 import { createContext, useContext, useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import api from '@/api/api';
 
-const AuthContext = createContext();
+const AuthContext = createContext({});
 
-export const AuthProvider = ({ children }) => {
-    const [token, setToken] = useState(null);
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const router = useRouter();
+export function AuthProvider({ children }) {
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true); // Começa como true para verificar o token
+    const [error, setError] = useState(null);
 
+    // Verifica se há um token salvo ao carregar a página
     useEffect(() => {
-        const storedToken = localStorage.getItem('token');
-        if (storedToken) {
-            setToken(storedToken);
-            setIsAuthenticated(true);
-        }
+        const checkAuth = async () => {
+            const token = localStorage.getItem('authToken');
+            if (token) {
+                try {
+                    // Aqui você faria uma chamada à API para validar o token
+                    const response = await api.post('/auth/login', {
+                       email,
+                       senha,
+                    });
+
+                    if (response.ok) {
+                        const userData = await response.json();
+                        setUser(userData);
+                    } else {
+                        localStorage.removeItem('authToken');
+                    }
+                } catch (err) {
+                    console.error('Erro ao verificar token:', err);
+                    localStorage.removeItem('authToken');
+                }
+            }
+            setLoading(false);
+        };
+
+        checkAuth();
     }, []);
 
-    const login = async (email, senha) => {
+    const login = async (email, senha
+    ) => {
         try {
-            const response = await fetch('/api/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, senha }),
+            setLoading(true);
+            setError(null);
+
+            const response = await api.post('/auth/login', {
+                email,
+                senha,
             });
 
-            const data = await response.json();
-            if (response.ok) {
-                localStorage.setItem('token', data.token);
-                setToken(data.token);
-                setIsAuthenticated(true);
-                router.push('/admin'); // Redireciona para a página de administração
-            } else {
-                console.error(data.message);
-            }
-        } catch (error) {
-            console.error('Erro ao fazer login:', error);
+            
+
+            const userData = await response.data;
+            setUser(userData);
+            localStorage.setItem('authToken', userData.token);
+
+            // Redireciona para a rota pretendida ou dashboard
+            // const intendedRoute = sessionStorage.getItem('intendedRoute');
+            // if (intendedRoute) {
+            //     sessionStorage.removeItem('intendedRoute');
+            //     window.location.href = intendedRoute;
+            // }
+
+            return true;
+        } catch (err) {
+            setError(err.message);
+            return false;
+        } finally {
+            setLoading(false);
         }
     };
 
     const logout = () => {
-        localStorage.removeItem('token');
-        setToken(null);
-        setIsAuthenticated(false);
-        router.push('/login'); // Redireciona para a página de login
+        setUser(null);
+        localStorage.removeItem('authToken');
+        window.location.href = '/login';
+    };
+
+    const value = {
+        user,
+        loading,
+        error,
+        login,
+        logout,
+        isAuthenticated: !!user,
     };
 
     return (
-        <AuthContext.Provider value={{ isAuthenticated, login, logout, token }}>
+        <AuthContext.Provider value={value}>
             {children}
         </AuthContext.Provider>
     );
-};
+}
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = () => {
+    const context = useContext(AuthContext);
+    if (!context) {
+        throw new Error('useAuth deve ser usado dentro de um AuthProvider');
+    }
+    return context;
+};

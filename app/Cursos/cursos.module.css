@@ -1,0 +1,8 @@
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+}   
+.tittle {
+  font-size: 19px;
+  font-weight: bold;
+}
