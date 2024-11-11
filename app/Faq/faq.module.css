@@ -24,6 +24,7 @@
     text-align: center;
     color: #393b47ee;
     font-size: 38px;
+    font-family: 'Raleway', sans-serif;
 }
 .containerT{
     height: 8vh;
@@ -52,6 +53,7 @@
     text-align: center;
     font-size: 22px;
     margin-bottom: 1vh;
+    font-family: 'Raleway', sans-serif;
 }
 .subtiuloContato{
     font-weight: bold;
@@ -59,6 +61,7 @@
     color: #FF0000;
     font-size: 13px;
     margin-bottom: 4vh;
+    font-family: 'Raleway', sans-serif;
 }
 .divInformacoes{
     display: flex;
@@ -69,10 +72,12 @@
     color: rgb(0, 0, 0);
     text-align: center;
     margin-left: 5vh;
+    font-family: 'Raleway', sans-serif;
 }
 .localizacao{
     font-size: 16px;
     color: rgb(0, 0, 0);
     text-align: center;
     margin-left: 1vh;
+    font-family: 'Raleway', sans-serif;
 }
