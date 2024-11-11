@@ -1,10 +1,10 @@
 .Perguntas{
     font-weight: bold;
-    font-size: 4vh;
-    margin-left: 1vh;
+    font-size: 2vh;
+    margin-right: 22vh;
 }
 .Respostas{
     margin-top: 1vh;
     text-align: center;
-    margin-right: 5vh;
+    margin-right: 1vh;
 }
