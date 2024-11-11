@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import styles from './CarouselComponent.module.css'; // Certifique-se de importar o arquivo CSS
+import styles from './CarouselComponent.module.css'; 
 
 const CarouselComponent = () => (
   <div className={styles.carouselWrapper}>
@@ -16,6 +16,9 @@ const CarouselComponent = () => (
       </div>
       <div className={styles.carouselItem}>
         <img src="/senai.jpg" alt="Imagem 4" className={styles.carouselImage} />
+      </div>
+      <div className={styles.carouselItem}>
+        <img src="/senai.jpg" alt="Imagem 5" className={styles.carouselImage} />
       </div>
     </Carousel>
   </div>
