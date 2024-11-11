@@ -1,4 +1,5 @@
 import styles from "./sobreNos.module.css"
+
 const CardSobreNos = ({ foto, nome, funcao, desc, email, caminho }) => {
     return (
         <div className={styles.Card}>
