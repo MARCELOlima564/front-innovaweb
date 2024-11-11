@@ -11,7 +11,7 @@ export default function Faq() {
         <Header/>
       </div>
 <div className={styles.containerT}>
-            <h1 className={styles.titulo}>Perguntas Frequentes</h1>
+            <h1 className={styles.titulo}>PERGUNTAS FREQUENTES</h1>
             </div>
             <div className={styles.perguntas}>
                 <div className={styles.containerPerguntas}>

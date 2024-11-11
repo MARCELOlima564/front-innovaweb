@@ -55,7 +55,7 @@ export default function Sobrenos() {
             <img src="senai.webp" alt="senai" className={styles.imagem1} />
             <div className={styles.Divtexto}>
                 <div className={styles.divTitulo}>
-                    <h1 className={styles.texto3}>Sobre a Equipe e Projeto</h1>
+                    <h1 className={styles.texto3}>Sobre a Equipe e o Projeto</h1>
                 </div>
                 <p className={styles.texto}>A equipe InnovaWeb tem o prazer de anunciar a conclusão da plataforma de itinerários de cursos
                     para a Escola Técnica Senai. Nossa solução foi desenvolvida para oferecer uma experiência intuitiva e personalizada,
