@@ -5,6 +5,7 @@ import styles from './sobrenos.module.css';
 export default function Sobrenos() {
     return (
         <div className={styles.div1}>
+            
             <div className={styles.titulo1}>
             <h1 className={styles.titulo}>DESENVOLVEDORES DO PROJETO</h1>    
             </div>  
@@ -61,7 +62,7 @@ export default function Sobrenos() {
                     horários e vagas disponíveis. Agradecemos a todos os alunos e professores que contribuíram com feedback ao longo do desenvolvimento.
                     Estamos empolgados em ver como essa ferramenta irá enriquecer a jornada educacional dos estudantes!</p>
             </div>
-            <Footer />
+            
         </div>
     )
 }
