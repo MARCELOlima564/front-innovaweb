@@ -17,7 +17,7 @@ export function AuthProvider({ children }) {
             if (token) {
                 try {
                     // Aqui você faria uma chamada à API para validar o token
-                    const response = await api.post('/auth/Login', {
+                    const response = await api.post('/auth/login', {
                        email,
                        senha,
                     });
@@ -45,7 +45,7 @@ export function AuthProvider({ children }) {
             setLoading(true);
             setError(null);
 
-            const response = await api.post('/auth/Login', {
+            const response = await api.post('/auth/login', {
                 email,
                 senha,
             });
@@ -75,7 +75,7 @@ export function AuthProvider({ children }) {
     const logout = () => {
         setUser(null);
         localStorage.removeItem('authToken');
-        window.location.href = '/Login';
+        window.location.href = '/login';
     };
 
     const value = {
