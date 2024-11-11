@@ -15,7 +15,7 @@
 .Card:hover {
     transform: scale(1.1); 
     box-shadow: 0 0 20px rgb(0, 0, 0); 
-    border-bottom: 11px solid #26235C; 
+    border-bottom: 11px solid #FF0000; 
 }
 .fotos {
     width: 38%;
@@ -27,22 +27,25 @@
     color: black;
     font-size: 20px;
     padding: 5px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .funcoes {
-    color: #26235C;
+    color: #FF0000;
     font-size: 15px;
     padding: 2px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .descricao {
     color: black;
     font-size: 13px;
     padding: 10px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .DivEmail {
-    background-color: #26235C;
+    background-color: #393b47;
     border-radius: 6px;
     align-items: center;
     justify-content: center;
@@ -53,6 +56,7 @@
     font-size: 14px;
     justify-content: center;
     color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -72,7 +76,7 @@
     .Card:hover {
         transform: scale(1.1); 
         box-shadow: 0 0 20px rgb(0, 0, 0); 
-        border-bottom: 11px solid #26235C; 
+        border-bottom: 11px solid #FF0000; 
     }
     .fotos {
         width: 20vw;
@@ -83,19 +87,22 @@
         color: black;
         font-size: 18px;
         padding: 5px;
+        font-family: 'Raleway', sans-serif;
     }
     .funcoes {
-        color: #26235C;
+        color: #FF0000;
         font-size: 15px;
         padding: 2px;
+        font-family: 'Raleway', sans-serif;
     }
     .descricao {
         color: black;
         font-size: 13px;
         padding: 10px;
+        font-family: 'Raleway', sans-serif;
     }
     .DivEmail {
-        background-color: #26235C;
+        background-color: #393b47;
         border-radius: 6px;
         align-items: center;
         justify-content: center;
@@ -106,5 +113,6 @@
         font-size: 13px;
         justify-content: center;
         color: white;
+        font-family: 'Raleway', sans-serif;
     }
 }
