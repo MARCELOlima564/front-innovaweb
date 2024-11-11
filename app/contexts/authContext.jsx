@@ -29,7 +29,7 @@ export function AuthProvider({ children }) {
                         localStorage.removeItem('authToken');
                     }
                 } catch (err) {
-                    console.error('Erro ao verificar token:', err);
+                    console.log('Erro ao verificar token:', err);
                     localStorage.removeItem('authToken');
                 }
             }
