@@ -45,7 +45,8 @@
     padding-left: 1%;
     padding-right: 1%;
     border: 2px dashed #393b47ee;
-    margin-left: 10%;
+    margin-left: 9%;
+    margin-right: 9%;
 }
 
 .Divtexto:hover {
@@ -106,6 +107,7 @@
         padding-left: 2%;
         padding-right: 2%;
         border: 2px dashed #393b47ee;
+        margin: 10%;
     }
 
     .texto,
