@@ -1,5 +1,6 @@
 import styles from "./sobreNos.module.css"
-const CardSobreNos = ({ foto, nome, funcao, desc, email, caminho }) => {
+
+const CardSobreNos = ({ foto, nome, funcao, desc, email }) => {
     return (
         <div className={styles.Card}>
             <img src={foto} className={styles.fotos}/>

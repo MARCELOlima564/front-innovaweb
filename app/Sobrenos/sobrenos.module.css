@@ -10,12 +10,18 @@
 }
 .titulo {
     text-align: center;
-    font-size: 26px;
-    color: white;
+    font-size: 27px;
+    color: #ffffff;
 }
-.imagem{
+.titulo1{
+    background-color: #26235C;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+}
+.imagem1{
     width: 65vw;
-    height: 60vh;
+    height: 58vh;
     margin-bottom: 2%;
     margin-top: 2%;
     align-items: center;
@@ -23,25 +29,10 @@
     justify-content: center;
     margin-left: 17%;
 }
-.titulo1{
-    background-color: #FF0000;
-    margin: 1%;
-}
-.imagem1{
-    width: 55vw;
-    height: 50vh;
-    margin-bottom: 2%;
-    margin-top: 2%;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-left: 22%;
-}
 
 .Divtexto{
-    background-color: rgb(253, 251, 251);
     width: 80%;
-    height: 32vh;
+    height: auto;
     text-align: center;
     align-items: center;
     justify-content:center;
@@ -50,25 +41,29 @@
     margin-bottom: 6%;
     padding-left: 1%;
     padding-right: 1%;
-    border: 2px dashed #26235C;
-    box-shadow: 0 0 15px rgb(0, 0, 0);
+    border: 2px dashed #9b9b9b; 
     margin-left: 10%;
+}
+.Divtexto:hover{
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    border: 0px dashed #ffffff; 
 }
 .texto{
     font-size: 15px;
-    color: #26235C;
+    padding-bottom: 1%;
 }
 .texto2{
     font-size: 15px;
-    color: #26235C;
+    padding-bottom: 2%;
 }
 .texto3{
     font-size: 20px;
-    color: #FF0000;
+    color: #26235C;
 }
 .divTitulo{
     padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
 }
 
 @media (max-width: 768px) {
@@ -78,7 +73,7 @@
         justify-content: flex-start; 
     }
 
-    .imagem, .imagem1 {
+    .imagem1 {
         width: 90vw; 
         height: auto; 
         margin-left: 5%; 
@@ -87,7 +82,7 @@
     }
 
     .titulo {
-        font-size: 24px; 
+        font-size: 21px; 
     }
 
     .Divtexto {
@@ -96,8 +91,9 @@
         text-align: center;
         padding-left: 2%;
         padding-right: 2%;
+        border: 2px dashed #9b9b9b; 
     }
-
+    
     .texto, .texto2 {
         font-size: 13px; 
     }
@@ -107,8 +103,8 @@
     }
 
     .titulo1 {
-        font-size: 24px; 
-        margin: 2%; 
+        padding-top: 6%;
+        padding-bottom: 5%;
     }
 
     .divTitulo {
