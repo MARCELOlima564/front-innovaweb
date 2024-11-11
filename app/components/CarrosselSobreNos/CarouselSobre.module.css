@@ -1,63 +1,76 @@
-.carouselWrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .carousel {
-    width: 70%;
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  .carouselItem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: -60px;
-  
-  }
-  
-  .carouselImage {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .ant-carousel .slick-prev, .ant-carousel .slick-next {
-    background-color: #000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    z-index: 1;
-  }
-  
-  .ant-carousel .slick-prev {
-    left: -80px;
-  }
-  
-  .ant-carousel .slick-next {
-    right: -80px;
-  }
-  
-  .ant-carousel .slick-prev:hover, .ant-carousel .slick-next:hover {
-    background-color: #333;
-  }
-  
-  .ant-carousel .slick-dots li button {
-    background-color: #000;
-    width: 10px;
-    height: 10px;
-    opacity: 0.7;
-  }
-  
-  .ant-carousel .slick-dots li.slick-active button {
-    background-color: #333;
-    opacity: 1;
-  }
-  
-  .ant-carousel .slick-dots {
-    bottom: -30px;
-  }
-  
+/* Estilo para centralizar o cartão no meio da tela */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F5; /* Cor de fundo da página */
+}
+
+.carouselItem {
+  width: 250px; /* Define uma largura menor */
+  padding: 15px; /* Padding para espaçamento interno */
+  background-color: #FFF;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.carouselImage {
+  width: 60px; /* Tamanho reduzido da imagem */
+  height: 60px;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+
+.Nome {
+  font-size: 18px; /* Tamanho da fonte reduzido */
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.funcoes {
+  font-size: 12px; /* Tamanho da fonte reduzido */
+  color: #2E4D87;
+  margin-bottom: 10px;
+}
+
+.descricao {
+  font-size: 12px; /* Tamanho da fonte reduzido */
+  color: #666;
+  margin: 10px 0;
+}
+
+.email {
+  font-size: 10px; /* Tamanho da fonte reduzido */
+  color: #FFF;
+  background-color: #2E4D87;
+  padding: 6px 10px; /* Padding menor para o botão */
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.carouselItem::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #FF0000;
+  border-radius: 50%;
+}
+
+.carouselItem::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #FF0000;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
