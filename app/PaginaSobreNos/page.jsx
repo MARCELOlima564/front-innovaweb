@@ -24,6 +24,9 @@ export default function Sobrenos() {
                     <a href="/Sobrenos" className={styles.heroButton}>Saiba Mais</a>
                 </div>
             </div>
+            <div className={styles.seta}>
+            <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
+            </div>
             <Carrossel />
             <div className={styles.footerDiv}>
                 <Footer />

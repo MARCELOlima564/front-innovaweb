@@ -3,18 +3,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F5F5F5; /* Cor de fundo da página */
+  background-color: #FFF; /* Cor de fundo da página */
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
 }
 
 .carouselItem {
-  width: 250px; /* Define uma largura menor */
   padding: 15px; /* Padding para espaçamento interno */
-  background-color: #FFF;
+  max-width: 230px;
+  background-color: #393b47c0;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   position: relative;
+
 }
 
 .carouselImage {
@@ -22,34 +26,38 @@
   height: 60px;
   border-radius: 50%;
   margin: 10px 0;
+  margin-left: 65px;
 }
 
 .Nome {
   font-size: 18px; /* Tamanho da fonte reduzido */
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
   margin: 5px 0;
 }
 
 .funcoes {
-  font-size: 12px; /* Tamanho da fonte reduzido */
-  color: #2E4D87;
-  margin-bottom: 10px;
+  font-size: 13px; /* Tamanho da fonte reduzido */
+  color: #e40000;
+  margin-bottom: 3px;
 }
 
 .descricao {
   font-size: 12px; /* Tamanho da fonte reduzido */
-  color: #666;
+  color: #ffffff;
   margin: 10px 0;
+  text-align: center;
 }
 
 .email {
   font-size: 10px; /* Tamanho da fonte reduzido */
   color: #FFF;
-  background-color: #2E4D87;
+  background-color: #e40000;
   padding: 6px 10px; /* Padding menor para o botão */
   border-radius: 5px;
   text-decoration: none;
+  margin-bottom: 20px;
+  margin-top: 8px;
 }
 
 .carouselItem::before {
@@ -59,18 +67,6 @@
   left: 10px;
   width: 10px;
   height: 10px;
-  background-color: #FF0000;
+  background-color: #e40000;
   border-radius: 50%;
-}
-
-.carouselItem::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background-color: #FF0000;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
