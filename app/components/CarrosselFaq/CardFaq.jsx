@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import styles from './CarouselSobre.module.css';
+import styles from './cardfaq.module.css';
 
 const CarouselComponent = () => (
     <div className={styles.carouselWrapper}>
@@ -32,7 +32,6 @@ const CarouselComponent = () => (
                 </div>
                 <p className={styles.resposta}>Tem 17 anos, estudante formada do SENAI Valinhos,
                     no curso de Desenvolvimento de Sistemas em 2024.</p>
-                <p className={styles.email}>nicolly.silva5@aluno.senai.br</p>
             </div>
             <div className={styles.carouselItem}>
                 <div className={styles.infos}>
@@ -40,7 +39,6 @@ const CarouselComponent = () => (
                 </div>
                 <p className={styles.resposta}>Tem 17 anos, estudante formada do SENAI Valinhos,
                     no curso de Desenvolvimento de Sistemas em 2024.</p>
-                <p className={styles.email}>manuelamachado@aluno.senai.br</p>
             </div>
             <div className={styles.carouselItem}>
                 <div className={styles.infos}>
@@ -48,7 +46,6 @@ const CarouselComponent = () => (
                 </div>
                 <p className={styles.resposta}>Tem 17 anos, estudante formada do SENAI Valinhos,
                     no curso de Desenvolvimento de Sistemas em 2024.</p>
-                <p className={styles.email}>manuelamachado@aluno.senai.br</p>
             </div>
         </Carousel>
     </div>
