@@ -1,8 +1,11 @@
-'use client'
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import api from '@/api/api';
+import styles from './crudCursos.module.css';
+import { FaEdit, FaTrash } from 'react-icons/fa';
+import Header from '../components/Header/Header';
 
 const CursosPage = () => {
   const [cursos, setCursos] = useState([]);
@@ -77,7 +80,7 @@ const CursosPage = () => {
 
   const handleAtualizarCurso = async () => {
     if (!cursoSelecionadoId) return;
-    
+
     try {
       await api.put(`/cursos/${cursoSelecionadoId}`, {
         titulo: novoTitulo,
@@ -129,127 +132,153 @@ const CursosPage = () => {
   };
 
   return (
-    <div>
-      <h1>Cursos</h1>
+    <div className={styles.pageContainer}>
+      {/* <Header /> */}
+      <div className={styles.cardsContainer}>
+        <div className={styles.formCard}>
+          <h2>{cursoSelecionadoId ? 'Atualizar Curso' : 'Novo Curso'}</h2>
+          <label>Título:</label>
+          <input
+            type="text"
+            className={styles.inputField}
+            value={novoTitulo}
+            onChange={(e) => setNovoTitulo(e.target.value)}
+          />
+          <label>Modalidade:</label>
+          <input
+            type="text"
+            className={styles.inputField}
+            value={novaModalidade}
+            onChange={(e) => setNovaModalidade(e.target.value)}
+          />
+          <label>Carga Horária:</label>
+          <input
+            type="number"
+            className={styles.inputField}
+            value={novaCargaHoraria}
+            onChange={(e) => setNovaCargaHoraria(e.target.value)}
+          />
+          <label>Nível:</label>
+          <input
+            type="text"
+            className={styles.inputField}
+            value={novoNivel}
+            onChange={(e) => setNovoNivel(e.target.value)}
+          />
+          <label>Descrição:</label>
+          <input
+            type="text"
+            className={styles.inputField}
+            value={novaDescricao}
+            onChange={(e) => setNovoNivel(e.target.value)}
+          />
+          <label>Requisitos:</label>
+          <input
+            type="text"
+            className={styles.inputField}
+            value={novaDescricaoRequisitos}
+            onChange={(e) => setNovoNivel(e.target.value)}
+          />
+          <label>Programação:</label>
+          <input
+            type="text"
+            className={styles.inputField}
+            value={novaProgramacao}
+            onChange={(e) => setNovoNivel(e.target.value)}
+          />
+          <label>Modalidade aula:</label>
+          <input
+            type="text"
+            className={styles.inputField}
+            value={novaModalidadeAula}
+            onChange={(e) => setNovoNivel(e.target.value)}
+          />
+          <label>Metodologia de Ensino:</label>
+          <input
+            type="text"
+            className={styles.inputField}
+            value={novaMetodologiaEnsino}
+            onChange={(e) => setNovoNivel(e.target.value)}
+          />
+          <label>Idade:</label>
+          <input
+            type="text"
+            className={styles.inputField}
+            value={novaIdade}
+            onChange={(e) => setNovoNivel(e.target.value)}
+          />
+          <label>Turnos:</label>
+          <input
+            type="text"
+            className={styles.inputField}
+            value={novosTurnos}
+            onChange={(e) => setNovoNivel(e.target.value)}
+          />
+          <label>Status:</label>
+          <input
+            type="boolean"
+            className={styles.inputField}
+            value={novoStatus}
+            onChange={(e) => setNovoNivel(e.target.value)}
+          />
+          <label>Imagem:</label>
+          <input
+            type="text"
+            className={styles.inputField}
+            value={novaImagem}
+            onChange={(e) => setNovoNivel(e.target.value)}
+          />
+          {/* Adicione os outros inputs aqui, aplicando a classe styles.inputField */}
+          {cursoSelecionadoId ? (
+            <div>
+              <button onClick={handleAtualizarCurso}>Salvar Alterações</button>
+              <button onClick={resetFormFields}>Cancelar</button>
+            </div>
+          ) : (
+            <button onClick={handleCriarCurso}>Criar Curso</button>
+          )}
+        </div>
 
-      <h2>{cursoSelecionadoId ? 'Atualizar Curso' : 'Novo Curso'}</h2>
-      <div>
-        <label>Título:</label>
-        <input
-          type="text"
-          value={novoTitulo}
-          onChange={(e) => setNovoTitulo(e.target.value)}
-        />
-        <label>Modalidade:</label>
-        <input
-          type="text"
-          value={novaModalidade}
-          onChange={(e) => setNovaModalidade(e.target.value)}
-        />
-        <label>Carga Horária:</label>
-        <input
-          type="number"
-          value={novaCargaHoraria}
-          onChange={(e) => setNovaCargaHoraria(e.target.value)}
-        />
-        <label>Nível:</label>
-        <input
-          type="text"
-          value={novoNivel}
-          onChange={(e) => setNovoNivel(e.target.value)}
-        />
-        <label>Descrição:</label>
-        <textarea
-          value={novaDescricao}
-          onChange={(e) => setNovaDescricao(e.target.value)}
-        />
-        <label>Descrição de Requisitos:</label>
-        <textarea
-          value={novaDescricaoRequisitos}
-          onChange={(e) => setNovaDescricaoRequisitos(e.target.value)}
-        />
-        <label>Programação:</label>
-        <input
-          type="text"
-          value={novaProgramacao}
-          onChange={(e) => setNovaProgramacao(e.target.value)}
-        />
-        <label>Modalidade de Aula:</label>
-        <input
-          type="text"
-          value={novaModalidadeAula}
-          onChange={(e) => setNovaModalidadeAula(e.target.value)}
-        />
-        <label>Metodologia de Ensino:</label>
-        <input
-          type="text"
-          value={novaMetodologiaEnsino}
-          onChange={(e) => setNovaMetodologiaEnsino(e.target.value)}
-        />
-        <label>Idade:</label>
-        <input
-          type="number"
-          value={novaIdade}
-          onChange={(e) => setNovaIdade(e.target.value)}
-        />
-        <label>Turnos:</label>
-        <input
-          type="text"
-          value={novosTurnos}
-          onChange={(e) => setNovosTurnos(e.target.value)}
-        />
-        <label>Status:</label>
-        <input
-          type="text"
-          value={novoStatus}
-          onChange={(e) => setNovoStatus(e.target.value)}
-        />
-        <label>Imagem:</label>
-        <input
-          type="text"
-          value={novaImagem}
-          onChange={(e) => setNovaImagem(e.target.value)}
-        />
-        {cursoSelecionadoId ? (
-          <div>
-            <button onClick={handleAtualizarCurso}>Salvar Alterações</button>
-            <button onClick={resetFormFields}>Cancelar</button>
-          </div>
-        ) : (
-          <button onClick={handleCriarCurso}>Criar Curso</button>
-        )}
+        <div className={styles.coursesListCard}>
+          <h2>Listagem de Cursos</h2>
+          <table className={styles.coursesTable}>
+            <thead>
+              <tr>
+                <th className={styles.leftr} >Título</th>
+                <th className={styles.leftr}>Modalidade</th>
+                <th className={styles.leftr}>Carga Horária</th>
+                <th className={styles.leftr}>Descrição</th>
+                <th className={styles.leftr}>Programação</th>
+                <th className={styles.leftr}>Idade</th>
+                <th className={styles.leftr}>Turnos</th>
+                <th className={styles.leftr}>Status</th>
+                <th className={styles.leftr}>Imagem</th>
+                <th className={styles.leftr}>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cursos.map((curso) => (
+                <tr key={curso.id_curso} className={styles.courseRow}>
+                  <td>{curso.titulo}</td>
+                  <td>{curso.modalidade}</td>
+                  <td>{curso.carga_horaria}</td>
+                  <td>{curso.nivel}</td>
+                  <td>
+                    <FaEdit
+                      className={styles.actionIcon}
+                      onClick={() => preencherFormularioParaAtualizacao(curso)}
+                    />
+                    <FaTrash
+                      className={styles.actionIcon}
+                      onClick={() => handleDeletarCurso(curso.id_curso)}
+                    />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-
-      <h2>Listagem de Cursos</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Título</th>
-            <th>Modalidade</th>
-            <th>Carga Horária</th>
-            <th>Nível</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          {cursos.map((curso) => (
-            <tr key={curso.id_curso}>
-              <td>{curso.titulo}</td>
-              <td>{curso.modalidade}</td>
-              <td>{curso.carga_horaria}</td>
-              <td>{curso.nivel}</td>
-              <td>
-                <button onClick={() => preencherFormularioParaAtualizacao(curso)}>
-                  Atualizar
-                </button>
-                <button onClick={() => handleDeletarCurso(curso.id_curso)}>
-                  Deletar
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </div>
   );
 };
