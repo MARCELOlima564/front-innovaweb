@@ -21,7 +21,7 @@ export default function Sobrenos() {
                     <p className={styles.heroText}>A plataforma já está em funcionamento, proporcionando fácil acesso às informações dos cursos, como conteúdos,
                         horários e vagas disponíveis. Agradecemos a todos os alunos e professores que contribuíram com feedback ao longo do desenvolvimento.
                         Estamos empolgados em ver como essa ferramenta irá enriquecer a jornada educacional dos estudantes!</p>
-                    <a href="/Sobrenos" className={styles.heroButton}>Saiba Mais</a>
+                    <a href="/Sobrenos" className={styles.heroButton}>+ Saiba Mais</a>
                 </div>
             </div>
             <div className={styles.seta}>
@@ -29,7 +29,7 @@ export default function Sobrenos() {
             </div>
             <Carrossel />
             <div className={styles.aviso}>
-                <p className={styles.textoaviso}>Clique nos riscos Brancos para visualizar todos os Desenvolvedores. </p>
+                <p className={styles.textoaviso}>Clique nos riscos BRANCOS para visualizar todos os Desenvolvedores. </p>
             </div>
             <div className={styles.footerDiv}>
                 <Footer />
