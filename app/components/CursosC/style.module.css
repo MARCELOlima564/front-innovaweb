@@ -2,37 +2,19 @@
 
 .container {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Ajusta a linha caso haja muitos cursos */
-  gap: 1rem; /* Espaçamento entre os cursos */
+ justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem; 
   padding: 10px;
+  
 }
 
-.topcontainer {
-  display: flex;
-  gap: 1rem; /* Espaçamento entre os cursos */
-  flex-wrap: wrap; /* Permite quebra de linha caso necessário */
-  width: 100%;
-  justify-content: center;
-}
-
-.curso {
-  background-color: #ffffff;
-  padding: 22px; /* Reduzido para tornar o bloco menor */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 300px; /* Largura máxima menor */
-  min-width: 330px; /* Largura mínima menor */
-  min-height: 250px; /* Altura mínima menor */
-  border-radius: 8px;
-}
 
 .top {
   text-align: center;
 }
+
+
 
 .tittle {
   font-size: 10px; /* Fonte menor para o título */
@@ -115,3 +97,4 @@
     
   
 }
+
