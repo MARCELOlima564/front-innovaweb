@@ -1,13 +1,13 @@
 .pageContainer {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 101vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-image: url("../../public/senai.jpg");
     color: white;
-    background-color: #F5F5F5;
+    background-color: #393b47;
 }
 
 .titulo1 {
@@ -64,7 +64,6 @@
 }
 
 .footerDiv {
-    margin-top: auto;
     background-color: #393b47;
     padding: 10px;
     text-align: center;
@@ -79,16 +78,14 @@
 }
 
 .aviso {
-    background-color: #e40000;
-    margin-bottom: 35px;
-    width: 330px;
+    background-color: #393b47;
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 462px;
-    border-radius: 6px;
     padding-top: 4px;
     padding-bottom: 4px;
+    height: auto;
+    width: auto;
 }
 
 .textoaviso {
@@ -100,6 +97,9 @@
 .targetSection {
     padding: 40px 0;
     text-align: center;
+    background-color: #393b47;
 }
-
+.seta{
+    background-color: #393b47;
+}
 
