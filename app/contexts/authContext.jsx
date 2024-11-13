@@ -1,4 +1,5 @@
 'use client';
+
 import { createContext, useContext, useState, useEffect } from 'react';
 import api from '@/api/api';
 
@@ -28,7 +29,7 @@ export function AuthProvider({ children }) {
                         localStorage.removeItem('authToken');
                     }
                 } catch (err) {
-                    console.error('Erro ao verificar token:', err);
+                    console.log('Erro ao verificar token:', err);
                     localStorage.removeItem('authToken');
                 }
             }
@@ -74,7 +75,7 @@ export function AuthProvider({ children }) {
     const logout = () => {
         setUser(null);
         localStorage.removeItem('authToken');
-        window.location.href = '/Login';
+        window.location.href = '/login';
     };
 
     const value = {

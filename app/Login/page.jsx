@@ -2,6 +2,10 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/app/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
+import styles from './login.module.css';
+import { motion } from 'framer-motion';
+import Header from '../components/Header/Header';
+
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -11,7 +15,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      router.push('/DashBoard');
+      router.push('/CrudCursos');
     }
   }, [isAuthenticated, router]);
 
@@ -19,59 +23,69 @@ export default function LoginPage() {
     e.preventDefault();
     const success = await login(email, password);
     if (success) {
-      router.push('/DashBoard');
+      router.push('/CrudCursos');
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full space-y-8">
-        <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Login
-          </h2>
-        </div>
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="rounded-md shadow-sm -space-y-px">
-            <div>
-              <input
-                type="email"
-                required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div>
-              <input
-                type="password"
-                required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Senha"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-          </div>
-
-          {error && (
-            <div className="text-red-500 text-sm text-center">
-              {error}
-            </div>
-          )}
-
-          <div>
-            <button
-              type="submit"
-              disabled={loading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
-              {loading ? 'Carregando...' : 'Entrar'}
-            </button>
-          </div>
-        </form>
+    <div className={styles.loginPage}>
+      <div className={styles.headerDiv}>
+        <Header />
       </div>
+      <div className={styles['login-reg-panel']}>
+        <div className={styles['white-panel']}>
+          <div className={styles.loginContainer}>
+            <h2 className={styles.loginTitle}>Login</h2>
+            <form className={styles.loginForm} onSubmit={handleSubmit}>
+              <div>
+                <input
+                  type="email"
+                  required
+                  className={styles.loginInput}
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div>
+                <input
+                  type="password"
+                  required
+                  className={styles.loginInput}
+                  placeholder="Senha"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+
+              {error && (
+                <div className={styles.loginError}>
+                  {error}
+                </div>
+              )}
+
+              <div>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className={styles.loginButton}
+                >
+                  {loading ? 'Carregando...' : 'Entrar'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <motion.div
+          className={styles.motivationalText}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Transformar carreiras começa com a escolha certa, mas as informações precisam ser acessíveis!
+        </motion.div>
+      </div>
+
     </div>
   );
 }

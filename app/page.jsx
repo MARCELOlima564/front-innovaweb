@@ -7,6 +7,8 @@ import Footer from "./components/Footer/Footer";
 import Carrossel from "./components/Carrossel/CarouselComponent";
 import Wave from "react-wavify";
 import styles from "./page.module.css";
+import VoiceGreeting from "./components/Voice/VoiceGreeting";
+import AreaCardsPagination from "./components/AreaCardsPagination/AreaCardsPagination";
 
 export default function Home() {
   const [activeCard, setActiveCard] = useState(null);
@@ -37,10 +39,12 @@ export default function Home() {
 
   return (
     <div className={styles.backgroundimg}>
+       <VoiceGreeting />
       <Header />
       <div className={styles.redSection}>
         <div className={styles.banner}>
           <motion.h1
+            className={styles.title}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -106,16 +110,46 @@ export default function Home() {
       </div>
 
       <div ref={targetSectionRef} className={styles.targetSection}>
-
-
-        <div className={styles.infoSection}>
-          <h2 className={styles.infoTitle}>Conhecendo o SENAI Valinhos</h2>
-          <p className={styles.infoSubtitle}>
+        <motion.div 
+          className={styles.infoSection}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.h2 
+            className={styles.infoTitle}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Conhecendo o SENAI Valinhos
+          </motion.h2>
+          <motion.p 
+            className={styles.infoSubtitle}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             Nossa instituição é ótima por oferecer formação de qualidade e
             preparação prática para o mercado.
-          </p>
-          <div className={styles.infoCardsContainer}>
-            <div className={styles.infoCard}>
+          </motion.p>
+          <motion.div 
+            className={styles.infoCardsContainer}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <motion.div 
+              className={styles.infoCard}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
               <div className={styles.infoCardGif}></div>
               <img className={styles.infoCardImage} src="1.png" alt="Imagem 1" />
               <h4 className={styles.infoCardTitle}>Missão</h4>
@@ -124,9 +158,15 @@ export default function Home() {
                 competitividade da indústria, por meio da educação profissional
                 e da inovação e tecnologia.
               </p>
-            </div>
+            </motion.div>
 
-            <div className={styles.infoCard}>
+            <motion.div 
+              className={styles.infoCard}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
               <div className={styles.infoCardGif}></div>
               <img className={styles.infoCardImage} src="2.png" alt="Imagem 2" />
               <h4 className={styles.infoCardTitle}>Visão</h4>
@@ -135,9 +175,15 @@ export default function Home() {
                 global, como indutor da inovação e da tecnologia para a
                 competitividade da indústria.
               </p>
-            </div>
+            </motion.div>
 
-            <div className={styles.infoCard}>
+            <motion.div 
+              className={styles.infoCard}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+            >
               <div className={styles.infoCardGif}></div>
               <img className={styles.infoCardImage} src="3.png" alt="Imagem 3" />
               <h4 className={styles.infoCardTitle}>Compromissos</h4>
@@ -145,9 +191,9 @@ export default function Home() {
                 Formação para oportunidades reais de trabalho. Meritocracia
                 baseada em oportunidades iguais para todos.
               </p>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
 
         <div className={styles.middleSection}>
           <div className={styles.leftImage}>
@@ -176,29 +222,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.cardsInnerContainer}>
-            {[1, 2, 3, 4, 5, 6].map((item, index) => (
-              <motion.div
-                key={index}
-                className={styles.card}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className={styles.cardContent}>
-                  <h4 className={styles.cardTitle}>Área {item}</h4>
-                  <p className={styles.cardDescription}>Descrição breve da Área {item}.</p>
-                  <span className={styles.cardLink}>+ Saiba mais</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div style={{ textAlign: "center", margin: "20px 0" }}>
-            <button className={styles.buttonMais}>Quero mais opções</button>
-          </div>
+          <AreaCardsPagination />
         </div>
 
         <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
