@@ -15,7 +15,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      router.push('/DashBoard');
+      router.push('/CrudCursos');
     }
   }, [isAuthenticated, router]);
 
@@ -23,7 +23,7 @@ export default function LoginPage() {
     e.preventDefault();
     const success = await login(email, password);
     if (success) {
-      router.push('/DashBoard');
+      router.push('/CrudCursos');
     }
   };
 
