@@ -1,0 +1,84 @@
+.pageContainer {
+    background-image: url('/path/to/your/background.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.cardsContainer {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+}
+
+.formCard {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    flex: 1 1 40%;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputField {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #cccccc;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.coursesListCard {
+    background: #393b47;
+    color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    flex: 1 1 60%;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coursesTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+
+.coursesTable th,
+.coursesTable td {
+    padding: 0.3rem;
+    text-align: left;
+    font-size: small;
+}
+
+.coursesTable th {
+    background-color: #4a4c59;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.courseRow {
+    background: #4a4c59;
+    border-radius: 8px;
+    color: white;
+}
+
+.courseRow td {
+    background: #525561;
+    border-bottom: 1px solid #393b47;
+}
+
+.actionIcon {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    color: #fff;
+}
+
+.actionIcon:hover {
+    color: #f2f2f2;
+}
