@@ -88,3 +88,59 @@
     margin: 0 auto 0.5%;
     margin-top: 2vh;
   }
+
+
+  
+  /* Mobile Styles */
+@media (max-width: 767px) {
+    .container {
+      padding: 0 5%;
+    }
+  
+    .containerPerguntas {
+      width: 100%;
+      padding: 4% 2%;
+    }
+  
+    .mobileLayout {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      text-align: left;
+    }
+  
+    .circulo {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  
+    .titulo {
+      font-size: 28px;
+      margin-top: 4vh;
+    }
+  
+    .containerContato {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 4vh;
+    }
+  
+    .tituloContato {
+      font-size: 18px;
+    }
+  
+    .subtiuloContato {
+      font-size: 12px;
+      margin-bottom: 3vh;
+    }
+  
+    .telefone, .localizacao {
+      font-size: 14px;
+      margin-left: 3vh;
+    }
+  
+    .redSeta {
+      width: 100px;
+      margin-top: 1vh;
+    }
+  }
