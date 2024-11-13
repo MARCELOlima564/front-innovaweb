@@ -3,10 +3,12 @@
     font-size: 2vh;
     margin-right: 22vh;
     font-family: 'Raleway', sans-serif;
+    font-size: 3vh;
 }
 .Respostas{
     margin-top: 1vh;
-    text-align: center;
+    text-align: left;
     margin-right: 1vh;
     font-family: 'Raleway', sans-serif;
+
 }
