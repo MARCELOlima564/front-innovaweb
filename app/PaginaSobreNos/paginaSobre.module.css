@@ -12,7 +12,7 @@
 
 .titulo1 {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px ;
+    padding: 20px;
     text-align: center;
 }
 
@@ -20,6 +20,7 @@
     font-size: 35px;
     font-family: 'Raleway', sans-serif;
     margin-top: 62px;
+    font-weight: bold;
 }
 
 .heroSection {
@@ -29,7 +30,7 @@
     align-items: center;
     height: 53vh;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .heroText {
@@ -45,13 +46,15 @@
 .heroButton {
     font-size: 20px;
     background-color: #e40000;
-    padding: 15px 30px;
+    padding: 10px 15px;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
     margin-top: 20px;
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .heroButton:hover {
@@ -62,30 +65,40 @@
 .footerDiv {
     margin-top: auto;
     background-color: #393b47;
-    padding: 10px ;
+    padding: 10px;
     text-align: center;
     color: white;
 }
-.redSeta{
+
+.redSeta {
     width: 150px;
     display: block;
     margin: 0 auto 0.5%;
-    margin-top: 40px;
+    margin-top: 45px;
 }
-.aviso{
+
+.aviso {
     background-color: #e40000;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     width: 330px;
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 460px;
+    margin-left: 462px;
     border-radius: 6px;
     padding-top: 4px;
     padding-bottom: 4px;
 }
-.textoaviso{
+
+.textoaviso {
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 13px;
 }
+
+.targetSection {
+    padding: 40px 0;
+    text-align: center;
+}
+
+

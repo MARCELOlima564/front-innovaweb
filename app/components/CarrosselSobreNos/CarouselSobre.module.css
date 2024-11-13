@@ -1,63 +1,69 @@
 /* Estilo para centralizar o cartão no meio da tela */
 .container {
-  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #FFF; /* Cor de fundo da página */
   text-align: center;
-  margin-bottom: 40px;
-  margin-top: 30px;
 }
 
 .carouselItem {
   padding: 15px; /* Padding para espaçamento interno */
-  max-width: 230px;
-  background-color: #393b47aa;
+  max-width: 500px;
+  background-color: #393b47dc;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-family: 'Raleway', sans-serif;
   position: relative;
-
+  height: 280px;
 }
 
 .carouselImage {
-  width: 60px; /* Tamanho reduzido da imagem */
-  height: 60px;
+  width: 90px; /* Tamanho reduzido da imagem */
+  height: 90px;
   border-radius: 50%;
   margin: 10px 0;
-  margin-left: 65px;
+  margin-left: 40px;
 }
 
 .Nome {
-  font-size: 18px; /* Tamanho da fonte reduzido */
+  font-size: 20px; /* Tamanho da fonte reduzido */
   font-weight: bold;
   color: #ffffff;
   margin: 5px 0;
 }
 
 .funcoes {
-  font-size: 13px; /* Tamanho da fonte reduzido */
+  font-size: 16px; /* Tamanho da fonte reduzido */
   color: #e40000;
   margin-bottom: 3px;
+  font-weight: bold;
 }
 
 .descricao {
-  font-size: 12px; /* Tamanho da fonte reduzido */
+  font-size: 15px; /* Tamanho da fonte reduzido */
   color: #ffffff;
   margin: 10px 0;
   text-align: center;
+  margin-right: 35px;
+  text-align:start;
+  margin-top: 20px;
+  margin-left: 40px;
 }
 
 .email {
-  font-size: 10px; /* Tamanho da fonte reduzido */
+  font-size: 12px; /* Tamanho da fonte reduzido */
   color: #FFF;
   background-color: #e40000;
-  padding: 6px 10px; /* Padding menor para o botão */
+  padding: 1px 0; /* Padding menor para o botão */
   border-radius: 5px;
   text-decoration: none;
   margin-bottom: 20px;
-  margin-top: 8px;
+  margin-top: 25px;
+  max-width: 200px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 125px;
 }
 
 .carouselItem::before {
@@ -65,8 +71,19 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background-color: #e40000;
   border-radius: 50%;
+}
+
+.card{
+  display: flex;
+}
+
+.infos{
+  display: block;
+  margin-left: 20px;
+  margin-top: 15px;
+  text-align: center;
 }
