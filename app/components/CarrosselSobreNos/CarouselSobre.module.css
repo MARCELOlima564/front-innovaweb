@@ -2,19 +2,24 @@
 .container {
   justify-content: center;
   align-items: center;
-  background-color: #FFF; /* Cor de fundo da página */
+  background-color: #393b47; /* Cor de fundo da página */
   text-align: center;
+}
+
+.carouselWrapper{
+  background-color: #393b47;
 }
 
 .carouselItem {
   padding: 15px; /* Padding para espaçamento interno */
   max-width: 500px;
-  background-color: #393b47dc;
+  background-color: #ffffff;
   border-radius: 15px;
   text-align: center;
   font-family: 'Raleway', sans-serif;
   position: relative;
   height: 280px;
+  border-bottom: 23px solid #e40000;
 }
 
 .carouselImage {
@@ -28,7 +33,7 @@
 .Nome {
   font-size: 20px; /* Tamanho da fonte reduzido */
   font-weight: bold;
-  color: #ffffff;
+  color: #393b47;
   margin: 5px 0;
 }
 
@@ -41,7 +46,7 @@
 
 .descricao {
   font-size: 15px; /* Tamanho da fonte reduzido */
-  color: #ffffff;
+  color: #393b47;
   margin: 10px 0;
   text-align: center;
   margin-right: 35px;
@@ -57,7 +62,7 @@
   padding: 1px 0; /* Padding menor para o botão */
   border-radius: 5px;
   text-decoration: none;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   margin-top: 25px;
   max-width: 200px;
   text-align: center;
