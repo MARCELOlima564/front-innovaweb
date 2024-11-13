@@ -8,7 +8,7 @@ const Header = () => {
       <div className={styles.opcoes}>
         <a href="/Cursos" className={styles.link}>Cursos</a>
         <a href="/Faq" className={styles.link}>FAQ</a>
-        <a href="/Sobrenos" className={styles.link}>Desenvolvedores</a>
+        <a href="/PaginaSobreNos" className={styles.link}>Desenvolvedores</a>
         <a href="/login" className={styles.link}>Login</a>
 
       </div>
