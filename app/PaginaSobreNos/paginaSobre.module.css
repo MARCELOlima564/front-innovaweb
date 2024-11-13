@@ -55,6 +55,7 @@
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     cursor: pointer;
+    border: none;
 }
 
 .heroButton:hover {
