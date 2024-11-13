@@ -119,7 +119,7 @@
 .footerDiv {
     margin-top: auto;
     background-color: #393b47;
-    padding: 10px 0;
+    padding: 10px ;
     text-align: center;
     color: white;
 }
@@ -128,4 +128,12 @@
     display: block;
     margin: 0 auto 0.5%;
     margin-top: 40px;
+}
+.aviso{
+    background-color: #e40000;
+    margin-bottom: 20px;
+}
+.textoaviso{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
 }

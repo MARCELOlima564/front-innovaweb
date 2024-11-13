@@ -28,6 +28,9 @@ export default function Sobrenos() {
             <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
             </div>
             <Carrossel />
+            <div className={styles.aviso}>
+                <p className={styles.textoaviso}>Clique nos riscos Brancos para visualizar todos os Desenvolvedores. </p>
+            </div>
             <div className={styles.footerDiv}>
                 <Footer />
             </div>
