@@ -1,4 +1,5 @@
 import styles from './style.module.css';
+import DetalhesCurso from '../DetalheCursos/DetalheCursos';
 
 function CursosC({
   titulo,
@@ -26,7 +27,7 @@ function CursosC({
               </div>
 
             </div>
-            <a href="/DetalheCursos/DetalheCursos.jsx">  Ver Curso </a>
+            <a className={styles.btn} href="../DetalheCursos/DetalheCursos">  Ver Curso </a>
           </div>
         </div>
       </div>
