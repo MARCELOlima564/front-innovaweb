@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import api from '@/api/api';
-import styles from './crudCursos.module.css';
+import styles from './crudcursos.module.css';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import Header from '../components/Header/Header';
 
