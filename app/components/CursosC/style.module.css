@@ -1,12 +1,12 @@
-/* style.module.css */
+
 
 .container {
-  display: flex;
- justify-content: center;
   flex-wrap: wrap;
   gap: 3rem; 
   padding: 10px;
-  
+  background-color: #dfdfdf;
+  max-width: 255px;
+  max-height: 390px;
 }
 
 
@@ -25,7 +25,7 @@
 }
 
 .text {
-  margin: 4px 0; /* Menor margem entre os textos */
+  margin: 5px 0; /* Menor margem entre os textos */
   font-family:'Courier New', Courier, monospace;
   font-size: 15px; /* Fonte menor */
   color: #555;
@@ -34,23 +34,24 @@
 .botoes {
   display: flex;
   gap: 8px;
-  margin-top: 10px;
+  margin-top: 13px;
+
 }
 
 .btn {
-  padding: 8px 12px; /* Botões mais compactos */
+  padding: 8px 12px; 
   background-color: #f20000e0;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s;
-  font-size: 0.85rem; /* Fonte menor */
+  transition: background-color 0.4s;
+  font-size: 0.85rem; 
 }
 
 .btn:hover {
-  background-color: #2e0293; /* Mudança de cor ao passar o mouse */
+  background-color: #260080; 
 }
 
 .btn a {
@@ -63,19 +64,17 @@
   font-size: 0.8rem;
   color: #555;
   text-align: center;
-  max-width: 100%;
+  max-width: 130%;
   min-width: 100%;
   min-height: 100%;
   border-radius: 4px;
-
-    align-items: center;
-    justify-content: center;
+ justify-content: center;
 }
 
 .infos {
   display: flex;
   gap: 15px;
-  margin-top: 10px;
+  margin-top: 15px;
   align-items: center;
   justify-content: center;
   max-width: 100%;
@@ -86,15 +85,33 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   align-items: center;
-  display: flex;
+  font-size: 20px;
+ 
+
 }
 
 .textInfo{
-  font-size: 13px;
-    color: #555;
+  font-size: 15px;
+    color: #ca0606;
     font-family:'Courier New', Courier, monospace;
     font-weight: bold;
+
     
-  
 }
+.Cards {
+  background-color: rgb(168, 16, 16);
+  flex: 0 0 calc(25% - 15px); /* 25% width with 15px gap */
+  max-height: 60vh;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 7px 23px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 7px 23px -3px rgba(0,0,0,0.75);
+  box-shadow: 2px 7px 23px -3px rgba(0,0,0,0.75);
+
+}
+.text{
+  font-size: 17px;
+ }
+
+
+
 

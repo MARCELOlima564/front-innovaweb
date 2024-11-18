@@ -26,11 +26,7 @@ function CursosC({
               </div>
 
             </div>
-            <div className={styles.botoes}>
-              <button className={styles.btn}>
-                <a href="#">Ver Curso</a>
-              </button>
-            </div>
+            <a href="/DetalheCursos/DetalheCursos.jsx">  Ver Curso </a>
           </div>
         </div>
       </div>
