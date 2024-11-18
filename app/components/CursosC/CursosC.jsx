@@ -26,7 +26,7 @@ function CursosC({
               </div>
 
             </div>
-            <a href="/DetalheCursos/DetalheCursos.jsx">  Ver Curso </a>
+            <a className={styles.btn} href="/DetalheCursos/DetalheCursos.jsx">  Ver Curso </a>
           </div>
         </div>
       </div>
