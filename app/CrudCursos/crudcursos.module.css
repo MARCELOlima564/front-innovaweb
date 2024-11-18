@@ -1,84 +1,141 @@
+/* Estilos gerais para a página */
 .pageContainer {
-    background-image: url('/path/to/your/background.jpg'); /* Substitua pelo caminho da sua imagem */
-    background-size: cover;
     display: flex;
-    justify-content: center;
-    padding: 2rem;
-    font-family: 'Raleway', sans-serif;
-}
-
-.cardsContainer {
-    display: flex;
-    gap: 2rem;
-    max-width: 1200px;
-    width: 100%;
-    padding: 2rem;
-}
-
-.formCard {
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    flex: 1 1 40%;
-    min-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.inputField {
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #cccccc;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-}
-
-.coursesListCard {
-    background: #393b47;
-    color: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    flex: 1 1 60%;
-    min-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.coursesTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-
-.coursesTable th,
-.coursesTable td {
-    padding: 0.3rem;
-    text-align: left;
-    font-size: small;
-}
-
-.coursesTable th {
-    background-color: #4a4c59;
-    color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  .errorMessage {
+    color: red;
+    margin-bottom: 20px;
     font-weight: bold;
-}
-
-.courseRow {
-    background: #4a4c59;
+  }
+  
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Formulário */
+  .formCard {
+    background-color: white;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+  
+  .formCard h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .inputField,
+  .textareaField {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .textareaField {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .formActions button {
+    background-color: #007bff;
     color: white;
-}
-
-.courseRow td {
-    background: #525561;
-    border-bottom: 1px solid #393b47;
-}
-
-.actionIcon {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    margin: 0 0.5rem;
-    color: #fff;
-}
-
-.actionIcon:hover {
-    color: #f2f2f2;
-}
+  }
+  
+  .formActions button:disabled {
+    background-color: #cccccc;
+  }
+  
+  .formActions button[type='button'] {
+    background-color: #f44336;
+  }
+  
+  /* Lista de Cursos */
+  .cursosList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .cursosList h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+  }
+  
+  table th,
+  table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f1f1f1;
+  }
+  
+  table td {
+    background-color: #f9f9f9;
+  }
+  
+  .editButton,
+  .deleteButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  .editButton:hover,
+  .deleteButton:hover {
+    color: #f44336;
+  }
+  
+  /* Estilos adicionais para uma boa responsividade */
+  @media (max-width: 768px) {
+    .formCard {
+      width: 90%;
+    }
+  
+    .cursosList {
+      width: 100%;
+    }
+  }
+  
