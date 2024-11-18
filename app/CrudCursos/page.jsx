@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import api from '@/api/api';
-import styles from './crudCursos.module.css';
+import styles from './crudcursos.module.css';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import Header from '../components/Header/Header';
 
@@ -347,8 +347,6 @@ const CursosPage = () => {
           <div key={curso.id_curso} className={styles.cursoItem}>
             <h3>{curso.titulo}</h3>
             <p>{curso.descricao}</p>
-            <p>{curso.modalidade}</p>
-
             <div className={styles.cursoActions}>
               <FaEdit
                 className={styles.icon}
