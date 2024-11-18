@@ -1,0 +1,104 @@
+/* Estilo para centralizar o cartão no meio da tela */
+.container {
+    justify-content: center;
+    align-items: center;
+    background-color: #393b47; /* Cor de fundo da página */
+    text-align: center;
+  }
+  
+  .carouselWrapper{
+    background-color: #393b47;
+  }
+  
+  .carouselItem {
+    padding: 15px; /* Padding para espaçamento interno */
+    max-width: 500px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    height: 280px;
+    border-bottom: 23px solid #e40000;
+  }
+  
+  .pergunta {
+    font-size: 20px; /* Tamanho da fonte reduzido */
+    font-weight: bold;
+    color: #393b47;
+    margin: 5px 0;
+  }
+  
+  .resposta {
+    font-size: 15px; /* Tamanho da fonte reduzido */
+    color: #393b47;
+    margin: 10px 0;
+    text-align: center;
+    margin-right: 35px;
+    text-align:start;
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+  
+  
+  .carouselItem::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #e40000;
+    border-radius: 50%;
+  }
+  
+  .infos{
+    display: block;
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .carouselItem {
+      max-width: 90%;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .pergunta {
+      font-size: 18px;
+    }
+  
+    .resposta {
+      font-size: 14px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .carouselItem {
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    .pergunta {
+      font-size: 16px;
+    }
+  
+    .resposta {
+      font-size: 13px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .infos {
+      margin-left: 0;
+      text-align: center;
+    }
+  }

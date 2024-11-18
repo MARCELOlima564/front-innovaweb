@@ -104,3 +104,53 @@
     background-color: #393b47;
 }
 
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 28px;
+        margin-top: 50px;
+    }
+
+    .heroText {
+        font-size: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .heroButton {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .heroSection {
+        height: auto;
+        padding: 20px;
+    }
+
+    .heroText {
+        font-size: 13px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .heroButton {
+        font-size: 16px;
+        padding: 8px 10px;
+        margin-top: 15px;
+    }
+
+    .redSeta {
+        width: 100px;
+        margin-top: 20px;
+    }
+
+    .textoaviso {
+        font-size: 12px;
+    }
+}
