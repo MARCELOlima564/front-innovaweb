@@ -1,25 +1,25 @@
 .pageContainer {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 101vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-image: url("../../public/senai.jpg");
     color: white;
-    background-color: #F5F5F5;
+    background-color: #393b47;
 }
 
 .titulo1 {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
 .titulo {
     font-size: 35px;
     font-family: 'Raleway', sans-serif;
-    margin-top: 62px;
+    margin-top: 83px;
     font-weight: bold;
 }
 
@@ -36,10 +36,10 @@
 .heroText {
     font-size: 15px;
     font-weight: bold;
-    margin-bottom: 1%;
+    margin-bottom: 30px;
     text-align: center;
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-left: 150px;
+    margin-right: 150px;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -51,11 +51,12 @@
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
+    margin-top: 25px;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     cursor: pointer;
     border: none;
+    margin-bottom: 30px;
 }
 
 .heroButton:hover {
@@ -64,7 +65,6 @@
 }
 
 .footerDiv {
-    margin-top: auto;
     background-color: #393b47;
     padding: 10px;
     text-align: center;
@@ -79,16 +79,14 @@
 }
 
 .aviso {
-    background-color: #e40000;
-    margin-bottom: 35px;
-    width: 330px;
+    background-color: #393b47;
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 462px;
-    border-radius: 6px;
     padding-top: 4px;
     padding-bottom: 4px;
+    height: auto;
+    width: auto;
 }
 
 .textoaviso {
@@ -100,6 +98,59 @@
 .targetSection {
     padding: 40px 0;
     text-align: center;
+    background-color: #393b47;
+}
+.seta{
+    background-color: #393b47;
 }
 
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 28px;
+        margin-top: 50px;
+    }
 
+    .heroText {
+        font-size: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .heroButton {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .heroSection {
+        height: auto;
+        padding: 20px;
+    }
+
+    .heroText {
+        font-size: 13px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .heroButton {
+        font-size: 16px;
+        padding: 8px 10px;
+        margin-top: 15px;
+    }
+
+    .redSeta {
+        width: 100px;
+        margin-top: 20px;
+    }
+
+    .textoaviso {
+        font-size: 12px;
+    }
+}

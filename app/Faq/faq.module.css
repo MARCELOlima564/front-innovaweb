@@ -1,90 +1,156 @@
-.containerPerguntas{
+.pageContainer {
     display: flex;
-    background-color: #393b47ee;
-    margin: 2%;
+    flex-direction: column;
+    height: 101vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../../public/senai.jpg");
     color: white;
-    width: 35vw;
-    padding-bottom: 2%;
-    padding-top: 2%;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
-    align-items: center;
+    background-color: #393b47;
+}
+
+.titulo1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
     text-align: center;
-    border-bottom: 6px solid #949494;
 }
-.containerPerguntas:hover {
-    transform: scale(1.1); 
-    box-shadow: 0 0 15px rgb(0, 0, 0); 
-    border-bottom: 6px solid #e40000; 
-}
-.perguntas{
-    display: flex;
-}
-.titulo{
-    margin-top: 6vh;
-    text-align: center;
-    color: #393b47ee;
+
+.titulo {
     font-size: 35px;
     font-family: 'Raleway', sans-serif;
-}
-.containerT{
-    height: 8vh;
-    width: 100%;
-  border-bottom: 4px solid #e40000;
-}
-
-.circulo{
-    margin-left: 3vh;
-    margin-bottom: 7vh;
-}
-.containerContato{
-    width: 80vh;
-    height: auto;
-    margin-left: 59vh;
-    padding-top: 2vh;
-    padding-bottom: 3vh;
-    margin-top: 2vh;
-    border-radius: 8px;
-    border: 2px dashed #393b47ee;
-    margin-bottom: 8vh;
-}
-
-.tituloContato{
-    color: #393b47ee;
-    text-align: center;
-    font-size: 22px;
-    margin-bottom: 1vh;
-    font-family: 'Raleway', sans-serif;
-}
-.subtiuloContato{
+    margin-top: 83px;
     font-weight: bold;
-    text-align: center;
-    color: #e40000;
-    font-size: 13px;
-    margin-bottom: 4vh;
-    font-family: 'Raleway', sans-serif;
 }
-.divInformacoes{
+
+.heroSection {
     display: flex;
-    margin-top: 3vh;
-}
-.telefone{
-    font-size: 16px;
-    color: rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 53vh;
     text-align: center;
-    margin-left: 5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.heroText {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
     font-family: 'Raleway', sans-serif;
 }
-.localizacao{
-    font-size: 16px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    margin-left: 1vh;
+
+.heroButton {
+    font-size: 20px;
+    background-color: #e40000;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 30px;
 }
+
+.heroButton:hover {
+    background-color: #ffffff;
+    color: #e40000;
+}
+
+.footerDiv {
+    background-color: #393b47;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
 .redSeta {
     width: 150px;
     display: block;
     margin: 0 auto 0.5%;
-    margin-top: 2vh;
-  }
+    margin-top: 45px;
+}
+
+.aviso {
+    background-color: #393b47;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    height: auto;
+    width: auto;
+}
+
+.textoaviso {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 13px;
+}
+
+.targetSection {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #393b47;
+}
+.seta{
+    background-color: #393b47;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 28px;
+        margin-top: 50px;
+    }
+
+    .heroText {
+        font-size: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .heroButton {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .heroSection {
+        height: auto;
+        padding: 20px;
+    }
+
+    .heroText {
+        font-size: 13px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .heroButton {
+        font-size: 16px;
+        padding: 8px 10px;
+        margin-top: 15px;
+    }
+
+    .redSeta {
+        width: 100px;
+        margin-top: 20px;
+    }
+
+    .textoaviso {
+        font-size: 12px;
+    }
+}

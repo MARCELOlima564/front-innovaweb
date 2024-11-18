@@ -12,7 +12,9 @@ const Header = () => {
         <a href="/login" className={styles.link}>Login</a>
 
       </div>
-      <button className={styles.button}>SENAI</button>
+      <button className={styles.button}>
+        <a href="https://www.sp.senai.br/" target="_blank" rel="noopener noreferrer">SENAI</a>
+      </button>
     </div>
   );
 };
