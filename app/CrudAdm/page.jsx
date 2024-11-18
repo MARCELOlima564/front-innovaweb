@@ -15,11 +15,13 @@ const CrudAdm = () =>{
 
       const fetchAdiministrador = async () => {
         try {
-          const response = await api.get('/cursos');
-          setCursos(response.data.cursos);
+          const response = await api.get('/adiministrador');
+          setAdiministrador(response.data.adiministrador);
         } catch (error) {
-          console.error('Erro ao obter cursos:', error);
+          console.error('Erro ao obter adiministradores:', error);
         }
       };
+
+      
     
 }
