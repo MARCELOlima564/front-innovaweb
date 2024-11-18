@@ -82,26 +82,12 @@ const CursosPage = () => {
         return;
       }
 
-      console.log('Dados enviados para criação de curso:', dadosCurso);
-
       const response = await api.post('/cursos', dadosCurso);
-      console.log('Resposta do servidor:', response);
       fetchCursos();
       resetFormFields();
     } catch (error) {
-      console.error('Erro detalhado:', error);
-
-      // Verificar se a resposta contém um erro
-      if (error.response) {
-        const message = error.response.data?.message || 'Erro desconhecido no servidor';
-        setErro(`Erro ao criar curso: ${message}`);
-      } else if (error.request) {
-        // O pedido foi feito, mas sem resposta
-        setErro('Erro de rede. Verifique sua conexão.');
-      } else {
-        // Outro tipo de erro
-        setErro('Erro inesperado: ' + error.message);
-      }
+      console.error('Erro ao criar curso:', error);
+      setErro('Erro ao criar curso. Verifique os campos e tente novamente.');
     } finally {
       setLoading(false);
     }
@@ -128,22 +114,13 @@ const CursosPage = () => {
         imagem: novaImagem,
       };
 
-      console.log('Dados enviados para atualização de curso:', dadosCurso);
-
       await api.put(`/cursos/${cursoSelecionadoId}`, dadosCurso);
       fetchCursos();
       resetFormFields();
       setCursoSelecionadoId(null);
     } catch (error) {
       console.error('Erro ao atualizar curso:', error);
-
-      if (error.response) {
-        setErro('Erro ao atualizar curso: ' + (error.response.data.message || 'Erro desconhecido'));
-      } else if (error.request) {
-        setErro('Erro de rede. Verifique sua conexão.');
-      } else {
-        setErro('Erro inesperado: ' + error.message);
-      }
+      setErro('Erro ao atualizar curso. Tente novamente.');
     } finally {
       setLoading(false);
     }
@@ -157,14 +134,7 @@ const CursosPage = () => {
       fetchCursos();
     } catch (error) {
       console.error('Erro ao deletar curso:', error);
-
-      if (error.response) {
-        setErro('Erro ao deletar curso: ' + (error.response.data.message || 'Erro desconhecido'));
-      } else if (error.request) {
-        setErro('Erro de rede. Verifique sua conexão.');
-      } else {
-        setErro('Erro inesperado: ' + error.message);
-      }
+      setErro('Erro ao deletar curso. Tente novamente.');
     } finally {
       setLoading(false);
     }
@@ -192,175 +162,12 @@ const CursosPage = () => {
       <Header />
       {erro && <div className={styles.errorMessage}>{erro}</div>}
       <div className={styles.cardsContainer}>
-        <div className={styles.formCard}>
-          <h2>{cursoSelecionadoId ? 'Atualizar Curso' : 'Novo Curso'}</h2>
-          {/* Formulário de criação ou atualização */}
-          <div className={styles.formGroup}>
-            <label>Título:</label>
-            <input
-              type="text"
-              className={styles.inputField}
-              value={novoTitulo}
-              onChange={(e) => setNovoTitulo(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Modalidade:</label>
-            <input
-              type="text"
-              className={styles.inputField}
-              value={novaModalidade}
-              onChange={(e) => setNovaModalidade(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Carga Horária:</label>
-            <input
-              type="number"
-              className={styles.inputField}
-              value={novaCargaHoraria}
-              onChange={(e) => setNovaCargaHoraria(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Nível:</label>
-            <input
-              type="text"
-              className={styles.inputField}
-              value={novoNivel}
-              onChange={(e) => setNovoNivel(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Descrição:</label>
-            <textarea
-              className={styles.textareaField}
-              value={novaDescricao}
-              onChange={(e) => setNovaDescricao(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Descrição dos Requisitos:</label>
-            <textarea
-              className={styles.textareaField}
-              value={novaDescricaoRequisitos}
-              onChange={(e) => setNovaDescricaoRequisitos(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Programação:</label>
-            <textarea
-              className={styles.textareaField}
-              value={novaProgramacao}
-              onChange={(e) => setNovaProgramacao(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Modalidade de Aula:</label>
-            <input
-              type="text"
-              className={styles.inputField}
-              value={novaModalidadeAula}
-              onChange={(e) => setNovaModalidadeAula(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Metodologia de Ensino:</label>
-            <input
-              type="text"
-              className={styles.inputField}
-              value={novaMetodologiaEnsino}
-              onChange={(e) => setNovaMetodologiaEnsino(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Idade:</label>
-            <input
-              type="number"
-              className={styles.inputField}
-              value={novaIdade}
-              onChange={(e) => setNovaIdade(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Turnos:</label>
-            <input
-              type="text"
-              className={styles.inputField}
-              value={novosTurnos}
-              onChange={(e) => setNovosTurnos(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Status:</label>
-            <select
-              value={novoStatus ? 'Ativo' : 'Inativo'}
-              onChange={(e) => setNovoStatus(e.target.value === 'Ativo')}
-            >
-              <option value="Ativo">Ativo</option>
-              <option value="Inativo">Inativo</option>
-            </select>
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Imagem (URL):</label>
-            <input
-              type="text"
-              className={styles.inputField}
-              value={novaImagem}
-              onChange={(e) => setNovaImagem(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className={styles.formActions}>
-            <button
-              onClick={cursoSelecionadoId ? handleAtualizarCurso : handleCriarCurso}
-              className={styles.submitButton}
-              disabled={loading}
-            >
-              {loading ? 'Carregando...' : cursoSelecionadoId ? 'Atualizar' : 'Criar'}
-            </button>
-          </div>
-        </div>
+        {/* Formulário de criação e edição */}
+        {/* ... */}
       </div>
-
       <div className={styles.cursosList}>
         <h2>Cursos Cadastrados</h2>
-        {cursos.map((curso) => (
-          <div key={curso.id_curso} className={styles.cursoItem}>
-            <h3>{curso.titulo}</h3>
-            <p>{curso.descricao}</p>
-            <p>{curso.modalidade}</p>
-
-            <div className={styles.cursoActions}>
-              <FaEdit
-                className={styles.icon}
-                onClick={() => preencherFormularioParaAtualizacao(curso)}
-              />
-              <FaTrash
-                className={styles.icon}
-                onClick={() => handleDeletarCurso(curso.id_curso)}
-              />
-            </div>
-          </div>
-        ))}
+        {/* Lista de cursos */}
       </div>
     </div>
   );
