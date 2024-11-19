@@ -332,3 +332,114 @@
   animation-duration: 20s;
   animation-delay: -3s;
 }
+
+
+@media screen and (max-width: 390px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15px 10px;
+  }
+
+  .logo {
+    width: 80px;
+    margin-right: 0;
+  }
+
+  .opcoes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .link {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .redSection {
+    padding: 100px 20px;
+  }
+
+  .banner h1 {
+    font-size: 22px;
+  }
+
+  .bannerButton {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .cardsContainer {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+
+  .cardsInnerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infoCard {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .infoCardImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .middleSection {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .leftImage {
+    margin: 0;
+    width: 100%;
+  }
+
+  .leftImage img {
+    max-width: 100%;
+  }
+
+  .rightContent {
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .rightText {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .redSeta {
+    width: 70px;
+  }
+
+  .infoCardTitle {
+    font-size: 18px;
+  }
+}

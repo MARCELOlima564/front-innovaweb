@@ -7,7 +7,6 @@ import Footer from "./components/Footer/Footer";
 import Carrossel from "./components/Carrossel/CarouselComponent";
 import Wave from "react-wavify";
 import styles from "./page.module.css";
-import VoiceGreeting from "./components/Voice/VoiceGreeting";
 import AreaCardsPagination from "./components/AreaCardsPagination/AreaCardsPagination";
 
 export default function Home() {
@@ -39,7 +38,6 @@ export default function Home() {
 
   return (
     <div className={styles.backgroundimg}>
-       <VoiceGreeting />
       <Header />
       <div className={styles.redSection}>
         <div className={styles.banner}>
