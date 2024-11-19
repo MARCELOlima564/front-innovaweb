@@ -201,10 +201,12 @@
   font-weight: bold;
   margin: 20px 0;
   font-size: 26px;
-  background: linear-gradient(to right, #005bb5, #00aaff);
+  background: linear-gradient(to right, #b50000, #ffee00);
   background-size: 200% auto;
   color: transparent;
-  animation: gradientMove 2s linear infinite;
+  -webkit-background-clip: text;  
+  background-clip: text;
+  animation: gradientMove 3s linear infinite; 
   will-change: background-position;
 }
 
@@ -212,18 +214,14 @@
   0% {
     background-position: left center;
   }
-
-  100% {
+  50% {
     background-position: right center;
+  }
+  100% {
+    background-position: left center;
   }
 }
 
-.infoCard:hover .infoCardTitle {
-  background: linear-gradient(to right, #ffe100, #ff0000, #ffe100);
-  background-size: 200% auto;
-  color: transparent;
-  background-position: right center;
-}
 
 .infoCardImage {
   width: 90%;
@@ -396,8 +394,8 @@
   }
 
   .infoCardTitle {
-    background: none;
-    color: #333;
+    font-size: 20px;
+    animation: gradientMove 4s linear infinite;
   }
 
   .infoTitle {
