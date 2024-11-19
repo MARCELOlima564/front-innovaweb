@@ -93,7 +93,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div style={{ transform: "rotate(180deg)", overflow: "hidden" }}>
+      <div  className={styles.wave} style={{ transform: "rotate(180deg)", overflow: "hidden" }}>
         <Wave mask="url(#mask)" fill="#393b47" options={{ speed: 0.2, points: 4 }}>
           <defs>
             <linearGradient id="gradient" gradientTransform="rotate(90)">

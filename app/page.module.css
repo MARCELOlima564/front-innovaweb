@@ -6,11 +6,24 @@
 .redSection {
   position: relative;
   background-color: #393b47;
-  padding: 130px 0;
+  padding: 80px 0;
   text-align: center;
   color: white;
   margin-bottom: -5px;
   font-family: 'Raleway', sans-serif;
+}
+
+.redSection .bannerButton {
+  font-size: 14px;
+  padding: 8px 15px;
+}
+
+.redSection .banner h1 {
+  font-size: 22px;
+}
+
+.redSection .banner p {
+  font-size: 14px;
 }
 
 .banner {
@@ -89,6 +102,11 @@
   font-weight: bold;
   margin: 5px;
   margin-bottom: 8px;
+  background: linear-gradient(to right, #005bb5, #00aaff);
+  background-size: 200% auto;
+  color: transparent;
+  animation: gradientMove 2s linear infinite;
+  will-change: background-position;
 }
 
 .cardTitle1 {
@@ -185,7 +203,6 @@
   font-size: 26px;
   background: linear-gradient(to right, #005bb5, #00aaff);
   background-size: 200% auto;
-  -webkit-background-clip: text;
   color: transparent;
   animation: gradientMove 2s linear infinite;
   will-change: background-position;
@@ -195,6 +212,7 @@
   0% {
     background-position: left center;
   }
+
   100% {
     background-position: right center;
   }
@@ -203,7 +221,6 @@
 .infoCard:hover .infoCardTitle {
   background: linear-gradient(to right, #ffe100, #ff0000, #ffe100);
   background-size: 200% auto;
-  -webkit-background-clip: text;
   color: transparent;
   background-position: right center;
 }
@@ -270,176 +287,120 @@
   max-width: 820px;
 }
 
-
-/* ELEMENTOS SE MOVENDO NO BCKG */
-.movingElements {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; 
-  z-index: -1; 
-}
-
-/* Estilo para os elementos em movimento */
-.movingElement {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2); /* Cor transparente */
-  animation: moveElement 15s infinite linear; /* Animação para o movimento */
-}
-
-/* Animação para o movimento dos elementos */
-@keyframes moveElement {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translate(100vw, 100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-/* Variando o tempo e posição de cada elemento */
-.movingElement:nth-child(1) {
-  animation-duration: 12s;
-  animation-delay: -5s;
-}
-
-.movingElement:nth-child(2) {
-  animation-duration: 18s;
-  animation-delay: -2s;
-}
-
-.movingElement:nth-child(3) {
-  animation-duration: 16s;
-  animation-delay: -1s;
-}
-
-.movingElement:nth-child(4) {
-  animation-duration: 14s;
-  animation-delay: -4s;
-}
-
-.movingElement:nth-child(5) {
-  animation-duration: 20s;
-  animation-delay: -3s;
-}
-
-
-@media screen and (max-width: 390px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 15px 10px;
+@media (max-width: 390px) {
+  .infoTitle {
+    font-size: 25px;
+    margin-top: -120px;
   }
 
-  .logo {
-    width: 80px;
-    margin-right: 0;
-  }
-
-  .opcoes {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: flex-start;
-    margin-top: 10px;
-  }
-
-  .link {
-    margin: 10px 0;
+  .infoSubtitle {
     font-size: 14px;
+    margin-top: -26px;
+    margin-bottom: 30px;
   }
 
-  .button {
-    width: 100%;
-    padding: 12px;
-    font-size: 14px;
-    margin-top: 15px;
+  .sectionTitle {
+    font-size: 20px;
+    margin-top: -60px;
+    margin-left: 35px;
+
   }
 
-  .redSection {
-    padding: 100px 20px;
+  .wave {
+    margin-top: -55px;
+  }
+  .rightText {
+    font-size: 15px;
+    margin: 20px;
+    margin-top: 2px;
   }
 
-  .banner h1 {
-    font-size: 22px;
+  .leftImage img {
+    width: 70vw;
+    margin-left: -300px;
   }
 
-  .bannerButton {
-    padding: 10px 20px;
-    font-size: 14px;
+  .infoCardImage {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
   }
 
-  .cardsContainer {
-    margin-top: 50px;
-    padding: 0 10px;
-  }
-
-  .cardsInnerContainer {
-    display: flex;
+  .infoCardsContainer {
     flex-direction: column;
     align-items: center;
   }
 
   .infoCard {
     width: 90%;
-    margin: 10px 0;
+    margin: 1px;
+    padding: 40px;
   }
 
-  .infoCardImage {
-    width: 100%;
-    height: auto;
+  .infoSection {
+    text-align: center;
+    padding: 45px 0;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .cardsContainer {
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+
+  .bannerButton {
+    font-size: 14px;
+    padding: 8px 10px;
   }
 
   .middleSection {
     flex-direction: column;
-    padding: 30px;
-  }
-
-  .leftImage {
-    margin: 0;
-    width: 100%;
-  }
-
-  .leftImage img {
-    max-width: 100%;
+    padding: 3px;
+    text-align: center;
   }
 
   .rightContent {
-    padding: 0;
-    margin-top: 20px;
+    padding-left: 0;
+    padding-top: 20px;
   }
 
-  .sectionTitle {
-    font-size: 30px;
-    margin-bottom: 15px;
+  .cardsInnerContainer {
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .rightText {
-    font-size: 16px;
-    line-height: 1.6;
+  .redSection {
+    display: none;
   }
 
-  .card {
-    width: 100%;
-    margin-bottom: 15px;
+  .banner p {
+    font-size: 10px;
+    margin-bottom: 10px;
   }
 
-  .redSeta {
-    width: 70px;
+  .banner h1 {
+    font-size: 17px;
+  }
+
+  .cardTitle {
+    background: none;
+    color: #333;
+  }
+
+  .cardTitle1 {
+    background: none;
+    color: #333;
+    font-size: 20px;
   }
 
   .infoCardTitle {
-    font-size: 18px;
+    background: none;
+    color: #333;
+  }
+
+  .infoTitle {
+    margin-top: -77px;
   }
 }
