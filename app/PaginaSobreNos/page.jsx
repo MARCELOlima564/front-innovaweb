@@ -69,7 +69,9 @@ export default function Sobrenos() {
                 <Carrossel />
             </div>
             <div className={styles.aviso}>
-                <p className={styles.textoaviso}>Clique nos riscos BRANCOS para visualizar todos os Desenvolvedores.</p>
+                <p className={styles.textoaviso}>
+                    Clique nos elementos horizontais para visualizar todos os desenvolvedores envolvidos no projeto.
+                </p>
             </div>
             <div className={styles.footerDiv}>
                 <Footer />
