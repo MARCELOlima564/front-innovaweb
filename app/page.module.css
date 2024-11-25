@@ -13,6 +13,14 @@
   font-family: 'Raleway', sans-serif;
 }
 
+.letter {
+  margin-top: 15px;
+}
+
+.letter1 {
+  font-size: 30px;
+}
+ 
 .redSection .bannerButton {
   font-size: 14px;
   padding: 8px 15px;
@@ -31,6 +39,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.title {
+  font-size: 50px;
 }
 
 .bannerButton {
