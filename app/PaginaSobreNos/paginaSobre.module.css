@@ -17,7 +17,7 @@
 }
 
 .titulo {
-    font-size: 35px;
+    font-size: 40px; 
     font-family: 'Raleway', sans-serif;
     margin-top: 83px;
     font-weight: bold;
@@ -49,11 +49,10 @@
     padding: 10px 15px;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 50px;
     transition: background-color 0.3s ease;
     margin-top: 25px;
     font-family: 'Raleway', sans-serif;
-    font-weight: bold;
     cursor: pointer;
     border: none;
     margin-bottom: 30px;
@@ -100,13 +99,14 @@
     text-align: center;
     background-color: #393b47;
 }
+
 .seta{
     background-color: #393b47;
 }
 
 @media (max-width: 768px) {
     .titulo {
-        font-size: 28px;
+        font-size: 32px; 
         margin-top: 50px;
     }
 
@@ -120,11 +120,15 @@
         font-size: 18px;
         padding: 8px 12px;
     }
+
+    .targetSection {
+        padding: 40px 20px;
+    }
 }
 
 @media (max-width: 480px) {
     .titulo {
-        font-size: 24px;
+        font-size: 28px; 
         margin-top: 30px;
     }
 
@@ -152,5 +156,13 @@
 
     .textoaviso {
         font-size: 12px;
+    }
+
+    .targetSection {
+        padding: 40px 10px;
+    }
+
+    .infoCard {
+        margin-bottom: 30px;
     }
 }

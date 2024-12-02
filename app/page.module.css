@@ -6,11 +6,32 @@
 .redSection {
   position: relative;
   background-color: #393b47;
-  padding: 30px 0;
+  padding: 80px 0;
   text-align: center;
   color: white;
-  margin-bottom: -25px;
+  margin-bottom: -5px;
   font-family: 'Raleway', sans-serif;
+}
+
+.letter {
+  margin-top: 15px;
+}
+
+.letter1 {
+  font-size: 30px;
+}
+ 
+.redSection .bannerButton {
+  font-size: 14px;
+  padding: 8px 15px;
+}
+
+.redSection .banner h1 {
+  font-size: 22px;
+}
+
+.redSection .banner p {
+  font-size: 14px;
 }
 
 .banner {
@@ -18,6 +39,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.title {
+  font-size: 50px;
 }
 
 .bannerButton {
@@ -40,7 +65,7 @@
 }
 
 .targetSection {
-  padding: 40px 0;
+  padding: 80px 0;
   text-align: center;
 }
 
@@ -68,8 +93,8 @@
   border: 2px dashed #c1c1c1;
   margin: 10px;
   text-align: center;
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,13 +108,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 
 .cardTitle {
   font-weight: bold;
   margin: 5px;
   margin-bottom: 8px;
+  background: linear-gradient(to right, #005bb5, #00aaff);
+  background-size: 200% auto;
+  color: transparent;
+  animation: gradientMove 2s linear infinite;
+  will-change: background-position;
 }
 
 .cardTitle1 {
@@ -120,52 +149,59 @@
   margin: 0 auto 10px;
 }
 
-.letter {
-  margin-bottom: 20px;
+.buttonMais {
+  background-color: #ca2525;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.title {
-  margin-top: 20px;
+.buttonMais:hover {
+  background-color: #172533;
+  transform: scale(1.05);
 }
 
 .infoSection {
   text-align: center;
-  padding: -20px 0;
-  font-family: 'Raleway';
+  padding: 90px 0;
+  font-family: 'Raleway', sans-serif;
 }
 
 .infoTitle {
-  font-size: 32px;
+  font-size: 42px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .infoSubtitle {
   margin-bottom: 60px;
-  font-size: 14px;
+  font-size: 20px;
   color: #666;
 }
 
 .infoCardsContainer {
   display: flex;
   justify-content: center;
-  gap: 5px;
-  margin-top: -20px;
+  gap: 40px;
 }
 
 .infoCard {
   background-color: white;
   border-radius: 20px;
-  width: 280px;
+  width: 300px;
   margin: 20px;
   text-align: center;
-  padding: 10px;
+  padding: 30px;
   border: 3px dashed #d8d8d8;
   font-family: 'Raleway', sans-serif;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
 .infoCard:hover {
@@ -177,11 +213,12 @@
   font-weight: bold;
   margin: 20px 0;
   font-size: 26px;
-  background: linear-gradient(to right, #005bb5, #00aaff);
+  background: linear-gradient(to right, #b50000, #ffee00);
   background-size: 200% auto;
-  -webkit-background-clip: text;
   color: transparent;
-  animation: gradientMove 2s linear infinite;
+  -webkit-background-clip: text;  
+  background-clip: text;
+  animation: gradientMove 3s linear infinite; 
   will-change: background-position;
 }
 
@@ -189,29 +226,21 @@
   0% {
     background-position: left center;
   }
-  100% {
+  50% {
     background-position: right center;
+  }
+  100% {
+    background-position: left center;
   }
 }
 
-.infoCard:hover .infoCardTitle {
-  background: linear-gradient(to right, #ffe100, #ff0000, #ffe100);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-position: right center;
-}
 
 .infoCardImage {
-  width: 80%;
-  height: 200px;
+  width: 90%;
+  height: 240px;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
-}
-
-.infoCardDescription {
-  margin-bottom: 20px;
 }
 
 .infoCard:hover .infoCardImage {
@@ -222,36 +251,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  height: auto;
   width: 100%;
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 0 2rem;
+  text-align: left;
 }
 
 .leftImage {
   flex: 0 0 350px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin-left: 300px;
 }
 
 .leftImage img {
   width: 100%;
   max-width: 350px;
-  height: auto;
   border-radius: 8px;
 }
 
 .rightContent {
   flex: 1;
-  padding-left: 3rem;
-  max-width: 820px;
+  padding-left: 30px;
 }
 
 .titleAndText {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left;
 }
 
 .sectionTitle {
@@ -260,7 +287,6 @@
   color: #555555;
   margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
-  text-align: left;
 }
 
 .rightText {
@@ -268,38 +294,123 @@
   line-height: 1.6;
   font-family: 'Raleway', sans-serif;
   color: #333;
-  text-align: left;
+  max-width: 820px;
 }
 
-@media (max-width: 1024px) {
-  .middleSection {
-    padding: 0 1.5rem;
+@media (max-width: 390px) {
+  .infoTitle {
+    font-size: 25px;
+    margin-top: -120px;
   }
-  
-  .leftImage {
-    flex: 0 0 300px;
+
+  .infoSubtitle {
+    font-size: 14px;
+    margin-top: -26px;
+    margin-bottom: 30px;
   }
-  
-  .rightContent {
-    padding-left: 2rem;
-  }
-  
+
   .sectionTitle {
-    font-size: 40px;
-  }
-}
+    font-size: 20px;
+    margin-top: -60px;
+    margin-left: 35px;
 
-@media (max-width: 768px) {
+  }
+
+  .wave {
+    margin-top: -55px;
+  }
+  .rightText {
+    font-size: 15px;
+    margin: 20px;
+    margin-top: 2px;
+  }
+
+  .leftImage img {
+    width: 70vw;
+    margin-left: -300px;
+  }
+
+  .infoCardImage {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .infoCardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infoCard {
+    width: 90%;
+    margin: 1px;
+    padding: 40px;
+  }
+
+  .infoSection {
+    text-align: center;
+    padding: 45px 0;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .cardsContainer {
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+
+  .bannerButton {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
   .middleSection {
     flex-direction: column;
-    padding: 0 1rem;
+    padding: 3px;
+    text-align: center;
   }
-  
-  .leftImage {
-    margin-bottom: 2rem;
-  }
-  
+
   .rightContent {
     padding-left: 0;
+    padding-top: 20px;
+  }
+
+  .cardsInnerContainer {
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .redSection {
+    display: none;
+  }
+
+  .banner p {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .banner h1 {
+    font-size: 17px;
+  }
+
+  .cardTitle {
+    background: none;
+    color: #333;
+  }
+
+  .cardTitle1 {
+    background: none;
+    color: #333;
+    font-size: 20px;
+  }
+
+  .infoCardTitle {
+    font-size: 20px;
+    animation: gradientMove 4s linear infinite;
+  }
+
+  .infoTitle {
+    margin-top: -77px;
   }
 }

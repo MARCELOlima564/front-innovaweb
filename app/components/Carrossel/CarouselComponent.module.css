@@ -16,7 +16,6 @@
   justify-content: center;
   align-items: center;
   padding: -60px;
-
 }
 
 .carouselImage {
@@ -59,4 +58,19 @@
 
 .ant-carousel .slick-dots {
   bottom: -30px;
+}
+
+@media (max-width: 390px) {
+  .carousel {
+    margin: 5 20px;
+  }
+
+  .carouselImage {
+    width: 100%;
+    max-width: 300px;
+    margin-left: 58px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
 }

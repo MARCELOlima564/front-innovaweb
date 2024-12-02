@@ -1,70 +1,117 @@
-
 .header {
   background-color: #393b47;
+  padding: 10px 0;
+}
+
+.headerContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px 0; 
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .logo {
-  width: 120px; 
-  margin-right: 400px; 
+  width: 120px;
+  height: auto;
 }
 
-.opcoes {
-  margin: 10px 20px 0 20px; 
+.hamburgerMenu {
+  display: none;
+  flex-direction: column;
+  width: 35px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.hamburgerMenu span {
+  height: 3px;
+  width: 35px; 
+  background-color: white;
+  margin: 2px 0;
+  margin-right: 30px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
 }
 
 .link {
-  margin: 0 30px; 
+  margin: 0 15px;
   text-decoration: none;
   color: white;
   font-size: 18px;
   font-weight: 600;
-  position: relative;
-  transition: color 0.3s ease;
   font-family: 'Raleway', sans-serif;
-}
-
-.link::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;
-  height: 120%;
-  border-radius: 50px;
-  background-color: white;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.3s ease;
-  z-index: -1;
-}
-
-.link:hover::before {
-  transform: translate(-50%, -50%) scale(1); 
+  transition: color 0.3s ease;
 }
 
 .link:hover {
-  color: #e40000; 
+  color: #e40000;
 }
 
-.button {
+.senaiButton {
   background-image: linear-gradient(to right, #823030 0%, #da2626 51%, #553131 100%);
   color: white;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: 'Raleway', sans-serif;
   padding: 12px 35px;
-  border: none;
   border-radius: 100px;
-  cursor: pointer;
-  transition: background-position 0.3s, color 0.3s;
+  text-decoration: none;
+  transition: background-position 0.3s;
   background-size: 200% auto;
+  margin-left: 16px;
 }
 
-.button:hover {
+.senaiButton:hover {
   background-position: right center;
-  color: white;
+}
+
+@media (max-width: 768px) {
+  .hamburgerMenu {
+    display: flex;
+    margin-right: 23px;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #4a4c59;
+    transition: right 0.4s ease;
+    z-index: 100;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .menuContent {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 30px;
+    margin-top: -350px; 
+    align-items: flex-start;
+  }
+
+  .link {
+    margin: 12px 0; 
+    font-size: 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .senaiButton {
+    margin-top: 15px; 
+    width: fit-content;
+  }
 }
