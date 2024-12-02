@@ -6,6 +6,7 @@ import axios from 'axios';
 import styles from './DetalhesC.module.css';
 import AreaCardsPagination from '@/app/components/AreaCardsPagination/AreaCardsPagination';
 import Header from '@/app/components/Header/Header';
+import Footer from '@/app/components/Footer/Footer';
 
 export default function DetalhesCurso() {
   const params = useParams(); // Captura os parâmetros dinâmicos da URL
@@ -55,15 +56,16 @@ export default function DetalhesCurso() {
       <div className={styles.header2IMG}>
         <h2>{curso.titulo}</h2>
       </div>
-    
+
+
+     <div className={styles.contaier2}>
       <div className={styles.InfosDesc}>
         <h2 className={styles.h2}>Conheça sobre o curso!</h2>
         <p className={styles.infosDescText}>{curso.descricao}</p>
         <p className={styles.infosDescText}>{curso.status}</p>
       </div>
 
-      <div className={styles.contaier2}>
-
+     
         <div className={styles.bloco1}>
           <p className={styles.blocosText}>idade minima de {curso.idade} </p>
           <p className={styles.blocosText}>carga horaria de {curso.carga_horaria} horas.</p>
@@ -76,19 +78,9 @@ export default function DetalhesCurso() {
           <p className={styles.blocosText}>metodologia utilizada: {curso.metodologia_ensino}</p>
         </div>
       </div>
-
-      <div className={styles.cardsContainer}>
-          <div className={styles.cardsInnerContainer}>
-            <div className={styles.card1}>
-              <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
-              <h4 className={styles.cardTitle1}>Descubra áreas disponíveis!</h4>
-            </div>
-          </div>
-
-          <AreaCardsPagination />
-        </div>
-
     </div>
-  </div>
+  
+ </div> 
+
   );
 }
