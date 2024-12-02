@@ -1,12 +1,10 @@
+// src/app/CursosComponent.js
+"use client"
 import styles from './style.module.css';
-import DetalhesCurso from '../DetalheCursos/DetalheCursos';
+import Link from 'next/link';
 
-function CursosC({
-  titulo,
-  descricao,
-  idade,
-  status,
-}) {
+// Componente que renderiza cada curso individual
+function CursosC({ id_curso, titulo, descricao, idade, status }) {
   return (
     <div className={styles.container}>
       <div className={styles.topcontainer}>
@@ -21,15 +19,17 @@ function CursosC({
                 <p className={styles.text}>{descricao}</p>
               </div>
 
-<div className={styles.infos}>
-            <p className={styles.textInfo}>Idade:{idade}.</p>
-            <p className={styles.textInfo}>Curso:{status}.</p>
-          </div>
-
+              <div className={styles.infos}>
+                <p className={styles.textInfo}>Idade: {idade}</p>
+                <p className={styles.textInfo}>Status: {status}</p>
+              </div>
             </div>
-            <a className={styles.btn} href="../DetalheCursos/DetalheCursos">  Ver Curso </a>
+
+            {/* Link para detalhes do curso */}
+            <Link href={`/DetalhesC/${id_curso}`} className={styles.btn}>
+              Ver Curso
+            </Link>
           </div>
-          
         </div>
       </div>
     </div>
@@ -37,3 +37,27 @@ function CursosC({
 }
 
 export default CursosC;
+
+// Componente pai que renderiza a lista de cursos
+function ComponentePai({ cursos }) {
+  return (
+    <div>
+      {cursos.map((curso) => (
+        <CursosC
+          key={curso.id_curso}
+
+          titulo={curso.titulo}
+          status={curso.status}
+          descricao={curso.descricao}
+          idade={curso.idade}
+          carga_horaria={curso.carga_horaria}
+          nivel={curso.nivel} 
+          descricao_requisitos={curso.descricao_requisitos}  
+          programacao={curso.programacao}
+          modalidade_aula={curso.modalidade_aula}
+          metodologia_ensino={curso.metodologia_ensino}
+        />
+      ))}
+    </div>
+  );
+}
