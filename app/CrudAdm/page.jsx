@@ -6,21 +6,21 @@ import styles from './crudadm.module.css';
 import Header from '../components/Header/Header';
 
 const AdmPage = () => {
-  const [administradores, setAdministradores] = useState([]);
+  const [administrador, setadministrador] = useState([]);
   const [novoEmail, setNovoEmail] = useState('');
   const [novaSenha, setNovaSenha] = useState('');
   const [administradorSelecionadoId, setAdministradorSelecionadoId] = useState(null);
 
   useEffect(() => {
-    fetchAdministradores();
+    fetchAdiministrador();
   }, []);
 
-  const fetchAdministradores = async () => {
+  const fetchAdiministrador = async () => {
     try {
       const response = await api.get('/administrador');
-      setAdministradores(response.data.administradores);
+      setadministrador(response.data.administrador);
     } catch (error) {
-      console.error('Erro ao obter administradores:', error);
+      console.error('Erro ao obter administrador aaaaaaa:', error);
     }
   };
 
@@ -36,7 +36,7 @@ const AdmPage = () => {
         email: novoEmail,
         senha: novaSenha,
       });
-      fetchAdministradores();
+      fetchAdiministrador();
       resetFormFields();
     } catch (error) {
       console.error('Erro ao criar administrador:', error);
@@ -51,7 +51,7 @@ const AdmPage = () => {
         email: novoEmail,
         senha: novaSenha,
       });
-      fetchAdministradores();
+      fetchAdiministrador();
       resetFormFields();
       setAdministradorSelecionadoId(null);
     } catch (error) {
@@ -62,7 +62,7 @@ const AdmPage = () => {
   const handleDeletarAdministrador = async (id) => {
     try {
       await api.delete(`/administrador/${id}`);
-      fetchAdministradores();
+      fetchAdiministrador();
     } catch (error) {
       console.error('Erro ao deletar administrador:', error);
     }
@@ -76,7 +76,7 @@ const AdmPage = () => {
 
   return (
     <div className={styles.pageContainer}>
-      {/* <Header /> */}
+       <Header /> 
       <div className={styles.cardsContainer}>
         <div className={styles.formCard}>
           <h2>{administradorSelecionadoId ? 'Atualizar Administrador' : 'Novo Administrador'}</h2>
@@ -114,18 +114,18 @@ const AdmPage = () => {
               </tr>
             </thead>
             <tbody>
-              {administradores.map((administradores) => (
-                <tr key={administradores.id_administrador} className={styles.admRow}>
-                  <td>{administradores.email}</td>
-                  <td>{administradores.senha}</td>
+              {administrador.map((administrador) => (
+                <tr key={administrador.id_administrador} className={styles.admRow}>
+                  <td>{administrador.email}</td>
+                  <td>{administrador.senha}</td>
                   <td>
                     <FaEdit
                       className={styles.actionIcon}
-                      onClick={() => preencherFormularioParaAtualizacao(administradores)}
+                      onClick={() => preencherFormularioParaAtualizacao(administrador)}
                     />
                     <FaTrash
                       className={styles.actionIcon}
-                      onClick={() => handleDeletarAdministrador(administradores.id_administrador)}
+                      onClick={() => handleDeletarAdministrador(administrador.id_administrador)}
                     />
                   </td>
                 </tr>
