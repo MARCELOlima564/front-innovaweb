@@ -6,6 +6,7 @@ import { FaEdit, FaTrash } from 'react-icons/fa';
 import api from '@/api/api';
 import styles from './crudadm.module.css';
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 const AdmPage = () => {
   const [administradores, setAdministradores] = useState([]);
@@ -23,7 +24,7 @@ const AdmPage = () => {
     setLoading(true);
     setErro('');
     try {
-      const response = await api.get('/administrador');
+      const response = await api.get('http://localhost:4000/administrador');
       setAdministradores(response.data.administrador || []);
     } catch (error) {
       setErro('Erro ao carregar administradores. Tente novamente.');
@@ -35,7 +36,7 @@ const AdmPage = () => {
 
   const preencherFormularioParaAtualizacao = (adm) => {
     setNovoEmail(adm.email);
-    setNovaSenha(''); // Senha não deve ser exibida por segurança
+    setNovaSenha('');
     setAdministradorSelecionadoId(adm.id_administrador);
     setErro('');
   };
@@ -49,7 +50,7 @@ const AdmPage = () => {
     setLoading(true);
     setErro('');
     try {
-      await api.post('/administrador', { email: novoEmail, senha: novaSenha });
+      await api.post('http://localhost:4000/administrador', { email: novoEmail, login: 'teste', senha: novaSenha });
       fetchAdministradores();
       resetFormFields();
     } catch (error) {
@@ -65,12 +66,21 @@ const AdmPage = () => {
       setErro('Preencha todos os campos para atualizar.');
       return;
     }
-
+  
     setLoading(true);
     setErro('');
     try {
-      await api.put(`/administrador/${administradorSelecionadoId}`, { email: novoEmail, senha: novaSenha });
+      // Corrigindo a URL para incluir o administradorSelecionadoId
+      await api.put(`http://localhost:4000/administrador/${administradorSelecionadoId}`, {
+        email: novoEmail,
+        login: 'teste', // Você pode ajustar o login conforme necessário
+        senha: novaSenha,
+      });
+      
+      // Recarregar a lista de administradores
       fetchAdministradores();
+  
+      // Resetar os campos e o estado
       resetFormFields();
       setAdministradorSelecionadoId(null);
     } catch (error) {
@@ -80,6 +90,7 @@ const AdmPage = () => {
       setLoading(false);
     }
   };
+  
 
   const handleDeletarAdministrador = async (id) => {
     if (!window.confirm('Tem certeza que deseja excluir este administrador?')) return;
@@ -87,7 +98,7 @@ const AdmPage = () => {
     setLoading(true);
     setErro('');
     try {
-      await api.delete(`/administrador/${id}`);
+      await api.delete(`http://localhost:4000/administrador/${id}`);
       fetchAdministradores();
     } catch (error) {
       setErro('Erro ao deletar administrador. Tente novamente.');
@@ -165,6 +176,7 @@ const AdmPage = () => {
             </div>
           ))}
       </div>
+      <Footer/>
     </div>
   );
 };

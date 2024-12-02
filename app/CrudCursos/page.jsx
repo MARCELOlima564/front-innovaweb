@@ -20,7 +20,6 @@ const CursosPage = () => {
   const [novaIdade, setNovaIdade] = useState('');
   const [novosTurnos, setNovosTurnos] = useState('');
   const [novoStatus, setNovoStatus] = useState(false);
-  const [novaImagem, setNovaImagem] = useState('');
   const [cursoSelecionadoId, setCursoSelecionadoId] = useState(null);
   const [loading, setLoading] = useState(false);
   const [erro, setErro] = useState('');
@@ -52,7 +51,6 @@ const CursosPage = () => {
     setNovaIdade(curso.idade.toString());
     setNovosTurnos(curso.turnos);
     setNovoStatus(curso.status);
-    setNovaImagem(curso.imagem);
     setCursoSelecionadoId(curso.id_curso);
   };
 
@@ -73,11 +71,10 @@ const CursosPage = () => {
         idade: Number(novaIdade),
         turnos: novosTurnos,
         status: novoStatus,
-        imagem: novaImagem,
       };
 
       // Validar dados antes de enviar
-      if (!novoTitulo || !novaModalidade || !novaCargaHoraria || !novaDescricao || !novaImagem) {
+      if (!novoTitulo || !novaModalidade || !novaCargaHoraria || !novaDescricao) {
         setErro('Todos os campos obrigatórios devem ser preenchidos.');
         return;
       }
@@ -89,22 +86,18 @@ const CursosPage = () => {
       fetchCursos();
       resetFormFields();
     } catch (error) {
-      console.error('Erro detalhado:', error);
-
-      // Verificar se a resposta contém um erro
+      console.error('Erro ao deletar curso:', error);
+      setErro('Erro ao deletar curso. Tente novamente.');
+    
       if (error.response) {
         const message = error.response.data?.message || 'Erro desconhecido no servidor';
-        setErro(`Erro ao criar curso: ${message}`);
+        setErro(`Erro ao deletar curso: ${message}`);
       } else if (error.request) {
-        // O pedido foi feito, mas sem resposta
         setErro('Erro de rede. Verifique sua conexão.');
       } else {
-        // Outro tipo de erro
-        setErro('Erro inesperado: ' + error.message);
+        setErro('Erro inesperado: ' + (error.message || 'Erro desconhecido'));
       }
-    } finally {
-      setLoading(false);
-    }
+    }    
   };
 
   const handleAtualizarCurso = async () => {
@@ -125,7 +118,6 @@ const CursosPage = () => {
         idade: Number(novaIdade),
         turnos: novosTurnos,
         status: novoStatus,
-        imagem: novaImagem,
       };
 
       console.log('Dados enviados para atualização de curso:', dadosCurso);
@@ -150,6 +142,8 @@ const CursosPage = () => {
   };
 
   const handleDeletarCurso = async (id) => {
+    console.log(id);
+    
     setLoading(true);
     setErro('');
     try {
@@ -183,7 +177,6 @@ const CursosPage = () => {
     setNovaIdade('');
     setNovosTurnos('');
     setNovoStatus(false);
-    setNovaImagem('');
     setCursoSelecionadoId(null);
   };
 
@@ -304,28 +297,6 @@ const CursosPage = () => {
               className={styles.inputField}
               value={novosTurnos}
               onChange={(e) => setNovosTurnos(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Status:</label>
-            <select
-              value={novoStatus ? 'Ativo' : 'Inativo'}
-              onChange={(e) => setNovoStatus(e.target.value === 'Ativo')}
-            >
-              <option value="Ativo">Ativo</option>
-              <option value="Inativo">Inativo</option>
-            </select>
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Imagem (URL):</label>
-            <input
-              type="text"
-              className={styles.inputField}
-              value={novaImagem}
-              onChange={(e) => setNovaImagem(e.target.value)}
-              required
             />
           </div>
 

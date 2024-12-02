@@ -16,7 +16,7 @@ export default function LoginPage() {
   useEffect(() => {
     if (isAuthenticated) {
       router.push('/CrudCursos');
-    }
+    } 
   }, [isAuthenticated, router]);
 
   const handleSubmit = async (e) => {
