@@ -5,7 +5,8 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-image: url("../../public/senai.jpg");
+    background-image: url("../../public/senailogo.png");
+    background-size: contain;
     color: white;
     background-color: #393b47;
 }
@@ -17,7 +18,7 @@
 }
 
 .titulo {
-    font-size: 35px;
+    font-size: 45px;
     font-family: 'Raleway', sans-serif;
     margin-top: 83px;
     font-weight: bold;
@@ -49,11 +50,10 @@
     padding: 10px 15px;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 50px;
     transition: background-color 0.3s ease;
     margin-top: 25px;
     font-family: 'Raleway', sans-serif;
-    font-weight: bold;
     cursor: pointer;
     border: none;
     margin-bottom: 30px;
