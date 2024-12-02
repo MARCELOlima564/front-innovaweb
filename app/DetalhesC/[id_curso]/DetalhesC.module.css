@@ -1,59 +1,72 @@
 
 .container {
-    background-image: url('../../../public/fundoD2.png');   
+    background-image: url('../../../public/fundoD3N.png');   
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     height: 100%;
-    align-items: center;
+    align-items: center !important; 
     justify-content: center;
-    
-    
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    padding-bottom: 200px ;
 }
     
 
 .header2IMG{
-  text-align: center;
-  font-size: 20px;
+
+  font-size: 29px;
   padding: 18px;
-  margin-left: 450px;
-  width: 50vw;
+  width: 57vw;
   border-radius: 30px;
   padding: 100PX;
-  background-color: rgb(255, 255, 255);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-left:330px ;
 
  }
 
 .InfosDesc {
-    width: 40vw;
-    height: 290px;
+    width: 58vw;
+    height: 220px;
     margin-top: 60px;
-    margin-left: 70px;
+   text-align: center;
+   margin-left: 316px;
     padding: 20px;
     text-align: center;
-    justify-items: center;
-    justify-content: center;
-
+    background-color: rgba(3, 11, 17, 0.596);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 13px -11px 31px -9px rgb(240, 0, 0);
 }
 
 .contaier2 {
-   background-color: rgb(255, 255, 255);
-    margin-bottom: 10px;
+   background-color: rgba(17, 16, 16, 0.726);
      margin-top: 40px;
-    align-items: center;
-    width: 60vw;
-    margin-left: 330px;
-    border-radius: 30px;
-    box-shadow: 0px 0px 10px 0px black;
+    align-items: center ;
+    width: 70vw;
+    height: 90vh ;
+    margin-left: 240px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgb(255, 0, 0);
     display: flex;
+    color: rgb(252, 252, 252);
+    
 }
+
+.verticalLine {
+    border-top: 2px solid rgb(170, 6, 6);
+    height: 70; 
+    margin: 70px;
+  }
 
 .bloco1 {
 
     width: 245px;
     height: 200px;
-    width: 278px;
+    width: 400px;
     height: 290px;
     margin: 70px;
     padding: 22px;
@@ -66,7 +79,7 @@
 
     width: 245px;
     height: 200px;
-    width: 278px;
+    width: 400px;
     height: 290px;
     margin: 70px;
     padding: 22px;
@@ -85,3 +98,105 @@ text-align: center;
 margin-bottom: 15px;
 }
 
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    background-color: #f9f9f9; /* Fundo claro */
+  }
+  
+  .loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .errorText {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .loadingText {
+    color: gray;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  
+  @media (max-width: 800px) {
+    .container {
+        background-attachment: scroll; /* Desativa o efeito fixo para evitar problemas de desempenho em telas pequenas */
+    }
+
+    .header2IMG {
+        font-size: 22px; /* Reduz o tamanho da fonte */
+        width: 90%; /* Ajusta a largura para 90% da tela */
+        padding: 20px; /* Ajusta o padding */
+        margin-left: 7px; /* Remove a margem esquerda */
+        margin-right: 0; /* Remove a margem direita */
+    }
+
+    .InfosDesc {
+        width: 90%; /* Ajusta a largura para 90% da tela */
+        margin-top: 30px; /* Ajusta o espaçamento superior */
+        margin-left: 20px; /* Remove a margem esquerda */
+        padding: 15px; /* Ajusta o padding */
+        background-color: rgba(3, 11, 17, 0.596);
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        text-align: center;
+    }
+
+    .contaier2 {
+        width: 80%; /* Ajusta a largura para 90% da tela */
+        height: 100%; /* Ajusta a altura automaticamente */
+        margin-left: 35px; /* Remove a margem esquerda */
+        margin-top: 20px; /* Ajusta o espaçamento superior */
+        padding: 30px; /* Adiciona padding para o conteúdo */
+        border-radius: 10px;
+        flex-direction: column;
+        box-shadow: 0px 0px 10px 0px rgb(255, 0, 0);
+        color: rgb(252, 252, 252);
+
+    }
+
+    .verticalLine {
+        margin: 20px 0; /* Ajusta a margem para garantir o alinhamento */
+    }
+
+    .bloco1, .bloco2 {
+        width: 100%; /* Ajusta a largura para ocupar 100% da tela */
+        height: auto; /* Ajusta a altura automaticamente */
+        margin: 20px 0; /* Ajusta a margem */
+        padding: 15px; /* Ajusta o padding */
+        box-shadow: -11px 0px 0px -3px red;
+        line-height: 1.5;
+    }
+
+    .blocosText {
+        font-size: 16px; /* Reduz o tamanho da fonte */
+        word-wrap: break-word; /* Garante que o texto se ajuste corretamente */
+    }
+
+    .h2 {
+        font-size: 22px; /* Reduz o tamanho da fonte */
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* Estilos de carregamento */
+    .loadingContainer {
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 20px; /* Ajusta o padding */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .errorText, .loadingText {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+}

@@ -5,6 +5,8 @@ import Link from 'next/link';
 
 // Componente que renderiza cada curso individual
 function CursosC({ id_curso, titulo, descricao, idade, status }) {
+  console.log();
+  
   return (
     <div className={styles.container}>
       <div className={styles.topcontainer}>

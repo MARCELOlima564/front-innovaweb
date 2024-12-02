@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-wrap: nowrap wrap wrap-reverse;
+
 }
 
 .title {
@@ -21,11 +22,12 @@
   border-left: 2px solid rgb(170, 6, 6);
   height: 70; 
   margin: 70px;
+  
 }
 
 .textcabecalho{
   font-size: 20px;
-  color: #ad0505;
+  color: #b81818;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-bottom: 20px;
   font-weight: bold;
@@ -65,23 +67,73 @@
 }
 
 
-@media (max-width: 1200px) {
+
+/* Responsividade para telas de até 800px */
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    /* Alinha os itens verticalmente em vez de horizontalmente */
+  }
+
+  .textcabecalho{
+    font-size: 20px;
+    color: #ac0909;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .filterAside {
+    margin-left: 15px; 
+    max-width: 400px;
+    height: 440px; 
+    padding: 10px; 
+    background-color: rgba(26, 27, 32, 0.452);
+    border-radius: 10px;
+  
+  
+
+  }
+
+  .campoinfo{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 320px;
+    border-radius: 6px;
+    height: 26px;
+  
+  }
+
+  .containerCards {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    flex-direction: column;
+
+    /* Ajusta o layout dos cards */
+  }
+
   .cards {
-    flex: 0 0 calc(33.33% - 15px);
-    /* 33.33% width with 15px gap */
+    flex: 0 0 100%;
+    /* 100% de largura nos cards */
+  }
+
+  .textcabecalho {
+    font-size: 18px;
+    /* Reduz o tamanho da fonte */
   }
 }
 
-@media (max-width: 900px) {
-  .cards {
-    flex: 0 0 calc(50% - 15px);
-    /* 50% width with 15px gap */
-  }
-}
-
+/* Responsividade para telas de até 600px */
 @media (max-width: 600px) {
   .cards {
     flex: 0 0 100%;
-    /* 100% width on small screens */
+    /* 100% de largura em telas menores */
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
   }
 }
