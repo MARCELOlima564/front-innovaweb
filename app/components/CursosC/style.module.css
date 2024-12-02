@@ -8,6 +8,7 @@
   max-width: 255px;
   max-height: 400px;
   margin-left: 20px;
+ 
   
 }
 
@@ -111,7 +112,7 @@
 .curso{
   background-color: rgb(254, 252, 252);
   flex: 0 0 calc(25% - 15px); /* 25% width with 15px gap */
-  height: 42vh;
+  height: 30vh;
   border-radius: 10px;
   -webkit-box-shadow: -3px 11px 40px -6px rgba(166,166,166,1);
   -moz-box-shadow: -3px 11px 40px -6px rgba(166,166,166,1);
