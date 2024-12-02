@@ -169,6 +169,7 @@ const CursosComponent = () => {
           filteredCursos.map((curso) => (
             <div className={styles.Cards} key={curso.id_curso}>
               <CursosC
+              id_curso={curso.id_curso}
                 titulo={curso.titulo}
                 modalidade={curso.modalidade}
                 carga_horaria={curso.carga_horaria}
