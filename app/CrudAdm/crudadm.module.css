@@ -1,0 +1,24 @@
+.pageContainer{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.formCard{
+    padding: 30px;
+}
+.tituloAdm{
+    font-size: 30px;
+}
+.inputField{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9fafc;
+    color: #333;
+    transition: border-color 0.2s;
+}
+.submitButton{
+    
+}
