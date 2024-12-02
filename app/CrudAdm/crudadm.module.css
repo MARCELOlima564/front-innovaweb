@@ -24,7 +24,7 @@
   .cardsContainer {
     display: flex;
     flex-direction: column;
-    margin-left: 70vh;
+    margin-left: 55vh;
     gap: 30px;
     width: 100%;
     max-width: 800px;
@@ -125,6 +125,7 @@
     height: 40vh;
     margin-left: 60vh;
     margin-top: 20px;
+    margin-bottom: 8px;
   }
   
   .administradorList h2 {

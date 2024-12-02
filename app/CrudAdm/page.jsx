@@ -6,6 +6,7 @@ import { FaEdit, FaTrash } from 'react-icons/fa';
 import api from '@/api/api';
 import styles from './crudadm.module.css';
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 const AdmPage = () => {
   const [administradores, setAdministradores] = useState([]);
@@ -165,6 +166,7 @@ const AdmPage = () => {
             </div>
           ))}
       </div>
+      <Footer/>
     </div>
   );
 };
