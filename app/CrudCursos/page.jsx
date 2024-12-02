@@ -359,7 +359,7 @@ const CursosPage = () => {
             </div>
           </div>
         ))}
-      </div>
+       </div>
     </div>
   );
 };

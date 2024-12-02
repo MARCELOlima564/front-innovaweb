@@ -28,7 +28,7 @@ const Header = () => {
             <a href="/Cursos" className={styles.link}>Cursos</a>
             <a href="/Faq" className={styles.link}>FAQ</a>
             <a href="/PaginaSobreNos" className={styles.link}>Desenvolvedores</a>
-            <a href="/login" className={styles.link}>Login</a>
+            <a href="/Login" className={styles.link}>Login</a>
             <a 
               href="https://www.sp.senai.br/" 
               target="_blank" 
