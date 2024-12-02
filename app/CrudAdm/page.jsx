@@ -36,7 +36,7 @@ const AdmPage = () => {
 
   const preencherFormularioParaAtualizacao = (adm) => {
     setNovoEmail(adm.email);
-    setNovaSenha(''); // Senha não deve ser exibida por segurança
+    setNovaSenha('');
     setAdministradorSelecionadoId(adm.id_administrador);
     setErro('');
   };

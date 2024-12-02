@@ -1,5 +1,6 @@
 .pageContainer {
   background-image: url('../../public/imagemDoCrudAdm.png');
+  background-size: cover;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -124,8 +125,8 @@
     width: 40%;
     height: 40vh;
     margin-left: 60vh;
-    margin-top: 20px;
-    margin-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   
   .administradorList h2 {
@@ -179,6 +180,10 @@
   @media (max-width: 768px) {
     .cardsContainer {
       flex-direction: column;
+      margin-left: 1px;
+    }
+    .administradorList{
+      margin-left: 1px;
     }
   
     .formCard,
@@ -189,6 +194,12 @@
   }
   
   @media (max-width: 480px) {
+    .cardsContainer{
+      margin-left: 1px;
+    }
+    .administradorList{
+      margin-left: 1px;
+    }
     .formGroup {
       margin-bottom: 15px;
     }
