@@ -36,6 +36,7 @@ export default function LoginPage() {
         <div className={styles['white-panel']}>
           <div className={styles.loginContainer}>
             <h2 className={styles.loginTitle}>Login</h2>
+            <h2 className={styles.loginST}>Painel de controle administrativo</h2>
             <form className={styles.loginForm} onSubmit={handleSubmit}>
               <div>
                 <input

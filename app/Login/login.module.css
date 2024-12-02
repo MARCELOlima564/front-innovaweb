@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: 20rem;
+  margin-top: -5rem;
 }
 
 .login-reg-panel {
@@ -36,8 +36,8 @@
   width: 85%;
   margin: auto;
   height: 400px;
-  background-color: #26235c;
-  border-radius: 10px;
+  background-color: #393d52;
+  border-radius: 15px;
   margin-bottom: 0;
   margin-bottom: 0;
 }
@@ -52,7 +52,7 @@
   transition: 0.3s ease-in-out;
   z-index: 0;
   box-shadow: 0 0 15px 9px #74717164;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .loginContainer {
@@ -69,6 +69,15 @@
   font-weight: bold;
   color: #ff0000;
   margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+.loginST {
+  font-size: 15px;
+  font-weight: bold;
+  color: #2e2e2e;
+  margin: 20px;
+  margin-top: -5px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .loginForm {
@@ -76,12 +85,13 @@
   flex-direction: column;
   gap: 16px;
   width: 80%;
+  
 }
 
 .loginInput {
   padding: 15px;
   border: 1px solid #b5b5b5;
-  border-radius: 4px;
+  border-radius: 50px;
   font-size: 16px;
   width: 100%;
 }
@@ -98,10 +108,11 @@
   color: #f9f9f9;
   padding: 10px;
   border: none;
-  border-radius: 2px;
+  border-radius: 40px;
   font-size: 16px;
   text-transform: uppercase;
   cursor: pointer;
+  font-family: 'Raleway', sans-serif;
   transition: background-color 0.3s ease;
 }
 
