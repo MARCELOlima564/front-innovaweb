@@ -1,106 +1,181 @@
 
 /* Estilo para centralizar o cartão no meio da tela */
 .container {
-    justify-content: center;
-    align-items: center;
-    background-color: #393b47; /* Cor de fundo da página */
-    text-align: center;
-  }
-  
-  .carouselWrapper{
-    background-color: #393b47;
-  }
-  
+  justify-content: center;
+  align-items: center;
+  background-color: #393b47; /* Cor de fundo da página */
+  text-align: center;
+}
+
+.carouselWrapper{
+  background-color: #393b47;
+}
+
+.carouselItem {
+  padding: 15px; /* Padding para espaçamento interno */
+  max-width: 500px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  height: 280px;
+  border-bottom: 23px solid #e40000;
+}
+
+.carouselImage {
+  width: 90px; /* Tamanho reduzido da imagem */
+  height: 90px;
+  border-radius: 50%;
+  margin: 10px 0;
+  margin-left: 40px;
+}
+
+.Nome {
+  font-size: 20px; /* Tamanho da fonte reduzido */
+  font-weight: bold;
+  color: #393b47;
+  margin: 5px 0;
+}
+
+.funcoes {
+  font-size: 16px; /* Tamanho da fonte reduzido */
+  color: #e40000;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+.descricao {
+  font-size: 15px; /* Tamanho da fonte reduzido */
+  color: #393b47;
+  margin: 10px 0;
+  text-align: center;
+  margin-right: 35px;
+  text-align:start;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.email {
+  font-size: 12px; /* Tamanho da fonte reduzido */
+  color: #FFF;
+  background-color: #e40000;
+  padding: 1px 0; /* Padding menor para o botão */
+  border-radius: 50px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  margin-top: 25px;
+  max-width: 200px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 125px;
+}
+.email:hover{
+  background-color: #393b47;
+
+}
+
+.carouselItem::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: #e40000;
+  border-radius: 50%;
+}
+
+.card{
+  display: flex;
+}
+
+.infos{
+  display: block;
+  margin-left: 20px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
   .carouselItem {
-    padding: 15px; /* Padding para espaçamento interno */
-    max-width: 500px;
-    background-color: #ffffff;
-    border-radius: 15px;
+    max-width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .carouselImage {
+    width: 70px;
+    height: 70px;
+    margin-left: 0;
+  }
+
+  .Nome {
+    font-size: 18px;
+  }
+
+  .funcoes {
+    font-size: 15px;
+  }
+
+  .descricao {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .email {
+    font-size: 12px;
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .carouselItem {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .carouselImage {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  .Nome {
+    font-size: 16px;
+  }
+
+  .funcoes {
+    font-size: 14px;
+  }
+
+  .descricao {
+    font-size: 13px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .email {
+    font-size: 11px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infos {
+    margin-left: 0;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
-    position: relative;
-    height: 280px;
-    border-bottom: 23px solid #e40000;
   }
-  
-  .pergunta {
-    font-size: 20px; /* Tamanho da fonte reduzido */
-    font-weight: bold;
-    color: #393b47;
-    margin: 5px 0;
-  }
-  
-  .resposta {
-    font-size: 15px; /* Tamanho da fonte reduzido */
-    color: #393b47;
-    margin: 10px 0;
-    text-align: center;
-    margin-right: 35px;
-    text-align:start;
-    margin-top: 20px;
-    margin-left: 40px;
-  }
-  
-  
-  .carouselItem::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 15px;
-    height: 15px;
-    background-color: #e40000;
-    border-radius: 50%;
-  }
-  
-  .infos{
-    display: block;
-    margin-left: 20px;
-    margin-top: 15px;
-    text-align: center;
-  }
-  
-  @media (max-width: 768px) {
-    .carouselItem {
-      max-width: 90%;
-      height: auto;
-      padding: 20px;
-    }
-  
-    .pergunta {
-      font-size: 18px;
-    }
-  
-    .resposta {
-      font-size: 14px;
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .container {
-      padding: 10px;
-    }
-  
-    .carouselItem {
-      height: 25vh;
-      width: 20vh;
-      padding: 15px;
-    }
-  
-    .pergunta {
-      font-size: 16px;
-    }
-  
-    .resposta {
-      font-size: 13px;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  
-    .infos {
-      margin-left: 0;
-      text-align: center;
-    }
-  }
+}
