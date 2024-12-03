@@ -7,9 +7,10 @@ import Footer from "./components/Footer/Footer";
 import Carrossel from "./components/Carrossel/CarouselComponent";
 import Wave from "react-wavify";
 import styles from "./page.module.css";
-import AreaCardsPagination from "./components/AreaCardsPagination/AreaCardsPagination";
+
 
 export default function Home() {
+
   const [activeCard, setActiveCard] = useState(null);
   const targetSectionRef = useRef(null);
 
@@ -38,6 +39,8 @@ export default function Home() {
 
   return (
     <div className={styles.backgroundimg}>
+
+
       <Header />
       <div className={styles.redSection}>
         <div className={styles.banner}>
@@ -50,7 +53,7 @@ export default function Home() {
             O conhecimento se transforma em prática e
           </motion.h1>
           <motion.h1
-           className={styles.title}
+            className={styles.title}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -66,7 +69,7 @@ export default function Home() {
             para a profissão dos seus sonhos!
           </motion.h1>
           <motion.p
-           className={styles.letter}
+            className={styles.letter}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -75,7 +78,7 @@ export default function Home() {
             oportunidades.
           </motion.p>
           <motion.p
-           className={styles.letter1}
+            className={styles.letter1}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
@@ -85,7 +88,7 @@ export default function Home() {
           </motion.p>
 
           <motion.button
-            onClick={scrollToSection} 
+            onClick={scrollToSection}
             className={styles.bannerButton}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -96,7 +99,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div  className={styles.wave} style={{ transform: "rotate(180deg)", overflow: "hidden" }}>
+      <div className={styles.wave} style={{ transform: "rotate(180deg)", overflow: "hidden" }}>
         <Wave mask="url(#mask)" fill="#393b47" options={{ speed: 0.2, points: 4 }}>
           <defs>
             <linearGradient id="gradient" gradientTransform="rotate(90)">
@@ -111,14 +114,14 @@ export default function Home() {
       </div>
 
       <div ref={targetSectionRef} className={styles.targetSection}>
-        <motion.div 
+        <motion.div
           className={styles.infoSection}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <motion.h2 
+          <motion.h2
             className={styles.infoTitle}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -127,7 +130,7 @@ export default function Home() {
           >
             Conhecendo o SENAI Valinhos
           </motion.h2>
-          <motion.p 
+          <motion.p
             className={styles.infoSubtitle}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -137,14 +140,14 @@ export default function Home() {
             Nossa instituição é ótima por oferecer formação de qualidade e
             preparação prática para o mercado.
           </motion.p>
-          <motion.div 
+          <motion.div
             className={styles.infoCardsContainer}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <motion.div 
+            <motion.div
               className={styles.infoCard}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -161,7 +164,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className={styles.infoCard}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -178,7 +181,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className={styles.infoCard}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -195,6 +198,9 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </motion.div>
+
+
+
 
         <div className={styles.middleSection}>
           <div className={styles.leftImage}>
@@ -215,19 +221,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.cardsContainer}>
-          <div className={styles.cardsInnerContainer}>
-            <div className={styles.card1}>
-              <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
-              <h4 className={styles.cardTitle1}>Descubra áreas disponíveis!</h4>
-            </div>
-          </div>
-
-          <AreaCardsPagination />
+        <div className={styles.sesiImagem}>
+          <img src="senaianuncio.png" alt="Cursos SENAI" />
         </div>
 
+
+        <a href="/Cursos" className={styles.anuncioButton}>
+          <button>
+            Conheça os Cursos
+          </button>
+        </a>
+
+
+
         <img className={styles.redSeta} src="red.png" alt="Seta Vermelha" />
-        <h4 className={styles.cardTitle1}>Depoimentos</h4>
+        <h4 className={styles.cardTitle1}>Conheça nosso espaço</h4>
         <Carrossel />
       </div>
 
