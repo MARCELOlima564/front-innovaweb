@@ -5,6 +5,7 @@ import api from '@/api/api';
 import styles from './crudcursos.module.css';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import Header from '../components/Header/Header';
+import Link from 'next/link';
 
 const CursosPage = () => {
   const [cursos, setCursos] = useState([]);
@@ -86,18 +87,18 @@ const CursosPage = () => {
       fetchCursos();
       resetFormFields();
     } catch (error) {
-      console.error('Erro ao deletar curso:', error);
-      setErro('Erro ao deletar curso. Tente novamente.');
-    
+      console.error('Erro ao criar curso:', error);
+      setErro('Erro ao criar curso. Tente novamente.');
       if (error.response) {
-        const message = error.response.data?.message || 'Erro desconhecido no servidor';
-        setErro(`Erro ao deletar curso: ${message}`);
+        setErro(`Erro ao criar curso: ${error.response.data?.message || 'Erro desconhecido'}`);
       } else if (error.request) {
         setErro('Erro de rede. Verifique sua conexão.');
       } else {
         setErro('Erro inesperado: ' + (error.message || 'Erro desconhecido'));
       }
-    }    
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleAtualizarCurso = async () => {
@@ -128,9 +129,8 @@ const CursosPage = () => {
       setCursoSelecionadoId(null);
     } catch (error) {
       console.error('Erro ao atualizar curso:', error);
-
       if (error.response) {
-        setErro('Erro ao atualizar curso: ' + (error.response.data.message || 'Erro desconhecido'));
+        setErro('Erro ao atualizar curso: ' + (error.response.data?.message || 'Erro desconhecido'));
       } else if (error.request) {
         setErro('Erro de rede. Verifique sua conexão.');
       } else {
@@ -142,8 +142,6 @@ const CursosPage = () => {
   };
 
   const handleDeletarCurso = async (id) => {
-    console.log(id);
-    
     setLoading(true);
     setErro('');
     try {
@@ -151,9 +149,8 @@ const CursosPage = () => {
       fetchCursos();
     } catch (error) {
       console.error('Erro ao deletar curso:', error);
-
       if (error.response) {
-        setErro('Erro ao deletar curso: ' + (error.response.data.message || 'Erro desconhecido'));
+        setErro('Erro ao deletar curso: ' + (error.response.data?.message || 'Erro desconhecido'));
       } else if (error.request) {
         setErro('Erro de rede. Verifique sua conexão.');
       } else {
@@ -242,65 +239,13 @@ const CursosPage = () => {
             />
           </div>
 
-          <div className={styles.formGroup}>
-            <label>Descrição dos Requisitos:</label>
-            <textarea
-              className={styles.textareaField}
-              value={novaDescricaoRequisitos}
-              onChange={(e) => setNovaDescricaoRequisitos(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Programação:</label>
-            <textarea
-              className={styles.textareaField}
-              value={novaProgramacao}
-              onChange={(e) => setNovaProgramacao(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Modalidade de Aula:</label>
-            <input
-              type="text"
-              className={styles.inputField}
-              value={novaModalidadeAula}
-              onChange={(e) => setNovaModalidadeAula(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Metodologia de Ensino:</label>
-            <input
-              type="text"
-              className={styles.inputField}
-              value={novaMetodologiaEnsino}
-              onChange={(e) => setNovaMetodologiaEnsino(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Idade:</label>
-            <input
-              type="number"
-              className={styles.inputField}
-              value={novaIdade}
-              onChange={(e) => setNovaIdade(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Turnos:</label>
-            <input
-              type="text"
-              className={styles.inputField}
-              value={novosTurnos}
-              onChange={(e) => setNovosTurnos(e.target.value)}
-            />
-          </div>
-
           <div className={styles.formActions}>
+            
+          <div className={styles.formActions}>
+            <div className={styles.btnAdm}>
+              <Link href={'/CrudAdm'} className={styles.btn}>Criar Adm.</Link>
+            </div>
+          </div>
             <button
               onClick={cursoSelecionadoId ? handleAtualizarCurso : handleCriarCurso}
               className={styles.submitButton}
@@ -308,7 +253,9 @@ const CursosPage = () => {
             >
               {loading ? 'Carregando...' : cursoSelecionadoId ? 'Atualizar' : 'Criar'}
             </button>
+            
           </div>
+
         </div>
       </div>
 
