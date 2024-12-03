@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import CursosC from '../components/CursosC/CursosC.jsx';
 import styles from './cursos.module.css';
 import Header from '../components/Header/Header.jsx';
+import Footer from '../components/Footer/Footer.jsx';
 
 const CursosComponent = () => {
   const [allCursos, setAllCursos] = useState([]); // Cursos completos carregados do backend
@@ -191,7 +192,7 @@ const CursosComponent = () => {
         )}
       </div>
     </div>
- 
+ <Footer/>
     </div > 
   );
 
