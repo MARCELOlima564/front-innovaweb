@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import styles from './login.module.css';
 import { motion } from 'framer-motion';
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 
 export default function LoginPage() {
@@ -28,6 +29,7 @@ export default function LoginPage() {
   };
 
   return (
+    <div>
     <div className={styles.loginPage}>
       <div className={styles.headerDiv}>
         <Header />
@@ -87,6 +89,8 @@ export default function LoginPage() {
         </motion.div>
       </div>
 
-    </div>
+      </div>
+      <Footer/>
+      </div>
   );
 }
