@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Itinerários Formativos do SENAI Valinhos - Projeto Innova Web
+![Demonstração do Projeto](./public/gifinnovaweb.gif)
 
-## Getting Started
+## Descrição do Projeto
 
-First, run the development server:
+O projeto **Itinerários Formativos do SENAI Valinhos** foi desenvolvido para melhorar a visibilidade e acessibilidade das informações sobre os cursos oferecidos pelo SENAI Valinhos. O objetivo principal é resolver problemas identificados no site atual, como informações desatualizadas e dificuldade de navegação, proporcionando uma experiência mais eficiente para usuários e administradores do sistema.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário
+- **Next.js**: Framework baseado em React para renderização de páginas
+- **CSS Modules**: Estilo modular e escopo para componentes React
 
-## Learn More
+### Backend
+- **Node.js**: Ambiente de execução JavaScript no servidor
+- **PostgreSQL**: Banco de dados relacional
+- **bcrypt**: Biblioteca para criptografia de senhas
 
-To learn more about Next.js, take a look at the following resources:
+## Requisitos de Instalação
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Pré-requisitos
+- Node.js instalado
+- Gerenciador de pacotes (npm, yarn ou pnpm)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Configuração do Projeto
 
-## Deploy on Vercel
+### Passos para Instalação
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone o repositório:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    git clone https://github.com/seu-usuario/itinerarios-senai.git
+    ```
+
+2. Navegue até o diretório do projeto:
+
+    ```bash
+    cd itinerarios-senai
+    ```
+
+3. Instale as dependências:
+
+    ```bash
+    npm install  # ou yarn install  # ou pnpm install
+    ```
+
+4. Inicie o servidor de desenvolvimento:
+
+    ```bash
+    npm run dev  # ou yarn dev  # ou pnpm dev
+    ```
+
+5. Acesse o projeto no navegador:
+
+    Abra [http://localhost:3000](http://localhost:3000) para visualizar o site.
+
+## Funcionalidades Principais
+
+- **Visualização de Cursos**: Exibição clara e acessível dos cursos do SENAI Valinhos.
+- **Sistema CRUD de Cursos**: Gerenciamento completo de cursos para administradores.
+- **Segurança**: Criptografia de senhas e controle de acesso administrativo.
+
+## 1. Informações Gerais
+
+### Linguagem Utilizada:
+- **JavaScript**
+
+### Frameworks e Bibliotecas Principais:
+
+#### Frontend:
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **Next.js**: Framework baseado em React para renderização de páginas do lado do cliente e servidor.
+- **CSS Modules**: Estilo modular e escopado para componentes React.
+
+#### Backend:
+- **Node.js**: Ambiente de execução JavaScript.
+- **PostgreSQL**: Banco de dados relacional.
+- **bcrypt**: Biblioteca para encriptação de senhas.
+
+## Segurança e Tratamento de Erros
+
+- **Criptografia de senhas** usando `bcrypt`.
+- **Prevenção de SQL Injection** com instruções preparadas.
+- **Tratamento de erros** com blocos `try/catch`.
+- **Retorno de mensagens de erro claras** e códigos HTTP seguros.
+
+## Contribuição
+
+Para contribuir com o projeto, por favor:
+
+1. Faça um fork do repositório.
+2. Crie sua branch de feature.
+3. Commit suas mudanças.
+4. Push para a branch.
+5. Abra um Pull Request.
+
