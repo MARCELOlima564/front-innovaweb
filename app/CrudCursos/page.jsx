@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '@/api/api';
 import styles from './crudcursos.module.css';
+import Link from 'next/link';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import Header from '../components/Header/Header';
 
@@ -301,6 +302,11 @@ const CursosPage = () => {
           </div>
 
           <div className={styles.formActions}>
+          <div className={styles.btnAdm}>
+        <Link href={'/CrudAdm'} className={styles.btn}>
+              Criar Adm.
+            </Link>
+      </div>
             <button
               onClick={cursoSelecionadoId ? handleAtualizarCurso : handleCriarCurso}
               className={styles.submitButton}
@@ -328,9 +334,12 @@ const CursosPage = () => {
                 onClick={() => handleDeletarCurso(curso.id_curso)}
               />
             </div>
+       
           </div>
         ))}
       </div>
+    
+      
     </div>
   );
 };
