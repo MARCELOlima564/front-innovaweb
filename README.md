@@ -1,5 +1,5 @@
 # Itinerários Formativos do SENAI Valinhos - Projeto Innova Web
-![Demonstração do Projeto](./public/gifinnovaweb.gif)
+![Demonstração do Projeto](./public/senaireadme.gif)
 
 ## Descrição do Projeto
 
