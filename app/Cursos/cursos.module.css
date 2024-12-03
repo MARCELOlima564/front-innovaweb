@@ -16,7 +16,7 @@
   margin-right: 15px;
   padding: 10px;
   margin-top: 45px;
-
+  margin-left: 20px;
 }
 .verticalLine {
   border-left: 2px solid rgb(170, 6, 6);
@@ -28,7 +28,7 @@
 .textcabecalho{
   font-size: 20px;
   color: #b81818;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 20px;
   font-weight: bold;
 
@@ -55,15 +55,19 @@
 
 .infoAside{
   color: rgba(172, 6, 6, 0.888);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 19px;
-
+  font-weight: bold;
 }
 
 .campoinfo{
   margin-bottom: 20px;
   margin-top: 10px;
   width: 110px;
+  border-radius: 100px;
+  background-color: rgb(236, 236, 236);
+  border: none;
+ padding: 5px;
 }
 
 
@@ -81,7 +85,6 @@
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
   }
 
   .filterAside {
@@ -89,20 +92,19 @@
     max-width: 400px;
     height: 440px; 
     padding: 10px; 
-    background-color: rgba(26, 27, 32, 0.452);
-    border-radius: 10px;
-  
-  
-
+    background-color: rgba(238, 238, 238, 0.452);
+    border-radius: 16px;
   }
 
   .campoinfo{
     margin-bottom: 20px;
     margin-top: 10px;
     width: 320px;
-    border-radius: 6px;
+    border-radius: 100px;
     height: 26px;
-  
+    padding: 5px;
+     border: none;
+     background-color: rgb(255, 255, 255);
   }
 
   .containerCards {
